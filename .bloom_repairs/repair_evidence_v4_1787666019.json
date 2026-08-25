@@ -1,0 +1,479 @@
+{
+  "version": 4,
+  "timestamp": "2026-08-25T09:53:39-0400",
+  "root": "/data/data/com.termux/files/home/BLOOM",
+  "target": "bloom_terminal.py",
+  "target_sha256": "5d977709b42f8c7a39669899a429d7294d4eb4e7b310c09fafb7861ec0f07969",
+  "target_exists": true,
+  "compile": {
+    "status": "PASS"
+  },
+  "static_analysis": {
+    "functions": [
+      {
+        "name": "__init__",
+        "line": 20,
+        "end_line": 36,
+        "async": false
+      },
+      {
+        "name": "success",
+        "line": 39,
+        "end_line": 43,
+        "async": false
+      },
+      {
+        "name": "as_dict",
+        "line": 45,
+        "end_line": 55,
+        "async": false
+      },
+      {
+        "name": "__init__",
+        "line": 60,
+        "end_line": 62,
+        "async": false
+      },
+      {
+        "name": "_record",
+        "line": 64,
+        "end_line": 74,
+        "async": false
+      },
+      {
+        "name": "snapshot",
+        "line": 76,
+        "end_line": 95,
+        "async": false
+      },
+      {
+        "name": "run",
+        "line": 97,
+        "end_line": 170,
+        "async": false
+      }
+    ],
+    "classes": [
+      {
+        "name": "TerminalResult",
+        "line": 19,
+        "end_line": 55
+      },
+      {
+        "name": "BloomTerminal",
+        "line": 58,
+        "end_line": 170
+      }
+    ],
+    "imports": [
+      {
+        "module": "__future__",
+        "name": "annotations",
+        "alias": null,
+        "line": 3
+      },
+      {
+        "module": "hashlib",
+        "alias": null,
+        "line": 5
+      },
+      {
+        "module": "json",
+        "alias": null,
+        "line": 6
+      },
+      {
+        "module": "os",
+        "alias": null,
+        "line": 7
+      },
+      {
+        "module": "shlex",
+        "alias": null,
+        "line": 8
+      },
+      {
+        "module": "subprocess",
+        "alias": null,
+        "line": 9
+      },
+      {
+        "module": "time",
+        "alias": null,
+        "line": 10
+      },
+      {
+        "module": "pathlib",
+        "name": "Path",
+        "alias": null,
+        "line": 11
+      },
+      {
+        "module": "typing",
+        "name": "Any",
+        "alias": null,
+        "line": 12
+      }
+    ],
+    "stdin_operations": [
+      {
+        "name": "input",
+        "line": 187,
+        "context": [
+          {
+            "line": 185,
+            "text": ""
+          },
+          {
+            "line": 186,
+            "text": "        try:"
+          },
+          {
+            "line": 187,
+            "text": "            command = input(\"BLOOM$ \")"
+          },
+          {
+            "line": 188,
+            "text": ""
+          },
+          {
+            "line": 189,
+            "text": "        except EOFError:"
+          }
+        ]
+      }
+    ],
+    "subprocess_operations": [
+      {
+        "name": "run",
+        "line": 201,
+        "context": [
+          {
+            "line": 199,
+            "text": "            continue"
+          },
+          {
+            "line": 200,
+            "text": ""
+          },
+          {
+            "line": 201,
+            "text": "        result = terminal.run(command)"
+          },
+          {
+            "line": 202,
+            "text": ""
+          },
+          {
+            "line": 203,
+            "text": "        print()"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "line": 115,
+        "context": [
+          {
+            "line": 113,
+            "text": "        try:"
+          },
+          {
+            "line": 114,
+            "text": ""
+          },
+          {
+            "line": 115,
+            "text": "            proc = subprocess.run("
+          },
+          {
+            "line": 116,
+            "text": "                command,"
+          },
+          {
+            "line": 117,
+            "text": "                shell=True,"
+          }
+        ]
+      }
+    ],
+    "network_operations": [],
+    "sleep_operations": [],
+    "loops": [
+      {
+        "kind": "While",
+        "line": 184,
+        "end_line": 220,
+        "context": [
+          {
+            "line": 181,
+            "text": "    print(f\"LOG : {LOG}\")"
+          },
+          {
+            "line": 182,
+            "text": "    print()"
+          },
+          {
+            "line": 183,
+            "text": ""
+          },
+          {
+            "line": 184,
+            "text": "    while True:"
+          },
+          {
+            "line": 185,
+            "text": ""
+          },
+          {
+            "line": 186,
+            "text": "        try:"
+          },
+          {
+            "line": 187,
+            "text": "            command = input(\"BLOOM$ \")"
+          }
+        ]
+      },
+      {
+        "kind": "For",
+        "line": 79,
+        "end_line": 93,
+        "context": [
+          {
+            "line": 76,
+            "text": "    def snapshot(self):"
+          },
+          {
+            "line": 77,
+            "text": "        result = {}"
+          },
+          {
+            "line": 78,
+            "text": ""
+          },
+          {
+            "line": 79,
+            "text": "        for path in self.root.rglob(\"*\"):"
+          },
+          {
+            "line": 80,
+            "text": "            if not path.is_file():"
+          },
+          {
+            "line": 81,
+            "text": "                continue"
+          },
+          {
+            "line": 82,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "kind": "For",
+        "line": 151,
+        "end_line": 158,
+        "context": [
+          {
+            "line": 148,
+            "text": ""
+          },
+          {
+            "line": 149,
+            "text": "        all_paths = set(before) | set(after)"
+          },
+          {
+            "line": 150,
+            "text": ""
+          },
+          {
+            "line": 151,
+            "text": "        for path in sorted(all_paths):"
+          },
+          {
+            "line": 152,
+            "text": ""
+          },
+          {
+            "line": 153,
+            "text": "            if before.get(path) != after.get(path):"
+          },
+          {
+            "line": 154,
+            "text": ""
+          }
+        ]
+      }
+    ],
+    "file_operations": [
+      {
+        "name": "open",
+        "line": 67,
+        "context": [
+          {
+            "line": 65,
+            "text": "        LOG.parent.mkdir(parents=True, exist_ok=True)"
+          },
+          {
+            "line": 66,
+            "text": ""
+          },
+          {
+            "line": 67,
+            "text": "        with LOG.open(\"a\", encoding=\"utf-8\") as f:"
+          },
+          {
+            "line": 68,
+            "text": "            f.write("
+          },
+          {
+            "line": 69,
+            "text": "                json.dumps("
+          }
+        ]
+      }
+    ],
+    "environment_operations": [],
+    "exits": [],
+    "main_guards": [
+      {
+        "line": 173,
+        "condition": "__name__ == '__main__'"
+      }
+    ]
+  },
+  "controlled_cases": [
+    {
+      "label": "closed_stdin",
+      "command": [
+        "/data/data/com.termux/files/usr/bin/python",
+        "-u",
+        "/data/data/com.termux/files/home/BLOOM/bloom_terminal.py"
+      ],
+      "stdin": "",
+      "status": "PASS",
+      "returncode": 0,
+      "elapsed_seconds": 0.163,
+      "stdout": "================================================================================\nBLOOM AUTONOMOUS TERMINAL\n================================================================================\nROOT: /data/data/com.termux/files/home/BLOOM\nLOG : /data/data/com.termux/files/home/BLOOM/operator_terminal.jsonl\n\nBLOOM$ ",
+      "stderr": ""
+    },
+    {
+      "label": "newline_stdin",
+      "command": [
+        "/data/data/com.termux/files/usr/bin/python",
+        "-u",
+        "/data/data/com.termux/files/home/BLOOM/bloom_terminal.py"
+      ],
+      "stdin": "\n",
+      "status": "PASS",
+      "returncode": 0,
+      "elapsed_seconds": 0.161,
+      "stdout": "================================================================================\nBLOOM AUTONOMOUS TERMINAL\n================================================================================\nROOT: /data/data/com.termux/files/home/BLOOM\nLOG : /data/data/com.termux/files/home/BLOOM/operator_terminal.jsonl\n\nBLOOM$ BLOOM$ ",
+      "stderr": ""
+    },
+    {
+      "label": "help_flag",
+      "command": [
+        "/data/data/com.termux/files/usr/bin/python",
+        "-u",
+        "/data/data/com.termux/files/home/BLOOM/bloom_terminal.py",
+        "--help"
+      ],
+      "stdin": "",
+      "status": "PASS",
+      "returncode": 0,
+      "elapsed_seconds": 0.155,
+      "stdout": "================================================================================\nBLOOM AUTONOMOUS TERMINAL\n================================================================================\nROOT: /data/data/com.termux/files/home/BLOOM\nLOG : /data/data/com.termux/files/home/BLOOM/operator_terminal.jsonl\n\nBLOOM$ ",
+      "stderr": ""
+    },
+    {
+      "label": "version_flag",
+      "command": [
+        "/data/data/com.termux/files/usr/bin/python",
+        "-u",
+        "/data/data/com.termux/files/home/BLOOM/bloom_terminal.py",
+        "--version"
+      ],
+      "stdin": "",
+      "status": "PASS",
+      "returncode": 0,
+      "elapsed_seconds": 0.159,
+      "stdout": "================================================================================\nBLOOM AUTONOMOUS TERMINAL\n================================================================================\nROOT: /data/data/com.termux/files/home/BLOOM\nLOG : /data/data/com.termux/files/home/BLOOM/operator_terminal.jsonl\n\nBLOOM$ ",
+      "stderr": ""
+    }
+  ],
+  "process_observation": {
+    "status": "TIMEOUT_OBSERVED",
+    "pid": 10563,
+    "returncode": -15,
+    "elapsed_seconds": 8.042,
+    "observations": [
+      {
+        "elapsed_seconds": 1.003,
+        "pid": 10563,
+        "ps": "  PID  PPID STAT     ELAPSED COMMAND\n10563 10556 S<+        00:02 /data/data/com.termux/files/usr/bin/python /data/data/com.termux/files/usr/bin/python -u /data/data/com.termux/files/home/BLOOM/bloom_terminal.py\n"
+      },
+      {
+        "elapsed_seconds": 2.026,
+        "pid": 10563,
+        "ps": "  PID  PPID STAT     ELAPSED COMMAND\n10563 10556 S<+        00:03 /data/data/com.termux/files/usr/bin/python /data/data/com.termux/files/usr/bin/python -u /data/data/com.termux/files/home/BLOOM/bloom_terminal.py\n"
+      },
+      {
+        "elapsed_seconds": 3.043,
+        "pid": 10563,
+        "ps": "  PID  PPID STAT     ELAPSED COMMAND\n10563 10556 S<+        00:04 /data/data/com.termux/files/usr/bin/python /data/data/com.termux/files/usr/bin/python -u /data/data/com.termux/files/home/BLOOM/bloom_terminal.py\n"
+      },
+      {
+        "elapsed_seconds": 4.061,
+        "pid": 10563,
+        "ps": "  PID  PPID STAT     ELAPSED COMMAND\n10563 10556 S<+        00:05 /data/data/com.termux/files/usr/bin/python /data/data/com.termux/files/usr/bin/python -u /data/data/com.termux/files/home/BLOOM/bloom_terminal.py\n"
+      },
+      {
+        "elapsed_seconds": 5.092,
+        "pid": 10563,
+        "ps": "  PID  PPID STAT     ELAPSED COMMAND\n10563 10556 S<+        00:06 /data/data/com.termux/files/usr/bin/python /data/data/com.termux/files/usr/bin/python -u /data/data/com.termux/files/home/BLOOM/bloom_terminal.py\n"
+      },
+      {
+        "elapsed_seconds": 6.123,
+        "pid": 10563,
+        "ps": "  PID  PPID STAT     ELAPSED COMMAND\n10563 10556 S<+        00:07 /data/data/com.termux/files/usr/bin/python /data/data/com.termux/files/usr/bin/python -u /data/data/com.termux/files/home/BLOOM/bloom_terminal.py\n"
+      },
+      {
+        "elapsed_seconds": 7.156,
+        "pid": 10563,
+        "ps": "  PID  PPID STAT     ELAPSED COMMAND\n10563 10556 S<+        00:08 /data/data/com.termux/files/usr/bin/python /data/data/com.termux/files/usr/bin/python -u /data/data/com.termux/files/home/BLOOM/bloom_terminal.py\n"
+      },
+      {
+        "elapsed_seconds": 8.004,
+        "pid": 10563,
+        "ps": "  PID  PPID STAT     ELAPSED COMMAND\n10563 10556 S<+        00:09 /data/data/com.termux/files/usr/bin/python /data/data/com.termux/files/usr/bin/python -u /data/data/com.termux/files/home/BLOOM/bloom_terminal.py\n"
+      }
+    ],
+    "stdout": "================================================================================\nBLOOM AUTONOMOUS TERMINAL\n================================================================================\nROOT: /data/data/com.termux/files/home/BLOOM\nLOG : /data/data/com.termux/files/home/BLOOM/operator_terminal.jsonl\n\nBLOOM$ ",
+    "stderr": ""
+  },
+  "timeout_classification": {
+    "classification": "UNKNOWN",
+    "confidence": "LOW",
+    "reasons": [
+      "stdin-related operations detected",
+      "subprocess operations detected",
+      "loop constructs detected"
+    ],
+    "automatic_repair_allowed": false,
+    "explanation": "V4 is evidence acquisition only. No classification produced by this version authorizes source mutation."
+  },
+  "mutation_performed": false,
+  "source_changed": false,
+  "repair_authorization": "NONE",
+  "safety": {
+    "source_mutation": false,
+    "backup_required_before_future_mutation": true,
+    "validation_required_before_success": true,
+    "rollback_required_after_failed_validation": true,
+    "learning_requires_validated_success": true
+  },
+  "post_analysis_sha256": "5d977709b42f8c7a39669899a429d7294d4eb4e7b310c09fafb7861ec0f07969",
+  "source_hash_unchanged": true
+}

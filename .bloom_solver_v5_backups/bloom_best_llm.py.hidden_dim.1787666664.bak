@@ -1,0 +1,138 @@
+"""
+BLOOM BEST LLM - frontier soul, normal LLM head
+- char vocab from real data (tiny shakespeare + your gardens)
+- RNN: h = tanh(x@Wxh + h@Whh + bh), y = h@Why
+- loss = cross-entropy next token
+- frontier: dew 100, -0.5 cost, +2 on improvement, death<=0 -> gen++, wind mutate
+- humus = high loss examples for replay
+"""
+import json, math, random, hashlib, time, os
+from pathlib import Path
+try: import requests; HAS_REQ=True
+except: HAS_REQ=False
+try: import numpy as np; HAS_NP=True
+except: HAS_NP=False
+
+GARDEN=Path("garden_best_llm"); GARDEN.mkdir(exist_ok=True)
+
+# 1. DATA - real text, not synthetic
+def get_data():
+    txt=""
+    urls=["https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt"]
+    if HAS_REQ:
+        for u in urls:
+            try:
+                r=requests.get(u, timeout=15);
+                if r.status_code==200: txt=r.text[:50000]; print(f"got {len(txt)} chars from shakespeare"); break
+            except: pass
+    if not txt:
+        # fallback to your own garden logs = organic data
+        try: txt="".join([l for l in open("garden_frontier_org/petals.jsonl")])[:20000]
+        except: txt="bloom frontier light water soil wind dew need oath risk power "
+    return txt
+
+text=get_data()
+chars=sorted(list(set(text))); vocab_size=len(chars)
+stoi={ch:i for i,ch in enumerate(chars)}; itos={i:ch for ch,i in stoi.items()}
+print(f"vocab {vocab_size} chars: {''.join(chars[:60])}")
+
+# 2. MODEL - tiny RNN LLM
+hidden=128; block=32; batch=16
+def rand_mat(a,b, scale=0.5):
+    if HAS_NP: return np.random.randn(a,b)*scale/math.sqrt(a)
+    return [[random.gauss(0,scale/math.sqrt(a)) for _ in range(b)] for _ in range(a)]
+
+try: seed=json.load(open(GARDEN/"seedling.json"))
+except:
+    if HAS_NP:
+        Wxh=np.random.randn(vocab_size,hidden)*0.2
+        Whh=np.random.randn(hidden,hidden)*0.2/math.sqrt(hidden)
+        Why=np.random.randn(hidden,vocab_size)*0.2
+        bh=np.zeros(hidden); by=np.zeros(vocab_size)
+    else:
+        Wxh=rand_mat(vocab_size,hidden); Whh=rand_mat(hidden,hidden); Why=rand_mat(hidden,vocab_size); bh=[0]*hidden; by=[0]*vocab_size
+    seed={"gen":0,"id":hashlib.sha256(b"best0").hexdigest()[:6],"Wxh":None}
+    dew=100.0
+else:
+    dew=json.load(open(GARDEN/"dew.json"))["dew"] if (GARDEN/"dew.json").exists() else 100.0
+    # load weights
+    if HAS_NP and (GARDEN/"W.npz").exists():
+        d=np.load(GARDEN/"W.npz"); Wxh=d["Wxh"]; Whh=d["Whh"]; Why=d["Why"]; bh=d["bh"]; by=d["by"]
+    else:
+        Wxh=rand_mat(vocab_size,hidden); Whh=rand_mat(hidden,hidden); Why=rand_mat(hidden,vocab_size); bh=[0]*hidden; by=[0]*vocab_size
+
+def softmax_np(x):
+    m=np.max(x,axis=-1,keepdims=True); e=np.exp(x-m); return e/np.sum(e,axis=-1,keepdims=True)
+
+def forward_np(xs, hprev):
+    # xs: (T,B) ints
+    T,B=xs.shape; h=np.zeros((T+1,B,hidden)); h[0]=hprev
+    logits=np.zeros((T,B,vocab_size))
+    for t in range(T):
+        xh=Wxh[xs[t]] # (B, hidden)
+        hh=h[t]@Whh
+        h[t+1]=np.tanh(xh+hh+bh)
+        logits[t]=h[t+1]@Why+by
+    return logits, h
+
+def loss_np(logits, targets):
+    probs=softmax_np(logits); # (T,B,V)
+    T,B,_=logits.shape;
+    logp=-np.log(probs[np.arange(T)[:,None], np.arange(B), targets]+1e-8)
+    return np.mean(logp), probs
+
+# evolution mutate
+def mutate_np(scale=0.05):
+    global Wxh, Whh, Why, bh, by
+    Wxh+=np.random.randn(*Wxh.shape)*scale
+    Whh+=np.random.randn(*Whh.shape)*scale*0.5
+    Why+=np.random.randn(*Why.shape)*scale
+    bh+=np.random.randn(*bh.shape)*scale*0.1
+    by+=np.random.randn(*by.shape)*scale*0.1
+
+# 3. TRAIN - frontier autopoiesis
+data=np.array([stoi[c] for c in text]) if HAS_NP else [stoi[c] for c in text]
+total_steps=seed.get("total_steps",0) if isinstance(seed,dict) else 0
+gen=seed["gen"] if isinstance(seed,dict) else 0
+dew=100.0 if dew<=0 else dew
+best_loss=10.0; hits=[]
+
+print(f"\nBEST LLM gen {gen} dew {dew:.1f} hidden {hidden} vocab {vocab_size} np={HAS_NP}")
+for step in range(500):
+    if dew<=0:
+        print(f"DEATH step {total_steps} gen {gen} loss {best_loss:.3f} -> COURAGE mutate")
+        open(GARDEN/"lineage.jsonl","a").write(json.dumps({"gen":gen,"loss":best_loss,"dew":dew})+"\n")
+        gen+=1; mutate_np(0.2); dew=100.0; best_loss+=0.5
+        print(f" REBORN gen {gen}")
+    # sample batch
+    if HAS_NP:
+        idx=np.random.randint(0, len(data)-block-1, size=batch)
+        xs=np.zeros((block,batch), dtype=int); ys=np.zeros((block,batch), dtype=int)
+        for b,i in enumerate(idx): xs[:,b]=data[i:i+block]; ys[:,b]=data[i+1:i+block+1]
+        logits,h=forward_np(xs, np.zeros((batch,hidden)))
+        loss,probs=loss_np(logits, ys)
+        # simple evolutionary hill climb, not backprop = frontier style
+        old=[Wxh.copy(),Whh.copy(),Why.copy(),bh.copy(),by.copy()]
+        mutate_np(0.02)
+        logits2,_=forward_np(xs, np.zeros((batch,hidden)))
+        loss2,_=loss_np(logits2, ys)
+        if loss2<loss:
+            best_loss=min(best_loss,loss2); dew=dew-0.5+2.0; hits.append(1)
+            if abs(loss-loss2)>0.1:
+                open(GARDEN/"humus.jsonl","a").write(json.dumps({"gen":gen,"loss":float(loss),"improve":float(loss-loss2)})+"\n")
+        else:
+            # revert
+            Wxh,Whh,Why,bh,by=old; dew=dew-0.5; hits.append(0)
+        if step%50==0:
+            # generate
+            cur=np.array([[stoi[text[0]]]]); hgen=np.zeros((1,hidden)); out=text[0]
+            for _ in range(80):
+                lg,_=forward_np(cur, hgen); p=softmax_np(lg[-1]); nxt=np.random.choice(vocab_size,p=p[0]); out+=itos[nxt]; cur=np.array([[nxt]])
+            print(f" {total_steps} gen{gen} dew {dew:.1f} loss {loss:.3f}->{loss2:.3f} acc {sum(hits[-50:])/50:.2f} | {out[:80]}")
+    total_steps+=1
+
+# save
+if HAS_NP: np.savez(GARDEN/"W.npz", Wxh=Wxh, Whh=Whh, Why=Why, bh=bh, by=by)
+open(GARDEN/"seedling.json","w").write(json.dumps({"gen":gen,"id":hashlib.sha256(str(time.time()).encode()).hexdigest()[:6],"total_steps":total_steps,"vocab_size":vocab_size}))
+open(GARDEN/"dew.json","w").write(json.dumps({"dew":float(dew)}))
+print(f"\nDONE gen {gen} dew {dew:.1f} best_loss {best_loss:.3f}")

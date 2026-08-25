@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "total_files": 71,
+    "total_defects": 0,
+    "status": "PASSED_AUDIT"
+  },
+  "pillars": {
+    "1_code_integrity": [],
+    "2_model_contracts": [],
+    "3_execution_paths": [],
+    "4_data_sources": [],
+    "5_training_integrity": [],
+    "6_runtime_integrity": [],
+    "7_market_subsystem": [],
+    "8_repair_infrastructure": [],
+    "9_cross_file_consistency": {
+      "num_layers": {
+        "2": [
+          "bloom_frontier.py"
+        ]
+      },
+      "hidden_dim": {
+        "256": [
+          "bloom_real.py",
+          "finish_bloom_repair.py"
+        ]
+      }
+    },
+    "10_operational_completeness": [],
+    "11_behavioral_tests": [],
+    "12_architecture_discrepancies": []
+  }
+}

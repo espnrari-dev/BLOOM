@@ -1,0 +1,2143 @@
+{
+  "timestamp": 1787665854.775556,
+  "root": "/data/data/com.termux/files/home/BLOOM",
+  "model": {
+    "exists": true,
+    "source": {
+      "bytes": 27315,
+      "sha256": "2735f5630c3a8d1092cdc438c6438c7a4d0d9ddd4a10d9c0abd3f97896a1ec78"
+    },
+    "parse": {
+      "success": true
+    },
+    "top_level": [
+      {
+        "line": 2,
+        "end_line": 13,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 15,
+        "end_line": 15,
+        "type": "Import",
+        "name": "Import"
+      },
+      {
+        "line": 16,
+        "end_line": 16,
+        "type": "Import",
+        "name": "Import"
+      },
+      {
+        "line": 17,
+        "end_line": 17,
+        "type": "Import",
+        "name": "Import"
+      },
+      {
+        "line": 18,
+        "end_line": 18,
+        "type": "Import",
+        "name": "Import"
+      },
+      {
+        "line": 19,
+        "end_line": 19,
+        "type": "Import",
+        "name": "Import"
+      },
+      {
+        "line": 20,
+        "end_line": 20,
+        "type": "Import",
+        "name": "Import"
+      },
+      {
+        "line": 21,
+        "end_line": 21,
+        "type": "Import",
+        "name": "Import"
+      },
+      {
+        "line": 22,
+        "end_line": 22,
+        "type": "Import",
+        "name": "Import"
+      },
+      {
+        "line": 28,
+        "end_line": 28,
+        "type": "Assign",
+        "name": "HOME"
+      },
+      {
+        "line": 29,
+        "end_line": 29,
+        "type": "Assign",
+        "name": "BLOOM_DIR"
+      },
+      {
+        "line": 30,
+        "end_line": 30,
+        "type": "Assign",
+        "name": "ARCH_DIR"
+      },
+      {
+        "line": 31,
+        "end_line": 31,
+        "type": "Assign",
+        "name": "CKPT_DIR"
+      },
+      {
+        "line": 32,
+        "end_line": 32,
+        "type": "Assign",
+        "name": "TEXT_FILE"
+      },
+      {
+        "line": 34,
+        "end_line": 34,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 35,
+        "end_line": 35,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 37,
+        "end_line": 37,
+        "type": "Assign",
+        "name": "PRESET"
+      },
+      {
+        "line": 39,
+        "end_line": 43,
+        "type": "Assign",
+        "name": "PRESETS"
+      },
+      {
+        "line": 45,
+        "end_line": 45,
+        "type": "Assign",
+        "name": "cfg"
+      },
+      {
+        "line": 47,
+        "end_line": 47,
+        "type": "Assign",
+        "name": "D"
+      },
+      {
+        "line": 48,
+        "end_line": 48,
+        "type": "Assign",
+        "name": "H"
+      },
+      {
+        "line": 49,
+        "end_line": 49,
+        "type": "Assign",
+        "name": "L"
+      },
+      {
+        "line": 50,
+        "end_line": 50,
+        "type": "Assign",
+        "name": "T"
+      },
+      {
+        "line": 51,
+        "end_line": 51,
+        "type": "Assign",
+        "name": "LR"
+      },
+      {
+        "line": 53,
+        "end_line": 54,
+        "type": "If",
+        "name": "If"
+      },
+      {
+        "line": 56,
+        "end_line": 56,
+        "type": "Assign",
+        "name": "DH"
+      },
+      {
+        "line": 58,
+        "end_line": 58,
+        "type": "Assign",
+        "name": "BATCH"
+      },
+      {
+        "line": 59,
+        "end_line": 59,
+        "type": "Assign",
+        "name": "MAX_ITERS"
+      },
+      {
+        "line": 60,
+        "end_line": 60,
+        "type": "Assign",
+        "name": "EVAL_EVERY"
+      },
+      {
+        "line": 61,
+        "end_line": 61,
+        "type": "Assign",
+        "name": "SEED"
+      },
+      {
+        "line": 63,
+        "end_line": 63,
+        "type": "Assign",
+        "name": "BETA1"
+      },
+      {
+        "line": 64,
+        "end_line": 64,
+        "type": "Assign",
+        "name": "BETA2"
+      },
+      {
+        "line": 65,
+        "end_line": 65,
+        "type": "Assign",
+        "name": "EPS"
+      },
+      {
+        "line": 66,
+        "end_line": 66,
+        "type": "Assign",
+        "name": "WEIGHT_DECAY"
+      },
+      {
+        "line": 67,
+        "end_line": 67,
+        "type": "Assign",
+        "name": "MAX_GRAD_NORM"
+      },
+      {
+        "line": 69,
+        "end_line": 69,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 70,
+        "end_line": 70,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 76,
+        "end_line": 77,
+        "type": "FunctionDef",
+        "name": "zeros"
+      },
+      {
+        "line": 80,
+        "end_line": 83,
+        "type": "FunctionDef",
+        "name": "randn"
+      },
+      {
+        "line": 86,
+        "end_line": 91,
+        "type": "FunctionDef",
+        "name": "check_finite"
+      },
+      {
+        "line": 98,
+        "end_line": 115,
+        "type": "FunctionDef",
+        "name": "precompute_rope"
+      },
+      {
+        "line": 118,
+        "end_line": 142,
+        "type": "FunctionDef",
+        "name": "rope_rotate"
+      },
+      {
+        "line": 145,
+        "end_line": 171,
+        "type": "FunctionDef",
+        "name": "rope_inverse"
+      },
+      {
+        "line": 178,
+        "end_line": 178,
+        "type": "Assign",
+        "name": "VALIDATION_TEXT"
+      },
+      {
+        "line": 181,
+        "end_line": 240,
+        "type": "FunctionDef",
+        "name": "load_text"
+      },
+      {
+        "line": 241,
+        "end_line": 259,
+        "type": "FunctionDef",
+        "name": "get_batch"
+      },
+      {
+        "line": 266,
+        "end_line": 322,
+        "type": "ClassDef",
+        "name": "Linear"
+      },
+      {
+        "line": 329,
+        "end_line": 406,
+        "type": "ClassDef",
+        "name": "LayerNorm"
+      },
+      {
+        "line": 413,
+        "end_line": 595,
+        "type": "ClassDef",
+        "name": "CausalSelfAttention"
+      },
+      {
+        "line": 602,
+        "end_line": 665,
+        "type": "ClassDef",
+        "name": "MLP"
+      },
+      {
+        "line": 672,
+        "end_line": 723,
+        "type": "ClassDef",
+        "name": "Block"
+      },
+      {
+        "line": 730,
+        "end_line": 874,
+        "type": "ClassDef",
+        "name": "GPT"
+      },
+      {
+        "line": 881,
+        "end_line": 965,
+        "type": "FunctionDef",
+        "name": "collect_params"
+      },
+      {
+        "line": 968,
+        "end_line": 980,
+        "type": "FunctionDef",
+        "name": "count_params"
+      },
+      {
+        "line": 987,
+        "end_line": 990,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 992,
+        "end_line": 998,
+        "type": "Assign",
+        "name": "model"
+      },
+      {
+        "line": 1000,
+        "end_line": 1000,
+        "type": "Assign",
+        "name": "params"
+      },
+      {
+        "line": 1002,
+        "end_line": 1005,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1012,
+        "end_line": 1012,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1014,
+        "end_line": 1014,
+        "type": "Assign",
+        "name": ""
+      },
+      {
+        "line": 1016,
+        "end_line": 1019,
+        "type": "Assign",
+        "name": ""
+      },
+      {
+        "line": 1021,
+        "end_line": 1021,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1023,
+        "end_line": 1026,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1028,
+        "end_line": 1032,
+        "type": "For",
+        "name": "For"
+      },
+      {
+        "line": 1034,
+        "end_line": 1037,
+        "type": "Assign",
+        "name": "grad_norm_sq"
+      },
+      {
+        "line": 1039,
+        "end_line": 1039,
+        "type": "Assign",
+        "name": "initial_grad_norm"
+      },
+      {
+        "line": 1041,
+        "end_line": 1045,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1052,
+        "end_line": 1055,
+        "type": "Assign",
+        "name": "adam_m"
+      },
+      {
+        "line": 1057,
+        "end_line": 1060,
+        "type": "Assign",
+        "name": "adam_v"
+      },
+      {
+        "line": 1063,
+        "end_line": 1139,
+        "type": "FunctionDef",
+        "name": "apply_grads"
+      },
+      {
+        "line": 1146,
+        "end_line": 1192,
+        "type": "FunctionDef",
+        "name": "save_ckpt"
+      },
+      {
+        "line": 1199,
+        "end_line": 1199,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1201,
+        "end_line": 1201,
+        "type": "Assign",
+        "name": "t0"
+      },
+      {
+        "line": 1203,
+        "end_line": 1203,
+        "type": "Assign",
+        "name": "best_loss"
+      },
+      {
+        "line": 1205,
+        "end_line": 1256,
+        "type": "For",
+        "name": "For"
+      },
+      {
+        "line": 1258,
+        "end_line": 1261,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1263,
+        "end_line": 1266,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1273,
+        "end_line": 1273,
+        "type": "Assign",
+        "name": "archive_texts"
+      },
+      {
+        "line": 1275,
+        "end_line": 1292,
+        "type": "For",
+        "name": "For"
+      },
+      {
+        "line": 1295,
+        "end_line": 1320,
+        "type": "FunctionDef",
+        "name": "retrieve"
+      },
+      {
+        "line": 1327,
+        "end_line": 1395,
+        "type": "FunctionDef",
+        "name": "generate"
+      },
+      {
+        "line": 1402,
+        "end_line": 1402,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1403,
+        "end_line": 1406,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1407,
+        "end_line": 1409,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1410,
+        "end_line": 1410,
+        "type": "Expr",
+        "name": "Expr"
+      },
+      {
+        "line": 1412,
+        "end_line": 1460,
+        "type": "While",
+        "name": "While"
+      }
+    ],
+    "functions": {
+      "zeros": {
+        "line": 76,
+        "end_line": 77
+      },
+      "randn": {
+        "line": 80,
+        "end_line": 83
+      },
+      "check_finite": {
+        "line": 86,
+        "end_line": 91
+      },
+      "precompute_rope": {
+        "line": 98,
+        "end_line": 115
+      },
+      "rope_rotate": {
+        "line": 118,
+        "end_line": 142
+      },
+      "rope_inverse": {
+        "line": 145,
+        "end_line": 171
+      },
+      "load_text": {
+        "line": 181,
+        "end_line": 240
+      },
+      "get_batch": {
+        "line": 241,
+        "end_line": 259
+      },
+      "collect_params": {
+        "line": 881,
+        "end_line": 965
+      },
+      "count_params": {
+        "line": 968,
+        "end_line": 980
+      },
+      "apply_grads": {
+        "line": 1063,
+        "end_line": 1139
+      },
+      "save_ckpt": {
+        "line": 1146,
+        "end_line": 1192
+      },
+      "retrieve": {
+        "line": 1295,
+        "end_line": 1320
+      },
+      "generate": {
+        "line": 1327,
+        "end_line": 1395
+      },
+      "__init__": {
+        "line": 732,
+        "end_line": 768
+      },
+      "forward": {
+        "line": 771,
+        "end_line": 833
+      },
+      "backward": {
+        "line": 836,
+        "end_line": 874
+      }
+    },
+    "classes": {
+      "Linear": {
+        "line": 266,
+        "end_line": 322
+      },
+      "LayerNorm": {
+        "line": 329,
+        "end_line": 406
+      },
+      "CausalSelfAttention": {
+        "line": 413,
+        "end_line": 595
+      },
+      "MLP": {
+        "line": 602,
+        "end_line": 665
+      },
+      "Block": {
+        "line": 672,
+        "end_line": 723
+      },
+      "GPT": {
+        "line": 730,
+        "end_line": 874
+      }
+    },
+    "definitions": {
+      "HOME": 28,
+      "BLOOM_DIR": 29,
+      "ARCH_DIR": 30,
+      "CKPT_DIR": 31,
+      "TEXT_FILE": 32,
+      "PRESET": 37,
+      "PRESETS": 39,
+      "cfg": 45,
+      "D": 47,
+      "H": 48,
+      "L": 49,
+      "T": 50,
+      "LR": 51,
+      "DH": 56,
+      "BATCH": 58,
+      "MAX_ITERS": 59,
+      "EVAL_EVERY": 60,
+      "SEED": 61,
+      "BETA1": 63,
+      "BETA2": 64,
+      "EPS": 65,
+      "WEIGHT_DECAY": 66,
+      "MAX_GRAD_NORM": 67,
+      "zeros": 76,
+      "randn": 80,
+      "check_finite": 86,
+      "precompute_rope": 98,
+      "rope_rotate": 118,
+      "rope_inverse": 145,
+      "VALIDATION_TEXT": 178,
+      "load_text": 181,
+      "get_batch": 241,
+      "Linear": 266,
+      "LayerNorm": 329,
+      "CausalSelfAttention": 413,
+      "MLP": 602,
+      "Block": 672,
+      "GPT": 730,
+      "collect_params": 881,
+      "count_params": 968,
+      "model": 992,
+      "params": 1000,
+      "grad_norm_sq": 1034,
+      "initial_grad_norm": 1039,
+      "adam_m": 1052,
+      "adam_v": 1057,
+      "apply_grads": 1063,
+      "save_ckpt": 1146,
+      "t0": 1201,
+      "best_loss": 1203,
+      "archive_texts": 1273,
+      "retrieve": 1295,
+      "generate": 1327
+    },
+    "references": {
+      "params": [
+        1028,
+        965,
+        1067,
+        1091,
+        1054,
+        1059,
+        952,
+        1036,
+        889
+      ],
+      "HOME": [
+        29
+      ],
+      "BLOOM_DIR": [
+        30,
+        31,
+        32,
+        196,
+        197
+      ],
+      "PRESETS": [
+        45
+      ],
+      "PRESET": [
+        45,
+        1156,
+        988,
+        1405,
+        1150
+      ],
+      "cfg": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        1157
+      ],
+      "D": [
+        56,
+        994,
+        53,
+        418,
+        421,
+        422,
+        422,
+        606,
+        607,
+        682,
+        685,
+        691,
+        693,
+        736,
+        753,
+        756,
+        768,
+        989,
+        421,
+        606,
+        607,
+        739,
+        745
+      ],
+      "H": [
+        56,
+        995,
+        53,
+        417,
+        418,
+        686,
+        989,
+        739,
+        746
+      ],
+      "SEED": [
+        69,
+        70
+      ],
+      "valid_text": [
+        232,
+        224
+      ],
+      "total": [
+        980
+      ],
+      "print": [
+        987,
+        1002,
+        1012,
+        1041,
+        1199,
+        1258,
+        1402,
+        1403,
+        1407,
+        1410,
+        1190,
+        1453,
+        1460,
+        1240,
+        1449
+      ],
+      "GPT": [
+        992
+      ],
+      "vocab_size": [
+        993
+      ],
+      "L": [
+        996,
+        989,
+        750
+      ],
+      "T": [
+        997,
+        734,
+        1338,
+        243,
+        740,
+        989,
+        1340,
+        1344,
+        252,
+        256,
+        1351
+      ],
+      "collect_params": [
+        1000,
+        973
+      ],
+      "get_batch": [
+        1014,
+        1210
+      ],
+      "test_x": [
+        1017
+      ],
+      "test_y": [
+        1018
+      ],
+      "check_finite": [
+        1023,
+        1029,
+        1217,
+        1069,
+        1131
+      ],
+      "sum": [
+        1034
+      ],
+      "grad_norm_sq": [
+        1039
+      ],
+      "name": [
+        1053,
+        1058,
+        1095,
+        1096,
+        1030,
+        1312,
+        90,
+        1132
+      ],
+      "float": [
+        1203,
+        1035,
+        1074,
+        833
+      ],
+      "range": [
+        1205,
+        1348,
+        377,
+        750
+      ],
+      "save_ckpt": [
+        1263,
+        1253
+      ],
+      "MAX_ITERS": [
+        1264,
+        1207
+      ],
+      "loss": [
+        1265,
+        1155,
+        1219,
+        1249,
+        1251,
+        1255,
+        833,
+        833,
+        1242
+      ],
+      "archive_texts": [
+        1304,
+        1297,
+        1438,
+        1287,
+        1434
+      ],
+      "prompt": [
+        1346,
+        1335
+      ],
+      "out": [
+        1395,
+        296,
+        298,
+        142,
+        171
+      ],
+      "ARCH_DIR": [
+        34,
+        1275
+      ],
+      "CKPT_DIR": [
+        35,
+        1149
+      ],
+      "dict": [
+        40,
+        41,
+        42
+      ],
+      "ValueError": [
+        54,
+        100,
+        776
+      ],
+      "random": [
+        70,
+        1437
+      ],
+      "shape": [
+        77,
+        82
+      ],
+      "scale": [
+        82
+      ],
+      "end": [
+        108
+      ],
+      "positions": [
+        110
+      ],
+      "inv_freq": [
+        110
+      ],
+      "cos": [
+        115,
+        131,
+        160
+      ],
+      "sin": [
+        115,
+        132,
+        161
+      ],
+      "x": [
+        124,
+        259,
+        291,
+        706,
+        1213,
+        126,
+        293,
+        435,
+        437,
+        614,
+        698,
+        702,
+        787,
+        789,
+        1355,
+        87,
+        88,
+        351,
+        356,
+        366,
+        785,
+        699,
+        703,
+        88
+      ],
+      "B": [
+        126,
+        154,
+        506,
+        580,
+        584,
+        588,
+        851,
+        142,
+        171,
+        826,
+        446,
+        450,
+        454,
+        523,
+        846,
+        820
+      ],
+      "heads": [
+        126,
+        154,
+        142,
+        171
+      ],
+      "seq": [
+        126,
+        154,
+        506,
+        580,
+        584,
+        588,
+        775,
+        851,
+        131,
+        132,
+        142,
+        160,
+        161,
+        171,
+        827,
+        446,
+        450,
+        454,
+        476,
+        476,
+        524,
+        777,
+        846,
+        820
+      ],
+      "x_pair": [
+        128,
+        129
+      ],
+      "grad": [
+        151,
+        1031,
+        153,
+        1071,
+        1093,
+        1035,
+        1076
+      ],
+      "g_pair": [
+        157,
+        158
+      ],
+      "train_text": [
+        240,
+        219
+      ],
+      "archive_count": [
+        240
+      ],
+      "max_start": [
+        247
+      ],
+      "y": [
+        259,
+        1214,
+        513,
+        504
+      ],
+      "eps": [
+        340
+      ],
+      "rope_cos": [
+        424,
+        687,
+        747
+      ],
+      "rope_sin": [
+        425,
+        688,
+        748
+      ],
+      "q": [
+        508,
+        1423,
+        459,
+        1455,
+        471,
+        562,
+        1426,
+        1433,
+        445,
+        1450
+      ],
+      "k": [
+        509,
+        465,
+        1320,
+        557,
+        449,
+        471
+      ],
+      "v": [
+        510,
+        502,
+        1103,
+        1112,
+        1104,
+        536,
+        453
+      ],
+      "att": [
+        511,
+        502,
+        545,
+        540,
+        548
+      ],
+      "h": [
+        617,
+        624,
+        645,
+        628,
+        624,
+        645,
+        651,
+        658
+      ],
+      "idx": [
+        780,
+        773,
+        782,
+        1391,
+        1393
+      ],
+      "d_wte": [
+        874,
+        866
+      ],
+      "enumerate": [
+        887
+      ],
+      "set": [
+        970,
+        1300,
+        1308
+      ],
+      "model": [
+        1016,
+        1021,
+        1166,
+        887,
+        1137,
+        1137,
+        1212,
+        1222,
+        884,
+        884,
+        1355,
+        1004,
+        1160,
+        955,
+        956,
+        960,
+        961,
+        1162,
+        1163
+      ],
+      "test_loss": [
+        1025,
+        1043
+      ],
+      "math": [
+        1039,
+        1080,
+        419
+      ],
+      "zeros": [
+        1053,
+        1058,
+        278,
+        338,
+        345,
+        346,
+        768,
+        863,
+        273,
+        281
+      ],
+      "global_norm_sq": [
+        1081
+      ],
+      "min": [
+        1084,
+        1224
+      ],
+      "global_norm": [
+        1139,
+        1087
+      ],
+      "clip_coef": [
+        1139,
+        1093,
+        1245
+      ],
+      "step": [
+        1154,
+        1232,
+        1226,
+        1236,
+        1150,
+        1236,
+        1254,
+        1109,
+        1113,
+        1241
+      ],
+      "stoi": [
+        1158,
+        1334
+      ],
+      "itos": [
+        1159,
+        1391
+      ],
+      "time": [
+        1201,
+        1238
+      ],
+      "LR": [
+        1229
+      ],
+      "warmup": [
+        1229
+      ],
+      "apply_grads": [
+        1231
+      ],
+      "lr": [
+        1233,
+        1124,
+        1120,
+        1243
+      ],
+      "glob": [
+        1275
+      ],
+      "str": [
+        1275
+      ],
+      "f": [
+        1277,
+        1186
+      ],
+      "Exception": [
+        1291
+      ],
+      "scored": [
+        1320,
+        1315,
+        1311
+      ],
+      "n": [
+        1348
+      ],
+      "pathlib": [
+        28,
+        1277
+      ],
+      "np": [
+        69,
+        77,
+        108,
+        110,
+        112,
+        113,
+        137,
+        142,
+        166,
+        171,
+        251,
+        255,
+        1025,
+        77,
+        82,
+        87,
+        108,
+        245,
+        298,
+        322,
+        333,
+        371,
+        406,
+        439,
+        474,
+        491,
+        619,
+        640,
+        648,
+        1219,
+        1360,
+        87,
+        88,
+        112,
+        113,
+        335,
+        361,
+        475,
+        492,
+        591,
+        620,
+        641,
+        805,
+        865,
+        1035,
+        1075,
+        1350,
+        1374,
+        104,
+        478,
+        806,
+        846,
+        1127,
+        1352,
+        1365,
+        1375,
+        82,
+        88,
+        104,
+        629,
+        1035,
+        1076,
+        1385,
+        818,
+        820
+      ],
+      "FloatingPointError": [
+        89
+      ],
+      "dim": [
+        99,
+        126,
+        154,
+        334,
+        338,
+        345,
+        346,
+        104,
+        142,
+        171,
+        104
+      ],
+      "theta": [
+        103
+      ],
+      "even": [
+        134,
+        135,
+        163,
+        164
+      ],
+      "c": [
+        134,
+        135,
+        163,
+        164,
+        623,
+        644,
+        650,
+        1334
+      ],
+      "odd": [
+        134,
+        135,
+        163,
+        164
+      ],
+      "s": [
+        134,
+        135,
+        163,
+        164
+      ],
+      "out_even": [
+        138,
+        167
+      ],
+      "out_odd": [
+        138,
+        167
+      ],
+      "RuntimeError": [
+        200,
+        205,
+        220,
+        225
+      ],
+      "train_path": [
+        209,
+        199,
+        201
+      ],
+      "valid_path": [
+        214,
+        204,
+        206
+      ],
+      "len": [
+        219,
+        224,
+        1306,
+        1338,
+        243,
+        1434,
+        1340,
+        1386
+      ],
+      "BATCH": [
+        248
+      ],
+      "self": [
+        270,
+        272,
+        278,
+        280,
+        286,
+        291,
+        333,
+        338,
+        340,
+        342,
+        343,
+        345,
+        346,
+        361,
+        365,
+        417,
+        418,
+        419,
+        421,
+        422,
+        424,
+        425,
+        427,
+        428,
+        429,
+        430,
+        508,
+        509,
+        510,
+        511,
+        529,
+        530,
+        531,
+        532,
+        606,
+        607,
+        609,
+        617,
+        638,
+        682,
+        684,
+        691,
+        693,
+        734,
+        736,
+        743,
+        753,
+        755,
+        764,
+        765,
+        766,
+        768,
+        780,
+        784,
+        293,
+        295,
+        313,
+        315,
+        367,
+        380,
+        384,
+        388,
+        460,
+        461,
+        466,
+        467,
+        472,
+        558,
+        563,
+        568,
+        569,
+        574,
+        575,
+        762,
+        762,
+        775,
+        782,
+        825,
+        831,
+        838,
+        860,
+        874,
+        296,
+        303,
+        316,
+        392,
+        419,
+        437,
+        513,
+        520,
+        590,
+        614,
+        627,
+        636,
+        663,
+        711,
+        713,
+        717,
+        721,
+        787,
+        789,
+        840,
+        854,
+        858,
+        872,
+        305,
+        362,
+        370,
+        381,
+        398,
+        446,
+        446,
+        450,
+        450,
+        454,
+        454,
+        525,
+        526,
+        698,
+        702,
+        863,
+        867,
+        321,
+        370,
+        370,
+        699,
+        703,
+        777,
+        847,
+        399
+      ],
+      "randn": [
+        270,
+        736
+      ],
+      "nin": [
+        270,
+        278
+      ],
+      "nout": [
+        270,
+        278,
+        273,
+        281
+      ],
+      "bias": [
+        274,
+        282
+      ],
+      "d2": [
+        313,
+        316
+      ],
+      "tuple": [
+        376
+      ],
+      "dout": [
+        388,
+        518,
+        520,
+        636,
+        711,
+        715,
+        308,
+        384,
+        386,
+        310,
+        321,
+        381,
+        377
+      ],
+      "Linear": [
+        421,
+        422,
+        606,
+        607,
+        755
+      ],
+      "qkv": [
+        440
+      ],
+      "rope_rotate": [
+        458,
+        464
+      ],
+      "scores": [
+        483,
+        486,
+        492,
+        486
+      ],
+      "mask": [
+        483
+      ],
+      "exp_scores": [
+        495,
+        496
+      ],
+      "C": [
+        506,
+        580,
+        584,
+        588
+      ],
+      "dy": [
+        536,
+        541,
+        522
+      ],
+      "rope_inverse": [
+        566,
+        572
+      ],
+      "dq": [
+        567,
+        592,
+        578
+      ],
+      "dk": [
+        573,
+        592,
+        582
+      ],
+      "u": [
+        648,
+        629
+      ],
+      "LayerNorm": [
+        682,
+        691,
+        753
+      ],
+      "CausalSelfAttention": [
+        684
+      ],
+      "MLP": [
+        693
+      ],
+      "d_mlp": [
+        713
+      ],
+      "d_ln2": [
+        715
+      ],
+      "d_after_attn": [
+        718,
+        723
+      ],
+      "d_attn": [
+        721
+      ],
+      "d_ln1": [
+        723
+      ],
+      "vs": [
+        736,
+        757,
+        768
+      ],
+      "precompute_rope": [
+        738
+      ],
+      "targets": [
+        793,
+        831,
+        816
+      ],
+      "logits": [
+        833,
+        795,
+        1357,
+        1365,
+        1371,
+        1376,
+        797,
+        1371
+      ],
+      "dlogits": [
+        855,
+        842
+      ],
+      "dx": [
+        858,
+        406,
+        861,
+        868,
+        868
+      ],
+      "reversed": [
+        860
+      ],
+      "id": [
+        974
+      ],
+      "p": [
+        974,
+        978,
+        1053,
+        1058
+      ],
+      "key": [
+        976,
+        977
+      ],
+      "seen": [
+        976,
+        977
+      ],
+      "initial_grad_norm": [
+        1044
+      ],
+      "MAX_GRAD_NORM": [
+        1086
+      ],
+      "adam_m": [
+        1095
+      ],
+      "adam_v": [
+        1096
+      ],
+      "m": [
+        1098,
+        1108,
+        1099
+      ],
+      "param": [
+        1133,
+        1117
+      ],
+      "open": [
+        1183
+      ],
+      "path": [
+        1183,
+        1279,
+        1283,
+        1191,
+        1288
+      ],
+      "state": [
+        1185,
+        1168
+      ],
+      "t0": [
+        1238
+      ],
+      "best_loss": [
+        1249,
+        1260
+      ],
+      "ids": [
+        1338,
+        1341,
+        1344,
+        1393,
+        1351,
+        1340
+      ],
+      "temperature": [
+        1362,
+        1372
+      ],
+      "EOFError": [
+        1418
+      ],
+      "KeyboardInterrupt": [
+        1419
+      ],
+      "generate": [
+        1454
+      ],
+      "angles": [
+        112,
+        113
+      ],
+      "data": [
+        243,
+        252,
+        256
+      ],
+      "ix": [
+        252,
+        256
+      ],
+      "x2": [
+        313
+      ],
+      "mean": [
+        366
+      ],
+      "axes": [
+        382,
+        384
+      ],
+      "datt": [
+        546,
+        548
+      ],
+      "dscore": [
+        557,
+        561
+      ],
+      "du": [
+        660
+      ],
+      "dh": [
+        664
+      ],
+      "gelu_grad": [
+        664
+      ],
+      "Block": [
+        744
+      ],
+      "flat": [
+        800,
+        806,
+        800
+      ],
+      "exp": [
+        809,
+        810
+      ],
+      "V": [
+        844
+      ],
+      "BETA1": [
+        1099,
+        1100,
+        1109
+      ],
+      "g": [
+        1100,
+        1105,
+        1105
+      ],
+      "BETA2": [
+        1104,
+        1105,
+        1113
+      ],
+      "m_hat": [
+        1125
+      ],
+      "EPS": [
+        1127
+      ],
+      "pickle": [
+        1184,
+        1187
+      ],
+      "EVAL_EVERY": [
+        1236
+      ],
+      "text": [
+        1288,
+        1312,
+        1308
+      ],
+      "query": [
+        1300
+      ],
+      "qchars": [
+        1307
+      ],
+      "score": [
+        1312
+      ],
+      "int": [
+        1364,
+        1384
+      ],
+      "bad": [
+        90
+      ],
+      "i": [
+        252,
+        252,
+        256,
+        256,
+        891,
+        896,
+        901,
+        906,
+        911,
+        916,
+        921,
+        926,
+        931,
+        936,
+        941,
+        946
+      ],
+      "var": [
+        362
+      ],
+      "N": [
+        391,
+        393
+      ],
+      "dv": [
+        592,
+        586
+      ],
+      "tanh_u": [
+        656,
+        659
+      ],
+      "block": [
+        785,
+        861
+      ],
+      "probs": [
+        825,
+        1382,
+        1386,
+        1387,
+        819
+      ],
+      "count_params": [
+        1004
+      ],
+      "WEIGHT_DECAY": [
+        1120
+      ],
+      "v_hat": [
+        1127
+      ],
+      "grad_norm": [
+        1244
+      ],
+      "elapsed": [
+        1246
+      ],
+      "z": [
+        1316
+      ],
+      "input": [
+        1415
+      ],
+      "a": [
+        1444,
+        1445
+      ],
+      "b": [
+        1444,
+        1446,
+        912,
+        913,
+        917,
+        918,
+        922,
+        923,
+        927,
+        928,
+        892,
+        893,
+        897,
+        898,
+        902,
+        903,
+        907,
+        908,
+        932,
+        933,
+        937,
+        938,
+        942,
+        943,
+        947,
+        948,
+        1173,
+        1174,
+        1175,
+        1176,
+        1169,
+        1170,
+        1171,
+        1172,
+        1177,
+        1178,
+        1179,
+        1180
+      ],
+      "dxhat": [
+        393,
+        394,
+        399
+      ],
+      "target_flat": [
+        821
+      ]
+    },
+    "required_symbols": {
+      "load_text": {
+        "defined": true,
+        "definition_line": 181,
+        "references": []
+      },
+      "stoi": {
+        "defined": false,
+        "definition_line": null,
+        "references": [
+          1158,
+          1334
+        ]
+      },
+      "itos": {
+        "defined": false,
+        "definition_line": null,
+        "references": [
+          1159,
+          1391
+        ]
+      },
+      "vocab_size": {
+        "defined": false,
+        "definition_line": null,
+        "references": [
+          993
+        ]
+      },
+      "data": {
+        "defined": false,
+        "definition_line": null,
+        "references": [
+          243,
+          252,
+          256
+        ]
+      },
+      "validation_data": {
+        "defined": false,
+        "definition_line": null,
+        "references": []
+      },
+      "VALIDATION_TEXT": {
+        "defined": true,
+        "definition_line": 178,
+        "references": []
+      },
+      "get_batch": {
+        "defined": true,
+        "definition_line": 241,
+        "references": [
+          1014,
+          1210
+        ]
+      },
+      "GPT": {
+        "defined": true,
+        "definition_line": 730,
+        "references": [
+          992
+        ]
+      },
+      "model": {
+        "defined": true,
+        "definition_line": 992,
+        "references": [
+          1016,
+          1021,
+          1166,
+          887,
+          1137,
+          1137,
+          1212,
+          1222,
+          884,
+          884,
+          1355,
+          1004,
+          1160,
+          955,
+          956,
+          960,
+          961,
+          1162,
+          1163
+        ]
+      },
+      "params": {
+        "defined": true,
+        "definition_line": 1000,
+        "references": [
+          1028,
+          965,
+          1067,
+          1091,
+          1054,
+          1059,
+          952,
+          1036,
+          889
+        ]
+      },
+      "adam_m": {
+        "defined": true,
+        "definition_line": 1052,
+        "references": [
+          1095
+        ]
+      },
+      "adam_v": {
+        "defined": true,
+        "definition_line": 1057,
+        "references": [
+          1096
+        ]
+      },
+      "best_loss": {
+        "defined": true,
+        "definition_line": 1203,
+        "references": [
+          1249,
+          1260
+        ]
+      },
+      "generate": {
+        "defined": true,
+        "definition_line": 1327,
+        "references": [
+          1454
+        ]
+      },
+      "retrieve": {
+        "defined": true,
+        "definition_line": 1295,
+        "references": []
+      }
+    }
+  },
+  "import_probe": {
+    "returncode": 0,
+    "stdout": "[MODEL] Building small D=128 H=4 L=4 T=64\nIMPORT_FAILURE NameError name 'vocab_size' is not defined\n",
+    "stderr": ""
+  },
+  "duration": 0.5243725776672363
+}

@@ -1,0 +1,2880 @@
+==========================================================================================
+BLOOM RUNTIME EVIDENCE BUNDLE V3
+==========================================================================================
+Generated: 2026-08-25T09:51:03-0400
+Root: /data/data/com.termux/files/home/BLOOM
+
+
+SYMBOL DEFINITIONS
+{"file": "bloom.py", "kind": "function", "name": "sprout", "line": 27, "end_line": 34, "qualified": "bloom.sprout"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "now", "line": 59, "end_line": 60, "qualified": "bloom_autonomous_operator.now"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "sha256_bytes", "line": 63, "end_line": 64, "qualified": "bloom_autonomous_operator.sha256_bytes"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "sha256_file", "line": 67, "end_line": 79, "qualified": "bloom_autonomous_operator.sha256_file"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "write_json", "line": 82, "end_line": 97, "qualified": "bloom_autonomous_operator.write_json"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "record_ledger", "line": 100, "end_line": 117, "qualified": "bloom_autonomous_operator.record_ledger"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "CommandResult", "line": 125, "end_line": 142, "qualified": "bloom_autonomous_operator.CommandResult"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "AutonomousTerminal", "line": 145, "end_line": 278, "qualified": "bloom_autonomous_operator.AutonomousTerminal"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "SourceIntrospector", "line": 285, "end_line": 808, "qualified": "bloom_autonomous_operator.SourceIntrospector"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "RuntimeProbe", "line": 815, "end_line": 956, "qualified": "bloom_autonomous_operator.RuntimeProbe"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "ErrorDiscerner", "line": 963, "end_line": 1338, "qualified": "bloom_autonomous_operator.ErrorDiscerner"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "ContractTracer", "line": 1345, "end_line": 1573, "qualified": "bloom_autonomous_operator.ContractTracer"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "RepairSafety", "line": 1580, "end_line": 1608, "qualified": "bloom_autonomous_operator.RepairSafety"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "ValidationEngine", "line": 1615, "end_line": 1640, "qualified": "bloom_autonomous_operator.ValidationEngine"}
+{"file": "bloom_autonomous_operator.py", "kind": "class", "name": "BloomAutonomousOperator", "line": 1647, "end_line": 2286, "qualified": "bloom_autonomous_operator.BloomAutonomousOperator"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "success", "line": 135, "end_line": 139, "qualified": "bloom_autonomous_operator.success"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "as_dict", "line": 141, "end_line": 142, "qualified": "bloom_autonomous_operator.as_dict"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "__init__", "line": 147, "end_line": 153, "qualified": "bloom_autonomous_operator.__init__"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "snapshot", "line": 155, "end_line": 181, "qualified": "bloom_autonomous_operator.snapshot"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "run", "line": 183, "end_line": 278, "qualified": "bloom_autonomous_operator.run"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "__init__", "line": 287, "end_line": 301, "qualified": "bloom_autonomous_operator.__init__"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "load", "line": 303, "end_line": 320, "qualified": "bloom_autonomous_operator.load"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "_target_names", "line": 322, "end_line": 350, "qualified": "bloom_autonomous_operator._target_names"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "_expr_names", "line": 352, "end_line": 360, "qualified": "bloom_autonomous_operator._expr_names"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "_call_name", "line": 362, "end_line": 385, "qualified": "bloom_autonomous_operator._call_name"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "inspect", "line": 387, "end_line": 624, "qualified": "bloom_autonomous_operator.inspect"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "source_segment", "line": 626, "end_line": 648, "qualified": "bloom_autonomous_operator.source_segment"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "line_context", "line": 650, "end_line": 681, "qualified": "bloom_autonomous_operator.line_context"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "symbol_forensics", "line": 683, "end_line": 707, "qualified": "bloom_autonomous_operator.symbol_forensics"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "unresolved_references", "line": 709, "end_line": 732, "qualified": "bloom_autonomous_operator.unresolved_references"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "dependency_graph", "line": 734, "end_line": 775, "qualified": "bloom_autonomous_operator.dependency_graph"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "symbol_order", "line": 777, "end_line": 784, "qualified": "bloom_autonomous_operator.symbol_order"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "summary", "line": 786, "end_line": 808, "qualified": "bloom_autonomous_operator.summary"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "__init__", "line": 817, "end_line": 821, "qualified": "bloom_autonomous_operator.__init__"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "import_model", "line": 823, "end_line": 913, "qualified": "bloom_autonomous_operator.import_model"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "corpus_probe", "line": 915, "end_line": 956, "qualified": "bloom_autonomous_operator.corpus_probe"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "classify", "line": 1031, "end_line": 1085, "qualified": "bloom_autonomous_operator.classify"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "analyze", "line": 1087, "end_line": 1338, "qualified": "bloom_autonomous_operator.analyze"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "__init__", "line": 1347, "end_line": 1351, "qualified": "bloom_autonomous_operator.__init__"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "trace_symbol", "line": 1353, "end_line": 1399, "qualified": "bloom_autonomous_operator.trace_symbol"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "trace_tokenization", "line": 1401, "end_line": 1508, "qualified": "bloom_autonomous_operator.trace_tokenization"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "model_contract", "line": 1510, "end_line": 1528, "qualified": "bloom_autonomous_operator.model_contract"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "batching_contract", "line": 1530, "end_line": 1541, "qualified": "bloom_autonomous_operator.batching_contract"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "inference_contract", "line": 1543, "end_line": 1550, "qualified": "bloom_autonomous_operator.inference_contract"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "full_trace", "line": 1552, "end_line": 1573, "qualified": "bloom_autonomous_operator.full_trace"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "__init__", "line": 1582, "end_line": 1587, "qualified": "bloom_autonomous_operator.__init__"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "backup", "line": 1589, "end_line": 1608, "qualified": "bloom_autonomous_operator.backup"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "__init__", "line": 1617, "end_line": 1621, "qualified": "bloom_autonomous_operator.__init__"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "compile", "line": 1623, "end_line": 1628, "qualified": "bloom_autonomous_operator.compile"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "import_probe", "line": 1630, "end_line": 1634, "qualified": "bloom_autonomous_operator.import_probe"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "corpus_probe", "line": 1636, "end_line": 1640, "qualified": "bloom_autonomous_operator.corpus_probe"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "__init__", "line": 1649, "end_line": 1683, "qualified": "bloom_autonomous_operator.__init__"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "inspect", "line": 1689, "end_line": 1697, "qualified": "bloom_autonomous_operator.inspect"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "probe", "line": 1703, "end_line": 1713, "qualified": "bloom_autonomous_operator.probe"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "print_symbol", "line": 1719, "end_line": 1761, "qualified": "bloom_autonomous_operator.print_symbol"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "print_deep_trace", "line": 1767, "end_line": 1883, "qualified": "bloom_autonomous_operator.print_deep_trace"}
+{"file": "bloom_autonomous_operator.py", "kind": "function", "name": "run", "line": 1889, "end_line": 2286, "qualified": "bloom_autonomous_operator.run"}
+{"file": "bloom_backoff_baseline.py", "kind": "function", "name": "tokenize", "line": 14, "end_line": 15, "qualified": "bloom_backoff_baseline.tokenize"}
+{"file": "bloom_backoff_baseline.py", "kind": "function", "name": "uni_prob", "line": 57, "end_line": 58, "qualified": "bloom_backoff_baseline.uni_prob"}
+{"file": "bloom_backoff_baseline.py", "kind": "function", "name": "bi_prob", "line": 60, "end_line": 68, "qualified": "bloom_backoff_baseline.bi_prob"}
+{"file": "bloom_backoff_baseline.py", "kind": "function", "name": "tri_prob", "line": 70, "end_line": 77, "qualified": "bloom_backoff_baseline.tri_prob"}
+{"file": "bloom_backoff_baseline.py", "kind": "function", "name": "evaluate", "line": 79, "end_line": 113, "qualified": "bloom_backoff_baseline.evaluate"}
+{"file": "bloom_baseline.py", "kind": "function", "name": "tokenize", "line": 12, "end_line": 16, "qualified": "bloom_baseline.tokenize"}
+{"file": "bloom_best_llm.py", "kind": "function", "name": "get_data", "line": 19, "end_line": 32, "qualified": "bloom_best_llm.get_data"}
+{"file": "bloom_best_llm.py", "kind": "function", "name": "rand_mat", "line": 41, "end_line": 43, "qualified": "bloom_best_llm.rand_mat"}
+{"file": "bloom_best_llm.py", "kind": "function", "name": "softmax_np", "line": 64, "end_line": 65, "qualified": "bloom_best_llm.softmax_np"}
+{"file": "bloom_best_llm.py", "kind": "function", "name": "forward_np", "line": 67, "end_line": 76, "qualified": "bloom_best_llm.forward_np"}
+{"file": "bloom_best_llm.py", "kind": "function", "name": "loss_np", "line": 78, "end_line": 82, "qualified": "bloom_best_llm.loss_np"}
+{"file": "bloom_best_llm.py", "kind": "function", "name": "mutate_np", "line": 85, "end_line": 91, "qualified": "bloom_best_llm.mutate_np"}
+{"file": "bloom_best_llm_v2.py", "kind": "function", "name": "forward", "line": 19, "end_line": 27, "qualified": "bloom_best_llm_v2.forward"}
+{"file": "bloom_best_llm_v2.py", "kind": "function", "name": "loss_and_grad", "line": 29, "end_line": 45, "qualified": "bloom_best_llm_v2.loss_and_grad"}
+{"file": "bloom_chat.py", "kind": "function", "name": "gen", "line": 14, "end_line": 27, "qualified": "bloom_chat.gen"}
+{"file": "bloom_colony.py", "kind": "function", "name": "get_spy", "line": 8, "end_line": 11, "qualified": "bloom_colony.get_spy"}
+{"file": "bloom_colony.py", "kind": "function", "name": "battery", "line": 13, "end_line": 15, "qualified": "bloom_colony.battery"}
+{"file": "bloom_colony.py", "kind": "function", "name": "s_t", "line": 16, "end_line": 22, "qualified": "bloom_colony.s_t"}
+{"file": "bloom_colony.py", "kind": "function", "name": "sigmoid", "line": 23, "end_line": 23, "qualified": "bloom_colony.sigmoid"}
+{"file": "bloom_colony.py", "kind": "function", "name": "do_step", "line": 43, "end_line": 67, "qualified": "bloom_colony.do_step"}
+{"file": "bloom_corpus.py", "kind": "function", "name": "sha256", "line": 39, "end_line": 40, "qualified": "bloom_corpus.sha256"}
+{"file": "bloom_corpus.py", "kind": "function", "name": "discover", "line": 42, "end_line": 69, "qualified": "bloom_corpus.discover"}
+{"file": "bloom_corpus.py", "kind": "function", "name": "main", "line": 71, "end_line": 135, "qualified": "bloom_corpus.main"}
+{"file": "bloom_corpus_clean.py", "kind": "function", "name": "normalize", "line": 29, "end_line": 33, "qualified": "bloom_corpus_clean.normalize"}
+{"file": "bloom_corpus_integrity.py", "kind": "function", "name": "tokenize", "line": 21, "end_line": 22, "qualified": "bloom_corpus_integrity.tokenize"}
+{"file": "bloom_corpus_semantic_audit.py", "kind": "function", "name": "words", "line": 25, "end_line": 29, "qualified": "bloom_corpus_semantic_audit.words"}
+{"file": "bloom_dataset_validation.py", "kind": "function", "name": "tokenize", "line": 16, "end_line": 20, "qualified": "bloom_dataset_validation.tokenize"}
+{"file": "bloom_english.py", "kind": "function", "name": "sample", "line": 25, "end_line": 35, "qualified": "bloom_english.sample"}
+{"file": "bloom_english_best.py", "kind": "function", "name": "sample", "line": 25, "end_line": 35, "qualified": "bloom_english_best.sample"}
+{"file": "bloom_finance.py", "kind": "function", "name": "market_regime", "line": 27, "end_line": 34, "qualified": "bloom_finance.market_regime"}
+{"file": "bloom_finance.py", "kind": "function", "name": "vigor", "line": 36, "end_line": 36, "qualified": "bloom_finance.vigor"}
+{"file": "bloom_finance.py", "kind": "function", "name": "sigmoid", "line": 37, "end_line": 37, "qualified": "bloom_finance.sigmoid"}
+{"file": "bloom_frontier.py", "kind": "function", "name": "rand", "line": 20, "end_line": 20, "qualified": "bloom_frontier.rand"}
+{"file": "bloom_frontier.py", "kind": "function", "name": "ln_fwd", "line": 42, "end_line": 45, "qualified": "bloom_frontier.ln_fwd"}
+{"file": "bloom_frontier.py", "kind": "function", "name": "ln_bwd", "line": 46, "end_line": 53, "qualified": "bloom_frontier.ln_bwd"}
+{"file": "bloom_frontier.py", "kind": "function", "name": "gelu", "line": 55, "end_line": 55, "qualified": "bloom_frontier.gelu"}
+{"file": "bloom_frontier.py", "kind": "function", "name": "gelu_bwd", "line": 56, "end_line": 61, "qualified": "bloom_frontier.gelu_bwd"}
+{"file": "bloom_frontier.py", "kind": "function", "name": "forward", "line": 65, "end_line": 96, "qualified": "bloom_frontier.forward"}
+{"file": "bloom_frontier.py", "kind": "function", "name": "sample", "line": 98, "end_line": 104, "qualified": "bloom_frontier.sample"}
+{"file": "bloom_groundbreaking.py", "kind": "function", "name": "forward", "line": 24, "end_line": 27, "qualified": "bloom_groundbreaking.forward"}
+{"file": "bloom_groundbreaking.py", "kind": "function", "name": "loss_grad", "line": 28, "end_line": 37, "qualified": "bloom_groundbreaking.loss_grad"}
+{"file": "bloom_introspection.py", "kind": "function", "name": "source_hash", "line": 39, "end_line": 45, "qualified": "bloom_introspection.source_hash"}
+{"file": "bloom_introspection.py", "kind": "function", "name": "symbol_name", "line": 48, "end_line": 75, "qualified": "bloom_introspection.symbol_name"}
+{"file": "bloom_introspection.py", "kind": "function", "name": "inspect_source", "line": 78, "end_line": 226, "qualified": "bloom_introspection.inspect_source"}
+{"file": "bloom_introspection.py", "kind": "function", "name": "run_import_probe", "line": 229, "end_line": 313, "qualified": "bloom_introspection.run_import_probe"}
+{"file": "bloom_introspection.py", "kind": "function", "name": "build_state", "line": 316, "end_line": 338, "qualified": "bloom_introspection.build_state"}
+{"file": "bloom_live.py", "kind": "function", "name": "get_spy", "line": 5, "end_line": 13, "qualified": "bloom_live.get_spy"}
+{"file": "bloom_live.py", "kind": "function", "name": "sig_for", "line": 27, "end_line": 43, "qualified": "bloom_live.sig_for"}
+{"file": "bloom_live.py", "kind": "function", "name": "vigor", "line": 45, "end_line": 45, "qualified": "bloom_live.vigor"}
+{"file": "bloom_live.py", "kind": "function", "name": "sigmoid", "line": 46, "end_line": 46, "qualified": "bloom_live.sigmoid"}
+{"file": "bloom_llm.py", "kind": "function", "name": "forward", "line": 18, "end_line": 31, "qualified": "bloom_llm.forward"}
+{"file": "bloom_max.py", "kind": "function", "name": "rand", "line": 26, "end_line": 26, "qualified": "bloom_max.rand"}
+{"file": "bloom_max.py", "kind": "function", "name": "ln", "line": 32, "end_line": 32, "qualified": "bloom_max.ln"}
+{"file": "bloom_max.py", "kind": "function", "name": "forward", "line": 33, "end_line": 45, "qualified": "bloom_max.forward"}
+{"file": "bloom_max.py", "kind": "function", "name": "embed", "line": 54, "end_line": 54, "qualified": "bloom_max.embed"}
+{"file": "bloom_max.py", "kind": "function", "name": "retrieve", "line": 56, "end_line": 62, "qualified": "bloom_max.retrieve"}
+{"file": "bloom_max.py", "kind": "function", "name": "gen", "line": 63, "end_line": 75, "qualified": "bloom_max.gen"}
+{"file": "bloom_merged.py", "kind": "function", "name": "moral_regime", "line": 39, "end_line": 48, "qualified": "bloom_merged.moral_regime"}
+{"file": "bloom_merged.py", "kind": "function", "name": "vigor", "line": 50, "end_line": 50, "qualified": "bloom_merged.vigor"}
+{"file": "bloom_merged.py", "kind": "function", "name": "sigmoid", "line": 51, "end_line": 51, "qualified": "bloom_merged.sigmoid"}
+{"file": "bloom_ngram_baseline.py", "kind": "function", "name": "tokenize", "line": 14, "end_line": 15, "qualified": "bloom_ngram_baseline.tokenize"}
+{"file": "bloom_ngram_baseline.py", "kind": "function", "name": "evaluate_ngram", "line": 17, "end_line": 59, "qualified": "bloom_ngram_baseline.evaluate_ngram"}
+{"file": "bloom_nobility.py", "kind": "function", "name": "moral_regime", "line": 34, "end_line": 44, "qualified": "bloom_nobility.moral_regime"}
+{"file": "bloom_nobility.py", "kind": "function", "name": "vigor", "line": 46, "end_line": 46, "qualified": "bloom_nobility.vigor"}
+{"file": "bloom_nobility.py", "kind": "function", "name": "sigmoid", "line": 47, "end_line": 47, "qualified": "bloom_nobility.sigmoid"}
+{"file": "bloom_operator.py", "kind": "class", "name": "CommandResult", "line": 32, "end_line": 49, "qualified": "bloom_operator.CommandResult"}
+{"file": "bloom_operator.py", "kind": "class", "name": "BloomTerminal", "line": 56, "end_line": 203, "qualified": "bloom_operator.BloomTerminal"}
+{"file": "bloom_operator.py", "kind": "class", "name": "SourceIntrospector", "line": 210, "end_line": 487, "qualified": "bloom_operator.SourceIntrospector"}
+{"file": "bloom_operator.py", "kind": "class", "name": "RuntimeProbe", "line": 494, "end_line": 588, "qualified": "bloom_operator.RuntimeProbe"}
+{"file": "bloom_operator.py", "kind": "class", "name": "ErrorDiscerner", "line": 595, "end_line": 702, "qualified": "bloom_operator.ErrorDiscerner"}
+{"file": "bloom_operator.py", "kind": "class", "name": "NextStepReasoner", "line": 709, "end_line": 986, "qualified": "bloom_operator.NextStepReasoner"}
+{"file": "bloom_operator.py", "kind": "class", "name": "RepairPlanner", "line": 993, "end_line": 1124, "qualified": "bloom_operator.RepairPlanner"}
+{"file": "bloom_operator.py", "kind": "class", "name": "BloomOperator", "line": 1131, "end_line": 1464, "qualified": "bloom_operator.BloomOperator"}
+{"file": "bloom_operator.py", "kind": "function", "name": "success", "line": 42, "end_line": 46, "qualified": "bloom_operator.success"}
+{"file": "bloom_operator.py", "kind": "function", "name": "as_dict", "line": 48, "end_line": 49, "qualified": "bloom_operator.as_dict"}
+{"file": "bloom_operator.py", "kind": "function", "name": "__init__", "line": 58, "end_line": 63, "qualified": "bloom_operator.__init__"}
+{"file": "bloom_operator.py", "kind": "function", "name": "snapshot", "line": 65, "end_line": 90, "qualified": "bloom_operator.snapshot"}
+{"file": "bloom_operator.py", "kind": "function", "name": "run", "line": 92, "end_line": 188, "qualified": "bloom_operator.run"}
+{"file": "bloom_operator.py", "kind": "function", "name": "record", "line": 190, "end_line": 203, "qualified": "bloom_operator.record"}
+{"file": "bloom_operator.py", "kind": "function", "name": "__init__", "line": 212, "end_line": 223, "qualified": "bloom_operator.__init__"}
+{"file": "bloom_operator.py", "kind": "function", "name": "load", "line": 225, "end_line": 244, "qualified": "bloom_operator.load"}
+{"file": "bloom_operator.py", "kind": "function", "name": "_inspect", "line": 246, "end_line": 386, "qualified": "bloom_operator._inspect"}
+{"file": "bloom_operator.py", "kind": "function", "name": "source_segment", "line": 388, "end_line": 438, "qualified": "bloom_operator.source_segment"}
+{"file": "bloom_operator.py", "kind": "function", "name": "top_level_source", "line": 440, "end_line": 453, "qualified": "bloom_operator.top_level_source"}
+{"file": "bloom_operator.py", "kind": "function", "name": "unresolved_references", "line": 455, "end_line": 487, "qualified": "bloom_operator.unresolved_references"}
+{"file": "bloom_operator.py", "kind": "function", "name": "__init__", "line": 496, "end_line": 501, "qualified": "bloom_operator.__init__"}
+{"file": "bloom_operator.py", "kind": "function", "name": "import_model", "line": 503, "end_line": 588, "qualified": "bloom_operator.import_model"}
+{"file": "bloom_operator.py", "kind": "function", "name": "classify", "line": 656, "end_line": 702, "qualified": "bloom_operator.classify"}
+{"file": "bloom_operator.py", "kind": "function", "name": "__init__", "line": 730, "end_line": 735, "qualified": "bloom_operator.__init__"}
+{"file": "bloom_operator.py", "kind": "function", "name": "required_symbol_report", "line": 737, "end_line": 756, "qualified": "bloom_operator.required_symbol_report"}
+{"file": "bloom_operator.py", "kind": "function", "name": "dependency_report", "line": 758, "end_line": 815, "qualified": "bloom_operator.dependency_report"}
+{"file": "bloom_operator.py", "kind": "function", "name": "decide", "line": 817, "end_line": 986, "qualified": "bloom_operator.decide"}
+{"file": "bloom_operator.py", "kind": "function", "name": "__init__", "line": 995, "end_line": 1002, "qualified": "bloom_operator.__init__"}
+{"file": "bloom_operator.py", "kind": "function", "name": "build", "line": 1004, "end_line": 1124, "qualified": "bloom_operator.build"}
+{"file": "bloom_operator.py", "kind": "function", "name": "__init__", "line": 1133, "end_line": 1158, "qualified": "bloom_operator.__init__"}
+{"file": "bloom_operator.py", "kind": "function", "name": "run", "line": 1160, "end_line": 1464, "qualified": "bloom_operator.run"}
+{"file": "bloom_organic.py", "kind": "function", "name": "get_spy", "line": 18, "end_line": 24, "qualified": "bloom_organic.get_spy"}
+{"file": "bloom_organic.py", "kind": "function", "name": "real_body", "line": 29, "end_line": 50, "qualified": "bloom_organic.real_body"}
+{"file": "bloom_organic.py", "kind": "function", "name": "organic_regime", "line": 53, "end_line": 58, "qualified": "bloom_organic.organic_regime"}
+{"file": "bloom_organic.py", "kind": "function", "name": "vigor", "line": 63, "end_line": 63, "qualified": "bloom_organic.vigor"}
+{"file": "bloom_organic.py", "kind": "function", "name": "sigmoid", "line": 64, "end_line": 64, "qualified": "bloom_organic.sigmoid"}
+{"file": "bloom_pesticide.py", "kind": "function", "name": "spray", "line": 13, "end_line": 48, "qualified": "bloom_pesticide.spray"}
+{"file": "bloom_pure.py", "kind": "function", "name": "forward", "line": 18, "end_line": 25, "qualified": "bloom_pure.forward"}
+{"file": "bloom_pure.py", "kind": "function", "name": "loss_grad", "line": 27, "end_line": 43, "qualified": "bloom_pure.loss_grad"}
+{"file": "bloom_real.py", "kind": "function", "name": "zeros", "line": 76, "end_line": 77, "qualified": "bloom_real.zeros"}
+{"file": "bloom_real.py", "kind": "function", "name": "randn", "line": 80, "end_line": 83, "qualified": "bloom_real.randn"}
+{"file": "bloom_real.py", "kind": "function", "name": "check_finite", "line": 86, "end_line": 91, "qualified": "bloom_real.check_finite"}
+{"file": "bloom_real.py", "kind": "function", "name": "precompute_rope", "line": 98, "end_line": 115, "qualified": "bloom_real.precompute_rope"}
+{"file": "bloom_real.py", "kind": "function", "name": "rope_rotate", "line": 118, "end_line": 142, "qualified": "bloom_real.rope_rotate"}
+{"file": "bloom_real.py", "kind": "function", "name": "rope_inverse", "line": 145, "end_line": 171, "qualified": "bloom_real.rope_inverse"}
+{"file": "bloom_real.py", "kind": "function", "name": "load_text", "line": 181, "end_line": 240, "qualified": "bloom_real.load_text"}
+{"file": "bloom_real.py", "kind": "function", "name": "get_batch", "line": 241, "end_line": 259, "qualified": "bloom_real.get_batch"}
+{"file": "bloom_real.py", "kind": "class", "name": "Linear", "line": 266, "end_line": 322, "qualified": "bloom_real.Linear"}
+{"file": "bloom_real.py", "kind": "class", "name": "LayerNorm", "line": 329, "end_line": 406, "qualified": "bloom_real.LayerNorm"}
+{"file": "bloom_real.py", "kind": "class", "name": "CausalSelfAttention", "line": 413, "end_line": 595, "qualified": "bloom_real.CausalSelfAttention"}
+{"file": "bloom_real.py", "kind": "class", "name": "MLP", "line": 602, "end_line": 665, "qualified": "bloom_real.MLP"}
+{"file": "bloom_real.py", "kind": "class", "name": "Block", "line": 672, "end_line": 723, "qualified": "bloom_real.Block"}
+{"file": "bloom_real.py", "kind": "class", "name": "GPT", "line": 730, "end_line": 874, "qualified": "bloom_real.GPT"}
+{"file": "bloom_real.py", "kind": "function", "name": "collect_params", "line": 881, "end_line": 965, "qualified": "bloom_real.collect_params"}
+{"file": "bloom_real.py", "kind": "function", "name": "count_params", "line": 968, "end_line": 980, "qualified": "bloom_real.count_params"}
+{"file": "bloom_real.py", "kind": "function", "name": "apply_grads", "line": 1063, "end_line": 1139, "qualified": "bloom_real.apply_grads"}
+{"file": "bloom_real.py", "kind": "function", "name": "save_ckpt", "line": 1146, "end_line": 1192, "qualified": "bloom_real.save_ckpt"}
+{"file": "bloom_real.py", "kind": "function", "name": "retrieve", "line": 1295, "end_line": 1320, "qualified": "bloom_real.retrieve"}
+{"file": "bloom_real.py", "kind": "function", "name": "generate", "line": 1327, "end_line": 1395, "qualified": "bloom_real.generate"}
+{"file": "bloom_real.py", "kind": "function", "name": "__init__", "line": 268, "end_line": 286, "qualified": "bloom_real.__init__"}
+{"file": "bloom_real.py", "kind": "function", "name": "forward", "line": 289, "end_line": 298, "qualified": "bloom_real.forward"}
+{"file": "bloom_real.py", "kind": "function", "name": "backward", "line": 301, "end_line": 322, "qualified": "bloom_real.backward"}
+{"file": "bloom_real.py", "kind": "function", "name": "__init__", "line": 331, "end_line": 346, "qualified": "bloom_real.__init__"}
+{"file": "bloom_real.py", "kind": "function", "name": "forward", "line": 349, "end_line": 371, "qualified": "bloom_real.forward"}
+{"file": "bloom_real.py", "kind": "function", "name": "backward", "line": 374, "end_line": 406, "qualified": "bloom_real.backward"}
+{"file": "bloom_real.py", "kind": "function", "name": "__init__", "line": 415, "end_line": 430, "qualified": "bloom_real.__init__"}
+{"file": "bloom_real.py", "kind": "function", "name": "forward", "line": 433, "end_line": 513, "qualified": "bloom_real.forward"}
+{"file": "bloom_real.py", "kind": "function", "name": "backward", "line": 516, "end_line": 595, "qualified": "bloom_real.backward"}
+{"file": "bloom_real.py", "kind": "function", "name": "__init__", "line": 604, "end_line": 609, "qualified": "bloom_real.__init__"}
+{"file": "bloom_real.py", "kind": "function", "name": "forward", "line": 612, "end_line": 631, "qualified": "bloom_real.forward"}
+{"file": "bloom_real.py", "kind": "function", "name": "backward", "line": 634, "end_line": 665, "qualified": "bloom_real.backward"}
+{"file": "bloom_real.py", "kind": "function", "name": "__init__", "line": 674, "end_line": 693, "qualified": "bloom_real.__init__"}
+{"file": "bloom_real.py", "kind": "function", "name": "forward", "line": 696, "end_line": 706, "qualified": "bloom_real.forward"}
+{"file": "bloom_real.py", "kind": "function", "name": "backward", "line": 709, "end_line": 723, "qualified": "bloom_real.backward"}
+{"file": "bloom_real.py", "kind": "function", "name": "__init__", "line": 732, "end_line": 768, "qualified": "bloom_real.__init__"}
+{"file": "bloom_real.py", "kind": "function", "name": "forward", "line": 771, "end_line": 833, "qualified": "bloom_real.forward"}
+{"file": "bloom_real.py", "kind": "function", "name": "backward", "line": 836, "end_line": 874, "qualified": "bloom_real.backward"}
+{"file": "bloom_real_training_probe.py", "kind": "function", "name": "get_num", "line": 333, "end_line": 338, "qualified": "bloom_real_training_probe.get_num"}
+{"file": "bloom_real_v2_runtime_truth.py", "kind": "function", "name": "digest", "line": 22, "end_line": 25, "qualified": "bloom_real_v2_runtime_truth.digest"}
+{"file": "bloom_repair_engine.py", "kind": "class", "name": "Symbol", "line": 138, "end_line": 144, "qualified": "bloom_repair_engine.Symbol"}
+{"file": "bloom_repair_engine.py", "kind": "class", "name": "Reference", "line": 148, "end_line": 153, "qualified": "bloom_repair_engine.Reference"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "now", "line": 156, "end_line": 157, "qualified": "bloom_repair_engine.now"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "rel", "line": 160, "end_line": 164, "qualified": "bloom_repair_engine.rel"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "sha256_file", "line": 167, "end_line": 178, "qualified": "bloom_repair_engine.sha256_file"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "append_ledger", "line": 181, "end_line": 195, "qualified": "bloom_repair_engine.append_ledger"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "default_state", "line": 198, "end_line": 212, "qualified": "bloom_repair_engine.default_state"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "load_json", "line": 215, "end_line": 227, "qualified": "bloom_repair_engine.load_json"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "save_json", "line": 230, "end_line": 244, "qualified": "bloom_repair_engine.save_json"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "load_state", "line": 247, "end_line": 259, "qualified": "bloom_repair_engine.load_state"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "save_state", "line": 262, "end_line": 272, "qualified": "bloom_repair_engine.save_state"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "load_learned", "line": 275, "end_line": 293, "qualified": "bloom_repair_engine.load_learned"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "save_learned", "line": 296, "end_line": 300, "qualified": "bloom_repair_engine.save_learned"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "python_files", "line": 303, "end_line": 315, "qualified": "bloom_repair_engine.python_files"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "auxiliary_files", "line": 318, "end_line": 343, "qualified": "bloom_repair_engine.auxiliary_files"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "parse_python", "line": 346, "end_line": 364, "qualified": "bloom_repair_engine.parse_python"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "build_symbol_graph", "line": 367, "end_line": 507, "qualified": "bloom_repair_engine.build_symbol_graph"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "definitions_by_name", "line": 510, "end_line": 522, "qualified": "bloom_repair_engine.definitions_by_name"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "contract_analysis", "line": 525, "end_line": 637, "qualified": "bloom_repair_engine.contract_analysis"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "compile_all", "line": 640, "end_line": 686, "qualified": "bloom_repair_engine.compile_all"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "find_entrypoints", "line": 689, "end_line": 766, "qualified": "bloom_repair_engine.find_entrypoints"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "runtime_smoke_test", "line": 769, "end_line": 838, "qualified": "bloom_repair_engine.runtime_smoke_test"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "extract_runtime_failures", "line": 841, "end_line": 943, "qualified": "bloom_repair_engine.extract_runtime_failures"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "detect_contract_failures", "line": 946, "end_line": 1010, "qualified": "bloom_repair_engine.detect_contract_failures"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "backup_file", "line": 1013, "end_line": 1034, "qualified": "bloom_repair_engine.backup_file"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "restore_backup", "line": 1037, "end_line": 1050, "qualified": "bloom_repair_engine.restore_backup"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "fingerprint_failure", "line": 1053, "end_line": 1068, "qualified": "bloom_repair_engine.fingerprint_failure"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "learned_match", "line": 1071, "end_line": 1096, "qualified": "bloom_repair_engine.learned_match"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "record_learning", "line": 1099, "end_line": 1144, "qualified": "bloom_repair_engine.record_learning"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "safe_text_replace", "line": 1147, "end_line": 1175, "qualified": "bloom_repair_engine.safe_text_replace"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "propose_runtime_repair", "line": 1178, "end_line": 1210, "qualified": "bloom_repair_engine.propose_runtime_repair"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "validate_system", "line": 1213, "end_line": 1250, "qualified": "bloom_repair_engine.validate_system"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "autonomous_repair_cycle", "line": 1253, "end_line": 1355, "qualified": "bloom_repair_engine.autonomous_repair_cycle"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "source_inventory", "line": 1358, "end_line": 1389, "qualified": "bloom_repair_engine.source_inventory"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "auxiliary_inventory", "line": 1392, "end_line": 1411, "qualified": "bloom_repair_engine.auxiliary_inventory"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "runtime_environment", "line": 1414, "end_line": 1429, "qualified": "bloom_repair_engine.runtime_environment"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "runtime_processes", "line": 1432, "end_line": 1447, "qualified": "bloom_repair_engine.runtime_processes"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "build_evidence_bundle", "line": 1450, "end_line": 1533, "qualified": "bloom_repair_engine.build_evidence_bundle"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "main", "line": 1536, "end_line": 1857, "qualified": "bloom_repair_engine.main"}
+{"file": "bloom_repair_engine.py", "kind": "function", "name": "context", "line": 389, "end_line": 392, "qualified": "bloom_repair_engine.context"}
+{"file": "bloom_semantic_extractor.py", "kind": "function", "name": "add", "line": 23, "end_line": 42, "qualified": "bloom_semantic_extractor.add"}
+{"file": "bloom_semantic_extractor.py", "kind": "function", "name": "extract_python", "line": 44, "end_line": 91, "qualified": "bloom_semantic_extractor.extract_python"}
+{"file": "bloom_semantic_extractor.py", "kind": "function", "name": "extract_text", "line": 94, "end_line": 104, "qualified": "bloom_semantic_extractor.extract_text"}
+{"file": "bloom_terminal.py", "kind": "class", "name": "TerminalResult", "line": 19, "end_line": 55, "qualified": "bloom_terminal.TerminalResult"}
+{"file": "bloom_terminal.py", "kind": "class", "name": "BloomTerminal", "line": 58, "end_line": 170, "qualified": "bloom_terminal.BloomTerminal"}
+{"file": "bloom_terminal.py", "kind": "function", "name": "__init__", "line": 20, "end_line": 36, "qualified": "bloom_terminal.__init__"}
+{"file": "bloom_terminal.py", "kind": "function", "name": "success", "line": 39, "end_line": 43, "qualified": "bloom_terminal.success"}
+{"file": "bloom_terminal.py", "kind": "function", "name": "as_dict", "line": 45, "end_line": 55, "qualified": "bloom_terminal.as_dict"}
+{"file": "bloom_terminal.py", "kind": "function", "name": "__init__", "line": 60, "end_line": 62, "qualified": "bloom_terminal.__init__"}
+{"file": "bloom_terminal.py", "kind": "function", "name": "_record", "line": 64, "end_line": 74, "qualified": "bloom_terminal._record"}
+{"file": "bloom_terminal.py", "kind": "function", "name": "snapshot", "line": 76, "end_line": 95, "qualified": "bloom_terminal.snapshot"}
+{"file": "bloom_terminal.py", "kind": "function", "name": "run", "line": 97, "end_line": 170, "qualified": "bloom_terminal.run"}
+{"file": "bloom_train_probe.py", "kind": "function", "name": "tokenize", "line": 18, "end_line": 19, "qualified": "bloom_train_probe.tokenize"}
+{"file": "bloom_train_probe.py", "kind": "function", "name": "ids", "line": 42, "end_line": 46, "qualified": "bloom_train_probe.ids"}
+{"file": "bloom_train_probe.py", "kind": "function", "name": "frequency_distribution", "line": 66, "end_line": 71, "qualified": "bloom_train_probe.frequency_distribution"}
+{"file": "bloom_train_probe.py", "kind": "function", "name": "evaluate_distribution", "line": 73, "end_line": 82, "qualified": "bloom_train_probe.evaluate_distribution"}
+{"file": "bloom_true.py", "kind": "function", "name": "step", "line": 19, "end_line": 20, "qualified": "bloom_true.step"}
+{"file": "bloom_true.py", "kind": "function", "name": "gen", "line": 56, "end_line": 70, "qualified": "bloom_true.gen"}
+{"file": "bloom_v2_final.py", "kind": "function", "name": "forward", "line": 14, "end_line": 17, "qualified": "bloom_v2_final.forward"}
+{"file": "bloom_v2_final.py", "kind": "function", "name": "loss_grad", "line": 18, "end_line": 27, "qualified": "bloom_v2_final.loss_grad"}
+{"file": "frontier.py", "kind": "function", "name": "season_signal", "line": 25, "end_line": 29, "qualified": "frontier.season_signal"}
+{"file": "frontier.py", "kind": "function", "name": "vigor", "line": 31, "end_line": 31, "qualified": "frontier.vigor"}
+{"file": "frontier.py", "kind": "function", "name": "sigmoid", "line": 32, "end_line": 32, "qualified": "frontier.sigmoid"}
+{"file": "hybrid_bloom.py", "kind": "function", "name": "get_spy", "line": 19, "end_line": 27, "qualified": "hybrid_bloom.get_spy"}
+{"file": "hybrid_bloom.py", "kind": "function", "name": "moral_regime", "line": 48, "end_line": 55, "qualified": "hybrid_bloom.moral_regime"}
+{"file": "hybrid_bloom.py", "kind": "function", "name": "market_signal", "line": 57, "end_line": 67, "qualified": "hybrid_bloom.market_signal"}
+{"file": "hybrid_bloom.py", "kind": "function", "name": "vigor", "line": 69, "end_line": 69, "qualified": "hybrid_bloom.vigor"}
+{"file": "hybrid_bloom.py", "kind": "function", "name": "sigmoid", "line": 70, "end_line": 70, "qualified": "hybrid_bloom.sigmoid"}
+{"file": "hybrid_bloom_v2.py", "kind": "function", "name": "get_spy", "line": 18, "end_line": 24, "qualified": "hybrid_bloom_v2.get_spy"}
+{"file": "hybrid_bloom_v2.py", "kind": "function", "name": "moral_regime", "line": 37, "end_line": 42, "qualified": "hybrid_bloom_v2.moral_regime"}
+{"file": "hybrid_bloom_v2.py", "kind": "function", "name": "market_signal", "line": 44, "end_line": 51, "qualified": "hybrid_bloom_v2.market_signal"}
+{"file": "hybrid_bloom_v2.py", "kind": "function", "name": "vigor", "line": 53, "end_line": 53, "qualified": "hybrid_bloom_v2.vigor"}
+{"file": "hybrid_bloom_v2.py", "kind": "function", "name": "sigmoid", "line": 54, "end_line": 54, "qualified": "hybrid_bloom_v2.sigmoid"}
+{"file": "hybrid_bloom_v3.py", "kind": "function", "name": "get_spy", "line": 12, "end_line": 20, "qualified": "hybrid_bloom_v3.get_spy"}
+{"file": "hybrid_bloom_v3.py", "kind": "function", "name": "moral_regime", "line": 32, "end_line": 37, "qualified": "hybrid_bloom_v3.moral_regime"}
+{"file": "hybrid_bloom_v3.py", "kind": "function", "name": "market_signal", "line": 39, "end_line": 51, "qualified": "hybrid_bloom_v3.market_signal"}
+{"file": "hybrid_bloom_v3.py", "kind": "function", "name": "vigor", "line": 53, "end_line": 53, "qualified": "hybrid_bloom_v3.vigor"}
+{"file": "hybrid_bloom_v3.py", "kind": "function", "name": "sigmoid", "line": 54, "end_line": 54, "qualified": "hybrid_bloom_v3.sigmoid"}
+
+IMPORTS
+{"file": "bloom.py", "line": 6, "module": "json", "alias": null}
+{"file": "bloom.py", "line": 6, "module": "random", "alias": null}
+{"file": "bloom.py", "line": 6, "module": "hashlib", "alias": null}
+{"file": "bloom.py", "line": 6, "module": "time", "alias": null}
+{"file": "bloom.py", "line": 7, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom2.py", "line": 1, "module": "json", "alias": null}
+{"file": "bloom2.py", "line": 1, "module": "random", "alias": null}
+{"file": "bloom_architecture_probe.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_architecture_probe.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_architecture_probe.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 2, "module": "__future__", "name": "annotations", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 5, "module": "hashlib", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 6, "module": "json", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 7, "module": "re", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 8, "module": "shlex", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 9, "module": "shutil", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 10, "module": "subprocess", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 11, "module": "sys", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 12, "module": "time", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 13, "module": "traceback", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 14, "module": "dataclasses", "name": "dataclass", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 14, "module": "dataclasses", "name": "asdict", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 15, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_autonomous_operator.py", "line": 16, "module": "typing", "name": "Any", "alias": null}
+{"file": "bloom_backoff_baseline.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_backoff_baseline.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_backoff_baseline.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_backoff_baseline.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_baseline.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_baseline.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_baseline.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_baseline.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_best_llm.py", "line": 9, "module": "json", "alias": null}
+{"file": "bloom_best_llm.py", "line": 9, "module": "math", "alias": null}
+{"file": "bloom_best_llm.py", "line": 9, "module": "random", "alias": null}
+{"file": "bloom_best_llm.py", "line": 9, "module": "hashlib", "alias": null}
+{"file": "bloom_best_llm.py", "line": 9, "module": "time", "alias": null}
+{"file": "bloom_best_llm.py", "line": 9, "module": "os", "alias": null}
+{"file": "bloom_best_llm.py", "line": 10, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_best_llm.py", "line": 11, "module": "requests", "alias": null}
+{"file": "bloom_best_llm.py", "line": 13, "module": "numpy", "alias": "np"}
+{"file": "bloom_best_llm_v2.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_best_llm_v2.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_best_llm_v2.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_chat.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_chat.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_colony.py", "line": 1, "module": "json", "alias": null}
+{"file": "bloom_colony.py", "line": 1, "module": "math", "alias": null}
+{"file": "bloom_colony.py", "line": 1, "module": "random", "alias": null}
+{"file": "bloom_colony.py", "line": 1, "module": "hashlib", "alias": null}
+{"file": "bloom_colony.py", "line": 1, "module": "sys", "alias": null}
+{"file": "bloom_colony.py", "line": 1, "module": "time", "alias": null}
+{"file": "bloom_colony.py", "line": 1, "module": "subprocess", "alias": null}
+{"file": "bloom_colony.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_colony.py", "line": 7, "module": "requests", "alias": null}
+{"file": "bloom_colony.py", "line": 7, "module": "numpy", "alias": "np"}
+{"file": "bloom_corpus.py", "line": 3, "module": "hashlib", "alias": null}
+{"file": "bloom_corpus.py", "line": 4, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_corpus_audit.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_corpus_audit.py", "line": 4, "module": "hashlib", "alias": null}
+{"file": "bloom_corpus_audit.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_corpus_clean.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_corpus_clean.py", "line": 4, "module": "re", "alias": null}
+{"file": "bloom_corpus_clean.py", "line": 5, "module": "hashlib", "alias": null}
+{"file": "bloom_corpus_integrity.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_corpus_integrity.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_corpus_integrity.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_corpus_integrity.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_corpus_profile.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_corpus_profile.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_corpus_profile.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_corpus_profile.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_corpus_semantic_audit.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_corpus_semantic_audit.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_corpus_semantic_audit.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_corpus_semantic_audit.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_dataset_validation.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_dataset_validation.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_dataset_validation.py", "line": 5, "module": "hashlib", "alias": null}
+{"file": "bloom_dataset_validation.py", "line": 6, "module": "re", "alias": null}
+{"file": "bloom_dataset_validation.py", "line": 7, "module": "math", "alias": null}
+{"file": "bloom_english.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_english.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_english.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_english_best.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_english_best.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_english_best.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_finance.py", "line": 1, "module": "json", "alias": null}
+{"file": "bloom_finance.py", "line": 1, "module": "random", "alias": null}
+{"file": "bloom_finance.py", "line": 1, "module": "hashlib", "alias": null}
+{"file": "bloom_finance.py", "line": 1, "module": "time", "alias": null}
+{"file": "bloom_finance.py", "line": 1, "module": "math", "alias": null}
+{"file": "bloom_finance.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_finance.py", "line": 3, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "bloom_fix_vocab_runtime.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_fix_vocab_runtime.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_fix_vocab_runtime.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_fix_vocab_runtime.py", "line": 6, "module": "shutil", "alias": null}
+{"file": "bloom_fix_vocab_runtime.py", "line": 7, "module": "py_compile", "alias": null}
+{"file": "bloom_frontier.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_frontier.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_frontier.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_full_execution_forensics.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_full_execution_forensics.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_full_execution_forensics.py", "line": 5, "module": "hashlib", "alias": null}
+{"file": "bloom_full_execution_forensics.py", "line": 6, "module": "re", "alias": null}
+{"file": "bloom_full_execution_forensics.py", "line": 7, "module": "sys", "alias": null}
+{"file": "bloom_full_execution_forensics.py", "line": 8, "module": "traceback", "alias": null}
+{"file": "bloom_full_execution_forensics.py", "line": 609, "module": "bloom_real", "alias": null}
+{"file": "bloom_groundbreaking.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_groundbreaking.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_groundbreaking.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_introspection.py", "line": 3, "module": "__future__", "name": "annotations", "alias": null}
+{"file": "bloom_introspection.py", "line": 5, "module": "ast", "alias": null}
+{"file": "bloom_introspection.py", "line": 6, "module": "hashlib", "alias": null}
+{"file": "bloom_introspection.py", "line": 7, "module": "json", "alias": null}
+{"file": "bloom_introspection.py", "line": 8, "module": "subprocess", "alias": null}
+{"file": "bloom_introspection.py", "line": 9, "module": "sys", "alias": null}
+{"file": "bloom_introspection.py", "line": 10, "module": "time", "alias": null}
+{"file": "bloom_introspection.py", "line": 11, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_live.py", "line": 1, "module": "json", "alias": null}
+{"file": "bloom_live.py", "line": 1, "module": "random", "alias": null}
+{"file": "bloom_live.py", "line": 1, "module": "math", "alias": null}
+{"file": "bloom_live.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_live.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_llm.py", "line": 7, "module": "json", "alias": null}
+{"file": "bloom_llm.py", "line": 7, "module": "math", "alias": null}
+{"file": "bloom_llm.py", "line": 7, "module": "random", "alias": null}
+{"file": "bloom_llm.py", "line": 7, "module": "hashlib", "alias": null}
+{"file": "bloom_llm.py", "line": 8, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_max.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_max.py", "line": 1, "module": "pathlib", "alias": null}
+{"file": "bloom_max.py", "line": 1, "module": "glob", "alias": null}
+{"file": "bloom_max.py", "line": 1, "module": "re", "alias": null}
+{"file": "bloom_max.py", "line": 82, "module": "random", "alias": null}
+{"file": "bloom_max.py", "line": 10, "module": "pdfplumber", "alias": null}
+{"file": "bloom_merged.py", "line": 10, "module": "json", "alias": null}
+{"file": "bloom_merged.py", "line": 10, "module": "random", "alias": null}
+{"file": "bloom_merged.py", "line": 10, "module": "hashlib", "alias": null}
+{"file": "bloom_merged.py", "line": 10, "module": "time", "alias": null}
+{"file": "bloom_merged.py", "line": 10, "module": "math", "alias": null}
+{"file": "bloom_merged.py", "line": 11, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_merged.py", "line": 12, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "bloom_ngram_baseline.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_ngram_baseline.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_ngram_baseline.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_ngram_baseline.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_nobility.py", "line": 6, "module": "json", "alias": null}
+{"file": "bloom_nobility.py", "line": 6, "module": "random", "alias": null}
+{"file": "bloom_nobility.py", "line": 6, "module": "hashlib", "alias": null}
+{"file": "bloom_nobility.py", "line": 6, "module": "time", "alias": null}
+{"file": "bloom_nobility.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_nobility.py", "line": 7, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_nobility.py", "line": 8, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "bloom_operator.py", "line": 3, "module": "__future__", "name": "annotations", "alias": null}
+{"file": "bloom_operator.py", "line": 5, "module": "ast", "alias": null}
+{"file": "bloom_operator.py", "line": 6, "module": "hashlib", "alias": null}
+{"file": "bloom_operator.py", "line": 7, "module": "json", "alias": null}
+{"file": "bloom_operator.py", "line": 8, "module": "os", "alias": null}
+{"file": "bloom_operator.py", "line": 9, "module": "re", "alias": null}
+{"file": "bloom_operator.py", "line": 10, "module": "shlex", "alias": null}
+{"file": "bloom_operator.py", "line": 11, "module": "subprocess", "alias": null}
+{"file": "bloom_operator.py", "line": 12, "module": "sys", "alias": null}
+{"file": "bloom_operator.py", "line": 13, "module": "time", "alias": null}
+{"file": "bloom_operator.py", "line": 14, "module": "traceback", "alias": null}
+{"file": "bloom_operator.py", "line": 15, "module": "dataclasses", "name": "dataclass", "alias": null}
+{"file": "bloom_operator.py", "line": 15, "module": "dataclasses", "name": "asdict", "alias": null}
+{"file": "bloom_operator.py", "line": 16, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_operator.py", "line": 17, "module": "typing", "name": "Any", "alias": null}
+{"file": "bloom_organic.py", "line": 10, "module": "json", "alias": null}
+{"file": "bloom_organic.py", "line": 10, "module": "hashlib", "alias": null}
+{"file": "bloom_organic.py", "line": 10, "module": "time", "alias": null}
+{"file": "bloom_organic.py", "line": 10, "module": "math", "alias": null}
+{"file": "bloom_organic.py", "line": 10, "module": "subprocess", "alias": null}
+{"file": "bloom_organic.py", "line": 10, "module": "os", "alias": null}
+{"file": "bloom_organic.py", "line": 11, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_organic.py", "line": 12, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "bloom_organic.py", "line": 13, "module": "requests", "alias": null}
+{"file": "bloom_pesticide.py", "line": 7, "module": "json", "alias": null}
+{"file": "bloom_pesticide.py", "line": 7, "module": "shutil", "alias": null}
+{"file": "bloom_pesticide.py", "line": 8, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_prepare_training.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_prepare_training.py", "line": 4, "module": "re", "alias": null}
+{"file": "bloom_prepare_training.py", "line": 5, "module": "random", "alias": null}
+{"file": "bloom_prepare_training.py", "line": 6, "module": "hashlib", "alias": null}
+{"file": "bloom_prepare_training_v2.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_prepare_training_v2.py", "line": 4, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "bloom_prepare_training_v2.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_prepare_training_v2.py", "line": 6, "module": "random", "alias": null}
+{"file": "bloom_prepare_training_v2.py", "line": 7, "module": "hashlib", "alias": null}
+{"file": "bloom_pure.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_pure.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_real.py", "line": 15, "module": "math", "alias": null}
+{"file": "bloom_real.py", "line": 16, "module": "glob", "alias": null}
+{"file": "bloom_real.py", "line": 17, "module": "pathlib", "alias": null}
+{"file": "bloom_real.py", "line": 18, "module": "pickle", "alias": null}
+{"file": "bloom_real.py", "line": 19, "module": "random", "alias": null}
+{"file": "bloom_real.py", "line": 20, "module": "time", "alias": null}
+{"file": "bloom_real.py", "line": 21, "module": "sys", "alias": null}
+{"file": "bloom_real.py", "line": 22, "module": "numpy", "alias": "np"}
+{"file": "bloom_real_data_truth.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_real_data_truth.py", "line": 4, "module": "sys", "alias": null}
+{"file": "bloom_real_data_truth.py", "line": 5, "module": "traceback", "alias": null}
+{"file": "bloom_real_data_truth.py", "line": 231, "module": "hashlib", "alias": null}
+{"file": "bloom_real_data_truth.py", "line": 26, "module": "bloom_real", "alias": null}
+{"file": "bloom_real_loader_audit.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_real_loader_audit.py", "line": 4, "module": "re", "alias": null}
+{"file": "bloom_real_loader_audit.py", "line": 5, "module": "ast", "alias": null}
+{"file": "bloom_real_runtime_probe.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_real_runtime_probe.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_real_runtime_probe.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_real_training_probe.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_real_training_probe.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_real_training_probe.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_real_training_probe.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_real_v2_bridge.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_real_v2_bridge.py", "line": 4, "module": "shutil", "alias": null}
+{"file": "bloom_real_v2_bridge.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_real_v2_bridge.py", "line": 6, "module": "sys", "alias": null}
+{"file": "bloom_real_v2_bridge.py", "line": 214, "module": "py_compile", "alias": null}
+{"file": "bloom_real_v2_runtime_truth.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_real_v2_runtime_truth.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_real_v2_runtime_truth.py", "line": 5, "module": "hashlib", "alias": null}
+{"file": "bloom_real_v2_runtime_truth.py", "line": 6, "module": "re", "alias": null}
+{"file": "bloom_real_v2_runtime_truth.py", "line": 7, "module": "sys", "alias": null}
+{"file": "bloom_real_v2_runtime_truth.py", "line": 209, "module": "bloom_real", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 22, "module": "__future__", "name": "annotations", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 24, "module": "ast", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 25, "module": "hashlib", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 26, "module": "json", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 27, "module": "os", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 28, "module": "re", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 29, "module": "shutil", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 30, "module": "subprocess", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 31, "module": "sys", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 32, "module": "time", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 33, "module": "traceback", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 34, "module": "dataclasses", "name": "dataclass", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 34, "module": "dataclasses", "name": "asdict", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 35, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_repair_engine.py", "line": 36, "module": "typing", "name": "Any", "alias": null}
+{"file": "bloom_repair_vocab_runtime.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_repair_vocab_runtime.py", "line": 4, "module": "re", "alias": null}
+{"file": "bloom_repair_vocab_runtime.py", "line": 5, "module": "shutil", "alias": null}
+{"file": "bloom_repair_vocab_runtime.py", "line": 6, "module": "py_compile", "alias": null}
+{"file": "bloom_repair_vocab_runtime.py", "line": 7, "module": "sys", "alias": null}
+{"file": "bloom_repair_vocab_runtime.py", "line": 385, "module": "bloom_real", "alias": null}
+{"file": "bloom_semantic_corpus.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_semantic_corpus.py", "line": 4, "module": "re", "alias": null}
+{"file": "bloom_semantic_corpus.py", "line": 5, "module": "hashlib", "alias": null}
+{"file": "bloom_semantic_extractor.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_semantic_extractor.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_semantic_extractor.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_semantic_extractor.py", "line": 6, "module": "hashlib", "alias": null}
+{"file": "bloom_terminal.py", "line": 3, "module": "__future__", "name": "annotations", "alias": null}
+{"file": "bloom_terminal.py", "line": 5, "module": "hashlib", "alias": null}
+{"file": "bloom_terminal.py", "line": 6, "module": "json", "alias": null}
+{"file": "bloom_terminal.py", "line": 7, "module": "os", "alias": null}
+{"file": "bloom_terminal.py", "line": 8, "module": "shlex", "alias": null}
+{"file": "bloom_terminal.py", "line": 9, "module": "subprocess", "alias": null}
+{"file": "bloom_terminal.py", "line": 10, "module": "time", "alias": null}
+{"file": "bloom_terminal.py", "line": 11, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_terminal.py", "line": 12, "module": "typing", "name": "Any", "alias": null}
+{"file": "bloom_train_probe.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_train_probe.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_train_probe.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_train_probe.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_train_probe.py", "line": 7, "module": "random", "alias": null}
+{"file": "bloom_training_diagnose.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_training_diagnose.py", "line": 4, "module": "re", "alias": null}
+{"file": "bloom_training_readiness.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_training_readiness.py", "line": 4, "module": "collections", "name": "Counter", "alias": null}
+{"file": "bloom_training_readiness.py", "line": 5, "module": "re", "alias": null}
+{"file": "bloom_training_readiness.py", "line": 6, "module": "math", "alias": null}
+{"file": "bloom_true.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_true.py", "line": 1, "module": "pathlib", "alias": null}
+{"file": "bloom_v2_final.py", "line": 1, "module": "requests", "alias": null}
+{"file": "bloom_v2_final.py", "line": 1, "module": "numpy", "alias": "np"}
+{"file": "bloom_v2_final.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_vocab_forensics.py", "line": 3, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "bloom_vocab_forensics.py", "line": 4, "module": "ast", "alias": null}
+{"file": "bloom_vocab_forensics.py", "line": 5, "module": "re", "alias": null}
+{"file": "evolve10.py", "line": 1, "module": "subprocess", "alias": null}
+{"file": "evolve10.py", "line": 1, "module": "json", "alias": null}
+{"file": "frontier.py", "line": 1, "module": "json", "alias": null}
+{"file": "frontier.py", "line": 1, "module": "random", "alias": null}
+{"file": "frontier.py", "line": 1, "module": "hashlib", "alias": null}
+{"file": "frontier.py", "line": 1, "module": "time", "alias": null}
+{"file": "frontier.py", "line": 1, "module": "math", "alias": null}
+{"file": "frontier.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "frontier.py", "line": 3, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "hybrid_bloom.py", "line": 8, "module": "json", "alias": null}
+{"file": "hybrid_bloom.py", "line": 8, "module": "random", "alias": null}
+{"file": "hybrid_bloom.py", "line": 8, "module": "hashlib", "alias": null}
+{"file": "hybrid_bloom.py", "line": 8, "module": "time", "alias": null}
+{"file": "hybrid_bloom.py", "line": 8, "module": "math", "alias": null}
+{"file": "hybrid_bloom.py", "line": 8, "module": "sys", "alias": null}
+{"file": "hybrid_bloom.py", "line": 9, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "hybrid_bloom.py", "line": 10, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "hybrid_bloom.py", "line": 12, "module": "requests", "alias": null}
+{"file": "hybrid_bloom_v2.py", "line": 7, "module": "json", "alias": null}
+{"file": "hybrid_bloom_v2.py", "line": 7, "module": "random", "alias": null}
+{"file": "hybrid_bloom_v2.py", "line": 7, "module": "hashlib", "alias": null}
+{"file": "hybrid_bloom_v2.py", "line": 7, "module": "time", "alias": null}
+{"file": "hybrid_bloom_v2.py", "line": 7, "module": "math", "alias": null}
+{"file": "hybrid_bloom_v2.py", "line": 8, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "hybrid_bloom_v2.py", "line": 9, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "hybrid_bloom_v2.py", "line": 11, "module": "requests", "alias": null}
+{"file": "hybrid_bloom_v3.py", "line": 1, "module": "json", "alias": null}
+{"file": "hybrid_bloom_v3.py", "line": 1, "module": "random", "alias": null}
+{"file": "hybrid_bloom_v3.py", "line": 1, "module": "hashlib", "alias": null}
+{"file": "hybrid_bloom_v3.py", "line": 1, "module": "time", "alias": null}
+{"file": "hybrid_bloom_v3.py", "line": 1, "module": "math", "alias": null}
+{"file": "hybrid_bloom_v3.py", "line": 2, "module": "pathlib", "name": "Path", "alias": null}
+{"file": "hybrid_bloom_v3.py", "line": 3, "module": "collections", "name": "defaultdict", "alias": null}
+{"file": "hybrid_bloom_v3.py", "line": 5, "module": "requests", "alias": null}
+{"file": "run50.py", "line": 1, "module": "subprocess", "alias": null}
+{"file": "run50.py", "line": 1, "module": "json", "alias": null}
+{"file": "run50.py", "line": 2, "module": "collections", "name": "defaultdict", "alias": null}
+
+CONTRACT ANALYSIS
+{
+  "vocabulary": {
+    "status": "MISSING_PRODUCER_EVIDENCE",
+    "producer_count": 0,
+    "consumer_count": 92,
+    "unresolved_count": 91,
+    "evidence": {
+      "producer_definitions": [],
+      "consumer_references": [
+        {
+          "file": "bloom.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 46,
+          "context": "        \"id\": f\"bl_{i}_{hashlib.sha256(str(time.time()+i).encode()).hexdigest()[:6]}\","
+        },
+        {
+          "file": "bloom.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 46,
+          "context": "        \"id\": f\"bl_{i}_{hashlib.sha256(str(time.time()+i).encode()).hexdigest()[:6]}\","
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 791,
+          "context": "                self.source.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "call",
+          "name": "decode",
+          "line": 233,
+          "context": "                stdout = stdout.decode("
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "call",
+          "name": "decode",
+          "line": 239,
+          "context": "                stderr = stderr.decode("
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 791,
+          "context": "                self.source.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "decode",
+          "line": 233,
+          "context": "                stdout = stdout.decode("
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "decode",
+          "line": 239,
+          "context": "                stderr = stderr.decode("
+        },
+        {
+          "file": "bloom_best_llm.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 136,
+          "context": "open(GARDEN/\"seedling.json\",\"w\").write(json.dumps({\"gen\":gen,\"id\":hashlib.sha256(str(time.time()).encode()).hexdigest()[:6],\"total_steps\":total_steps,\"vocab_size\":vocab_size}))"
+        },
+        {
+          "file": "bloom_best_llm.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 136,
+          "context": "open(GARDEN/\"seedling.json\",\"w\").write(json.dumps({\"gen\":gen,\"id\":hashlib.sha256(str(time.time()).encode()).hexdigest()[:6],\"total_steps\":total_steps,\"vocab_size\":vocab_size}))"
+        },
+        {
+          "file": "bloom_colony.py",
+          "kind": "call",
+          "name": "decode",
+          "line": 14,
+          "context": "    try: return json.loads(subprocess.check_output([\"termux-battery-status\"], timeout=1).decode())[\"percentage\"]/10"
+        },
+        {
+          "file": "bloom_colony.py",
+          "kind": "attribute",
+          "name": "decode",
+          "line": 14,
+          "context": "    try: return json.loads(subprocess.check_output([\"termux-battery-status\"], timeout=1).decode())[\"percentage\"]/10"
+        },
+        {
+          "file": "bloom_colony.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 56,
+          "context": "    rng=random.Random(int(hashlib.sha256(f\"{th['id']}{th['total']}\".encode()).hexdigest()[:8],16))"
+        },
+        {
+          "file": "bloom_colony.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 56,
+          "context": "    rng=random.Random(int(hashlib.sha256(f\"{th['id']}{th['total']}\".encode()).hexdigest()[:8],16))"
+        },
+        {
+          "file": "bloom_corpus.py",
+          "kind": "call",
+          "name": "decode",
+          "line": 60,
+          "context": "            text = data.decode(\"utf-8\", errors=\"strict\")"
+        },
+        {
+          "file": "bloom_corpus.py",
+          "kind": "attribute",
+          "name": "decode",
+          "line": 60,
+          "context": "            text = data.decode(\"utf-8\", errors=\"strict\")"
+        },
+        {
+          "file": "bloom_corpus_audit.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 21,
+          "context": "print(f\"SHA256     : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "file": "bloom_corpus_audit.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 21,
+          "context": "print(f\"SHA256     : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "file": "bloom_corpus_clean.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 41,
+          "context": "    digest = hashlib.sha256(content.encode(\"utf-8\")).hexdigest()"
+        },
+        {
+          "file": "bloom_corpus_clean.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 41,
+          "context": "    digest = hashlib.sha256(content.encode(\"utf-8\")).hexdigest()"
+        },
+        {
+          "file": "bloom_corpus_clean.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 70,
+          "context": "print(f\"SHA256            : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "file": "bloom_corpus_clean.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 70,
+          "context": "print(f\"SHA256            : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "file": "bloom_dataset_validation.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 54,
+          "context": "        x.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_dataset_validation.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 61,
+          "context": "        x.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_dataset_validation.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 54,
+          "context": "        x.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_dataset_validation.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 61,
+          "context": "        x.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_finance.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 46,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "bloom_finance.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 46,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "bloom_max.py",
+          "kind": "call",
+          "name": "retrieve",
+          "line": 66,
+          "context": "        hits=retrieve(prompt)"
+        },
+        {
+          "file": "bloom_merged.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 60,
+          "context": "        seed[\"id\"] = hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "bloom_merged.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 60,
+          "context": "        seed[\"id\"] = hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "bloom_nobility.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 56,
+          "context": "        seed[\"id\"] = hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "bloom_nobility.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 56,
+          "context": "        seed[\"id\"] = hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "call",
+          "name": "decode",
+          "line": 141,
+          "context": "                stdout = stdout.decode("
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "call",
+          "name": "decode",
+          "line": 147,
+          "context": "                stderr = stderr.decode("
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 1027,
+          "context": "                    self.inspector.source.encode("
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "decode",
+          "line": 141,
+          "context": "                stdout = stdout.decode("
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "decode",
+          "line": 147,
+          "context": "                stderr = stderr.decode("
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 1027,
+          "context": "                    self.inspector.source.encode("
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 1033,
+          "context": "                        self.inspector.source.encode("
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 1033,
+          "context": "                        self.inspector.source.encode("
+        },
+        {
+          "file": "bloom_organic.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 77,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "bloom_organic.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 77,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "bloom_organic.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 80,
+          "context": "            h=int(hashlib.sha256(f\"{seed['id']}{k}\".encode()).hexdigest()[:4],16)/65535*0.4-0.2"
+        },
+        {
+          "file": "bloom_organic.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 80,
+          "context": "            h=int(hashlib.sha256(f\"{seed['id']}{k}\".encode()).hexdigest()[:4],16)/65535*0.4-0.2"
+        },
+        {
+          "file": "bloom_prepare_training.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 84,
+          "context": "        line.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_prepare_training.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 61,
+          "context": "            line.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_prepare_training.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 84,
+          "context": "        line.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_prepare_training.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 61,
+          "context": "            line.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_prepare_training.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 136,
+          "context": "    f.write(f\"train_sha256={hashlib.sha256(train_text.encode()).hexdigest()}\\n\")"
+        },
+        {
+          "file": "bloom_prepare_training.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 137,
+          "context": "    f.write(f\"valid_sha256={hashlib.sha256(valid_text.encode()).hexdigest()}\\n\")"
+        },
+        {
+          "file": "bloom_prepare_training.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 136,
+          "context": "    f.write(f\"train_sha256={hashlib.sha256(train_text.encode()).hexdigest()}\\n\")"
+        },
+        {
+          "file": "bloom_prepare_training.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 137,
+          "context": "    f.write(f\"valid_sha256={hashlib.sha256(valid_text.encode()).hexdigest()}\\n\")"
+        },
+        {
+          "file": "bloom_prepare_training_v2.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 106,
+          "context": "        chunk.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_prepare_training_v2.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 78,
+          "context": "            chunk.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_prepare_training_v2.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 106,
+          "context": "        chunk.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_prepare_training_v2.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 78,
+          "context": "            chunk.lower().encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_prepare_training_v2.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 165,
+          "context": "        + hashlib.sha256(train_text.encode()).hexdigest()"
+        },
+        {
+          "file": "bloom_prepare_training_v2.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 170,
+          "context": "        + hashlib.sha256(valid_text.encode()).hexdigest()"
+        },
+        {
+          "file": "bloom_prepare_training_v2.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 165,
+          "context": "        + hashlib.sha256(train_text.encode()).hexdigest()"
+        },
+        {
+          "file": "bloom_prepare_training_v2.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 170,
+          "context": "        + hashlib.sha256(valid_text.encode()).hexdigest()"
+        },
+        {
+          "file": "bloom_real_data_truth.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 234,
+          "context": "    text.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_real_data_truth.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 159,
+          "context": "print(f\"Bytes UTF-8      : {len(text.encode('utf-8')):,}\")"
+        },
+        {
+          "file": "bloom_real_data_truth.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 234,
+          "context": "    text.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_real_data_truth.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 266,
+          "context": "        data.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_real_data_truth.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 159,
+          "context": "print(f\"Bytes UTF-8      : {len(text.encode('utf-8')):,}\")"
+        },
+        {
+          "file": "bloom_real_data_truth.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 266,
+          "context": "        data.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_real_v2_runtime_truth.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 312,
+          "context": "        runtime_train.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_real_v2_runtime_truth.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 359,
+          "context": "        runtime_valid.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_real_v2_runtime_truth.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 312,
+          "context": "        runtime_train.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_real_v2_runtime_truth.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 359,
+          "context": "        runtime_valid.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_repair_engine.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 1067,
+          "context": "        raw.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_repair_engine.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 1067,
+          "context": "        raw.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_repair_vocab_runtime.py",
+          "kind": "attribute",
+          "name": "stoi",
+          "line": 477,
+          "context": "runtime_stoi = bloom_real.stoi"
+        },
+        {
+          "file": "bloom_repair_vocab_runtime.py",
+          "kind": "attribute",
+          "name": "itos",
+          "line": 478,
+          "context": "runtime_itos = bloom_real.itos"
+        },
+        {
+          "file": "bloom_repair_vocab_runtime.py",
+          "kind": "attribute",
+          "name": "vocab_size",
+          "line": 479,
+          "context": "runtime_vocab_size = bloom_real.vocab_size"
+        },
+        {
+          "file": "bloom_semantic_corpus.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 65,
+          "context": "    digest = hashlib.sha256(content.encode(\"utf-8\")).hexdigest()"
+        },
+        {
+          "file": "bloom_semantic_corpus.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 65,
+          "context": "    digest = hashlib.sha256(content.encode(\"utf-8\")).hexdigest()"
+        },
+        {
+          "file": "bloom_semantic_corpus.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 92,
+          "context": "print(f\"SHA256              : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "file": "bloom_semantic_corpus.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 92,
+          "context": "print(f\"SHA256              : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "file": "bloom_semantic_extractor.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 149,
+          "context": "        normalized.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_semantic_extractor.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 149,
+          "context": "        normalized.encode(\"utf-8\")"
+        },
+        {
+          "file": "bloom_semantic_extractor.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 191,
+          "context": "    + hashlib.sha256(result.encode()).hexdigest()"
+        },
+        {
+          "file": "bloom_semantic_extractor.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 191,
+          "context": "    + hashlib.sha256(result.encode()).hexdigest()"
+        },
+        {
+          "file": "frontier.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 41,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "frontier.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 41,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "hybrid_bloom.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 79,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "hybrid_bloom.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 79,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "hybrid_bloom_v2.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 61,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "hybrid_bloom_v2.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 61,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "hybrid_bloom_v3.py",
+          "kind": "call",
+          "name": "encode",
+          "line": 61,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "file": "hybrid_bloom_v3.py",
+          "kind": "attribute",
+          "name": "encode",
+          "line": 61,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        }
+      ],
+      "unresolved_names": [
+        {
+          "name": "encode",
+          "file": "bloom.py",
+          "line": 46,
+          "context": "        \"id\": f\"bl_{i}_{hashlib.sha256(str(time.time()+i).encode()).hexdigest()[:6]}\","
+        },
+        {
+          "name": "encode",
+          "file": "bloom.py",
+          "line": 46,
+          "context": "        \"id\": f\"bl_{i}_{hashlib.sha256(str(time.time()+i).encode()).hexdigest()[:6]}\","
+        },
+        {
+          "name": "encode",
+          "file": "bloom_autonomous_operator.py",
+          "line": 791,
+          "context": "                self.source.encode(\"utf-8\")"
+        },
+        {
+          "name": "decode",
+          "file": "bloom_autonomous_operator.py",
+          "line": 233,
+          "context": "                stdout = stdout.decode("
+        },
+        {
+          "name": "decode",
+          "file": "bloom_autonomous_operator.py",
+          "line": 239,
+          "context": "                stderr = stderr.decode("
+        },
+        {
+          "name": "encode",
+          "file": "bloom_autonomous_operator.py",
+          "line": 791,
+          "context": "                self.source.encode(\"utf-8\")"
+        },
+        {
+          "name": "decode",
+          "file": "bloom_autonomous_operator.py",
+          "line": 233,
+          "context": "                stdout = stdout.decode("
+        },
+        {
+          "name": "decode",
+          "file": "bloom_autonomous_operator.py",
+          "line": 239,
+          "context": "                stderr = stderr.decode("
+        },
+        {
+          "name": "encode",
+          "file": "bloom_best_llm.py",
+          "line": 136,
+          "context": "open(GARDEN/\"seedling.json\",\"w\").write(json.dumps({\"gen\":gen,\"id\":hashlib.sha256(str(time.time()).encode()).hexdigest()[:6],\"total_steps\":total_steps,\"vocab_size\":vocab_size}))"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_best_llm.py",
+          "line": 136,
+          "context": "open(GARDEN/\"seedling.json\",\"w\").write(json.dumps({\"gen\":gen,\"id\":hashlib.sha256(str(time.time()).encode()).hexdigest()[:6],\"total_steps\":total_steps,\"vocab_size\":vocab_size}))"
+        },
+        {
+          "name": "decode",
+          "file": "bloom_colony.py",
+          "line": 14,
+          "context": "    try: return json.loads(subprocess.check_output([\"termux-battery-status\"], timeout=1).decode())[\"percentage\"]/10"
+        },
+        {
+          "name": "decode",
+          "file": "bloom_colony.py",
+          "line": 14,
+          "context": "    try: return json.loads(subprocess.check_output([\"termux-battery-status\"], timeout=1).decode())[\"percentage\"]/10"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_colony.py",
+          "line": 56,
+          "context": "    rng=random.Random(int(hashlib.sha256(f\"{th['id']}{th['total']}\".encode()).hexdigest()[:8],16))"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_colony.py",
+          "line": 56,
+          "context": "    rng=random.Random(int(hashlib.sha256(f\"{th['id']}{th['total']}\".encode()).hexdigest()[:8],16))"
+        },
+        {
+          "name": "decode",
+          "file": "bloom_corpus.py",
+          "line": 60,
+          "context": "            text = data.decode(\"utf-8\", errors=\"strict\")"
+        },
+        {
+          "name": "decode",
+          "file": "bloom_corpus.py",
+          "line": 60,
+          "context": "            text = data.decode(\"utf-8\", errors=\"strict\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_corpus_audit.py",
+          "line": 21,
+          "context": "print(f\"SHA256     : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_corpus_audit.py",
+          "line": 21,
+          "context": "print(f\"SHA256     : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_corpus_clean.py",
+          "line": 41,
+          "context": "    digest = hashlib.sha256(content.encode(\"utf-8\")).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_corpus_clean.py",
+          "line": 41,
+          "context": "    digest = hashlib.sha256(content.encode(\"utf-8\")).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_corpus_clean.py",
+          "line": 70,
+          "context": "print(f\"SHA256            : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_corpus_clean.py",
+          "line": 70,
+          "context": "print(f\"SHA256            : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_dataset_validation.py",
+          "line": 54,
+          "context": "        x.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_dataset_validation.py",
+          "line": 61,
+          "context": "        x.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_dataset_validation.py",
+          "line": 54,
+          "context": "        x.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_dataset_validation.py",
+          "line": 61,
+          "context": "        x.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_finance.py",
+          "line": 46,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_finance.py",
+          "line": 46,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_merged.py",
+          "line": 60,
+          "context": "        seed[\"id\"] = hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_merged.py",
+          "line": 60,
+          "context": "        seed[\"id\"] = hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_nobility.py",
+          "line": 56,
+          "context": "        seed[\"id\"] = hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_nobility.py",
+          "line": 56,
+          "context": "        seed[\"id\"] = hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "decode",
+          "file": "bloom_operator.py",
+          "line": 141,
+          "context": "                stdout = stdout.decode("
+        },
+        {
+          "name": "decode",
+          "file": "bloom_operator.py",
+          "line": 147,
+          "context": "                stderr = stderr.decode("
+        },
+        {
+          "name": "encode",
+          "file": "bloom_operator.py",
+          "line": 1027,
+          "context": "                    self.inspector.source.encode("
+        },
+        {
+          "name": "decode",
+          "file": "bloom_operator.py",
+          "line": 141,
+          "context": "                stdout = stdout.decode("
+        },
+        {
+          "name": "decode",
+          "file": "bloom_operator.py",
+          "line": 147,
+          "context": "                stderr = stderr.decode("
+        },
+        {
+          "name": "encode",
+          "file": "bloom_operator.py",
+          "line": 1027,
+          "context": "                    self.inspector.source.encode("
+        },
+        {
+          "name": "encode",
+          "file": "bloom_operator.py",
+          "line": 1033,
+          "context": "                        self.inspector.source.encode("
+        },
+        {
+          "name": "encode",
+          "file": "bloom_operator.py",
+          "line": 1033,
+          "context": "                        self.inspector.source.encode("
+        },
+        {
+          "name": "encode",
+          "file": "bloom_organic.py",
+          "line": 77,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_organic.py",
+          "line": 77,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_organic.py",
+          "line": 80,
+          "context": "            h=int(hashlib.sha256(f\"{seed['id']}{k}\".encode()).hexdigest()[:4],16)/65535*0.4-0.2"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_organic.py",
+          "line": 80,
+          "context": "            h=int(hashlib.sha256(f\"{seed['id']}{k}\".encode()).hexdigest()[:4],16)/65535*0.4-0.2"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training.py",
+          "line": 84,
+          "context": "        line.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training.py",
+          "line": 61,
+          "context": "            line.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training.py",
+          "line": 84,
+          "context": "        line.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training.py",
+          "line": 61,
+          "context": "            line.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training.py",
+          "line": 136,
+          "context": "    f.write(f\"train_sha256={hashlib.sha256(train_text.encode()).hexdigest()}\\n\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training.py",
+          "line": 137,
+          "context": "    f.write(f\"valid_sha256={hashlib.sha256(valid_text.encode()).hexdigest()}\\n\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training.py",
+          "line": 136,
+          "context": "    f.write(f\"train_sha256={hashlib.sha256(train_text.encode()).hexdigest()}\\n\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training.py",
+          "line": 137,
+          "context": "    f.write(f\"valid_sha256={hashlib.sha256(valid_text.encode()).hexdigest()}\\n\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training_v2.py",
+          "line": 106,
+          "context": "        chunk.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training_v2.py",
+          "line": 78,
+          "context": "            chunk.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training_v2.py",
+          "line": 106,
+          "context": "        chunk.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training_v2.py",
+          "line": 78,
+          "context": "            chunk.lower().encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training_v2.py",
+          "line": 165,
+          "context": "        + hashlib.sha256(train_text.encode()).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training_v2.py",
+          "line": 170,
+          "context": "        + hashlib.sha256(valid_text.encode()).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training_v2.py",
+          "line": 165,
+          "context": "        + hashlib.sha256(train_text.encode()).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_prepare_training_v2.py",
+          "line": 170,
+          "context": "        + hashlib.sha256(valid_text.encode()).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_data_truth.py",
+          "line": 234,
+          "context": "    text.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_data_truth.py",
+          "line": 159,
+          "context": "print(f\"Bytes UTF-8      : {len(text.encode('utf-8')):,}\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_data_truth.py",
+          "line": 234,
+          "context": "    text.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_data_truth.py",
+          "line": 266,
+          "context": "        data.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_data_truth.py",
+          "line": 159,
+          "context": "print(f\"Bytes UTF-8      : {len(text.encode('utf-8')):,}\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_data_truth.py",
+          "line": 266,
+          "context": "        data.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_v2_runtime_truth.py",
+          "line": 312,
+          "context": "        runtime_train.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_v2_runtime_truth.py",
+          "line": 359,
+          "context": "        runtime_valid.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_v2_runtime_truth.py",
+          "line": 312,
+          "context": "        runtime_train.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_real_v2_runtime_truth.py",
+          "line": 359,
+          "context": "        runtime_valid.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_repair_engine.py",
+          "line": 1067,
+          "context": "        raw.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_repair_engine.py",
+          "line": 1067,
+          "context": "        raw.encode(\"utf-8\")"
+        },
+        {
+          "name": "stoi",
+          "file": "bloom_repair_vocab_runtime.py",
+          "line": 477,
+          "context": "runtime_stoi = bloom_real.stoi"
+        },
+        {
+          "name": "itos",
+          "file": "bloom_repair_vocab_runtime.py",
+          "line": 478,
+          "context": "runtime_itos = bloom_real.itos"
+        },
+        {
+          "name": "vocab_size",
+          "file": "bloom_repair_vocab_runtime.py",
+          "line": 479,
+          "context": "runtime_vocab_size = bloom_real.vocab_size"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_semantic_corpus.py",
+          "line": 65,
+          "context": "    digest = hashlib.sha256(content.encode(\"utf-8\")).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_semantic_corpus.py",
+          "line": 65,
+          "context": "    digest = hashlib.sha256(content.encode(\"utf-8\")).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_semantic_corpus.py",
+          "line": 92,
+          "context": "print(f\"SHA256              : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_semantic_corpus.py",
+          "line": 92,
+          "context": "print(f\"SHA256              : {hashlib.sha256(text.encode()).hexdigest()}\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_semantic_extractor.py",
+          "line": 149,
+          "context": "        normalized.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_semantic_extractor.py",
+          "line": 149,
+          "context": "        normalized.encode(\"utf-8\")"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_semantic_extractor.py",
+          "line": 191,
+          "context": "    + hashlib.sha256(result.encode()).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "bloom_semantic_extractor.py",
+          "line": 191,
+          "context": "    + hashlib.sha256(result.encode()).hexdigest()"
+        },
+        {
+          "name": "encode",
+          "file": "frontier.py",
+          "line": 41,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "frontier.py",
+          "line": 41,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "hybrid_bloom.py",
+          "line": 79,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "hybrid_bloom.py",
+          "line": 79,
+          "context": "        seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "hybrid_bloom_v2.py",
+          "line": 61,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "hybrid_bloom_v2.py",
+          "line": 61,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "hybrid_bloom_v3.py",
+          "line": 61,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        },
+        {
+          "name": "encode",
+          "file": "hybrid_bloom_v3.py",
+          "line": 61,
+          "context": "        seed[\"gen\"]+=1; seed[\"id\"]=hashlib.sha256(f\"{seed['id']}{time.time()}\".encode()).hexdigest()[:6]"
+        }
+      ]
+    }
+  },
+  "model": {
+    "status": "MISSING_PRODUCER_EVIDENCE",
+    "producer_count": 0,
+    "consumer_count": 58,
+    "unresolved_count": 14,
+    "evidence": {
+      "producer_definitions": [],
+      "consumer_references": [
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 288,
+          "context": "        self.model = Path(model)"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 309,
+          "context": "        self.source = self.model.read_text("
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 789,
+          "context": "            \"model\": str(self.model),"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 794,
+          "context": "                self.model"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 304,
+          "context": "        if not self.model.exists():"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 306,
+          "context": "                f\"Missing model: {self.model}\""
+        },
+        {
+          "file": "bloom_best_llm_v2.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 54,
+          "context": "    logits,h=forward(xs, np.zeros((batch,hidden)))"
+        },
+        {
+          "file": "bloom_best_llm_v2.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 67,
+          "context": "            lg,h_full=forward(cur, h_state)"
+        },
+        {
+          "file": "bloom_frontier.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 112,
+          "context": "    logits,cache=forward(xb)"
+        },
+        {
+          "file": "bloom_frontier.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 101,
+          "context": "        cur=ids[:,-T:]; logits,_=forward(cur)"
+        },
+        {
+          "file": "bloom_frontier.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 131,
+          "context": "    dWhy = np.einsum('bth,btv->hv', forward(xb)[0]*0+0, dlogits) # placeholder will be overwritten below"
+        },
+        {
+          "file": "bloom_groundbreaking.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 44,
+          "context": "    logits,h=forward(xs,np.zeros((batch,hidden)))"
+        },
+        {
+          "file": "bloom_groundbreaking.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 53,
+          "context": "            lg,hf=forward(cur,hs); hs=hf[-1]; pr=np.exp(lg[-1]-np.max(lg[-1])); pr/=pr.sum(); nxt=np.random.choice(vs,p=pr[0]); out+=itos[nxt]; cur=np.array([[nxt]])"
+        },
+        {
+          "file": "bloom_llm.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 40,
+          "context": "    probs=forward(ctx)"
+        },
+        {
+          "file": "bloom_llm.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 51,
+          "context": "            p=forward(cur); r=random.random(); cum=0"
+        },
+        {
+          "file": "bloom_max.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 50,
+          "context": "    logits=forward(xs); e=np.exp(logits-logits.max(axis=1,keepdims=True)); e/=e.sum(axis=1,keepdims=True)"
+        },
+        {
+          "file": "bloom_max.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 74,
+          "context": "        logits=forward(np.array(ids[-T:])); idx=int(np.argmax(logits[-1])); out+=itos[idx]; ids.append(idx)"
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 214,
+          "context": "        self.model = Path(model)"
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 233,
+          "context": "        self.source = self.model.read_text("
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 227,
+          "context": "        if not self.model.exists():"
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 230,
+          "context": "                f\"Missing model: {self.model}\""
+        },
+        {
+          "file": "bloom_pure.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 50,
+          "context": "    logits,h=forward(xs,np.zeros((batch,hidden)))"
+        },
+        {
+          "file": "bloom_pure.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 59,
+          "context": "            lg,hf=forward(cur,hs); hs=hf[-1]"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 1016,
+          "context": "_, test_loss = model.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 1016,
+          "context": "_, test_loss = model.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 1212,
+          "context": "    _, loss = model.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 437,
+          "context": "        qkv = self.qkv.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 513,
+          "context": "        return self.proj.forward(y)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 614,
+          "context": "        h = self.fc1.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 627,
+          "context": "        return self.fc2.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 787,
+          "context": "        x = self.ln_f.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 789,
+          "context": "        logits = self.lm_head.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 1212,
+          "context": "    _, loss = model.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 1355,
+          "context": "        logits, _ = model.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "generate",
+          "line": 1454,
+          "context": "        generate("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 437,
+          "context": "        qkv = self.qkv.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 513,
+          "context": "        return self.proj.forward(y)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 614,
+          "context": "        h = self.fc1.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 627,
+          "context": "        return self.fc2.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 698,
+          "context": "        x = x + self.attn.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 702,
+          "context": "        x = x + self.mlp.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 785,
+          "context": "            x = block.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 787,
+          "context": "        x = self.ln_f.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 789,
+          "context": "        logits = self.lm_head.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 1355,
+          "context": "        logits, _ = model.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 698,
+          "context": "        x = x + self.attn.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 699,
+          "context": "            self.ln1.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 702,
+          "context": "        x = x + self.mlp.forward("
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 703,
+          "context": "            self.ln2.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 785,
+          "context": "            x = block.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 699,
+          "context": "            self.ln1.forward(x)"
+        },
+        {
+          "file": "bloom_real.py",
+          "kind": "attribute",
+          "name": "forward",
+          "line": 703,
+          "context": "            self.ln2.forward(x)"
+        },
+        {
+          "file": "bloom_repair_vocab_runtime.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 598,
+          "context": "    type(bloom_real.model).__name__"
+        },
+        {
+          "file": "bloom_repair_vocab_runtime.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 603,
+          "context": "    bloom_real.model.wte.shape[0]"
+        },
+        {
+          "file": "bloom_repair_vocab_runtime.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 608,
+          "context": "    bloom_real.model.wte.shape[1]"
+        },
+        {
+          "file": "bloom_repair_vocab_runtime.py",
+          "kind": "attribute",
+          "name": "model",
+          "line": 612,
+          "context": "    bloom_real.model.wte.shape[0]"
+        },
+        {
+          "file": "bloom_v2_final.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 34,
+          "context": "    logits,h=forward(xs,np.zeros((batch,hidden)))"
+        },
+        {
+          "file": "bloom_v2_final.py",
+          "kind": "call",
+          "name": "forward",
+          "line": 43,
+          "context": "            lg,hf=forward(cur,hs); hs=hf[-1]; pr=np.exp(lg[-1]-np.max(lg[-1])); pr/=pr.sum(); nxt=np.random.choice(vs,p=pr[0]); out+=itos[nxt]; cur=np.array([[nxt]])"
+        }
+      ],
+      "unresolved_names": [
+        {
+          "name": "model",
+          "file": "bloom_autonomous_operator.py",
+          "line": 288,
+          "context": "        self.model = Path(model)"
+        },
+        {
+          "name": "model",
+          "file": "bloom_autonomous_operator.py",
+          "line": 309,
+          "context": "        self.source = self.model.read_text("
+        },
+        {
+          "name": "model",
+          "file": "bloom_autonomous_operator.py",
+          "line": 789,
+          "context": "            \"model\": str(self.model),"
+        },
+        {
+          "name": "model",
+          "file": "bloom_autonomous_operator.py",
+          "line": 794,
+          "context": "                self.model"
+        },
+        {
+          "name": "model",
+          "file": "bloom_autonomous_operator.py",
+          "line": 304,
+          "context": "        if not self.model.exists():"
+        },
+        {
+          "name": "model",
+          "file": "bloom_autonomous_operator.py",
+          "line": 306,
+          "context": "                f\"Missing model: {self.model}\""
+        },
+        {
+          "name": "model",
+          "file": "bloom_operator.py",
+          "line": 214,
+          "context": "        self.model = Path(model)"
+        },
+        {
+          "name": "model",
+          "file": "bloom_operator.py",
+          "line": 233,
+          "context": "        self.source = self.model.read_text("
+        },
+        {
+          "name": "model",
+          "file": "bloom_operator.py",
+          "line": 227,
+          "context": "        if not self.model.exists():"
+        },
+        {
+          "name": "model",
+          "file": "bloom_operator.py",
+          "line": 230,
+          "context": "                f\"Missing model: {self.model}\""
+        },
+        {
+          "name": "model",
+          "file": "bloom_repair_vocab_runtime.py",
+          "line": 598,
+          "context": "    type(bloom_real.model).__name__"
+        },
+        {
+          "name": "model",
+          "file": "bloom_repair_vocab_runtime.py",
+          "line": 603,
+          "context": "    bloom_real.model.wte.shape[0]"
+        },
+        {
+          "name": "model",
+          "file": "bloom_repair_vocab_runtime.py",
+          "line": 608,
+          "context": "    bloom_real.model.wte.shape[1]"
+        },
+        {
+          "name": "model",
+          "file": "bloom_repair_vocab_runtime.py",
+          "line": 612,
+          "context": "    bloom_real.model.wte.shape[0]"
+        }
+      ]
+    }
+  },
+  "runtime": {
+    "status": "MISSING_PRODUCER_EVIDENCE",
+    "producer_count": 0,
+    "consumer_count": 65,
+    "unresolved_count": 7,
+    "evidence": {
+      "producer_definitions": [],
+      "consumer_references": [
+        {
+          "file": "bloom2.py",
+          "kind": "call",
+          "name": "load",
+          "line": 2,
+          "context": "with open(\"garden/seedling.json\") as f: seed=json.load(f)"
+        },
+        {
+          "file": "bloom2.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 2,
+          "context": "with open(\"garden/seedling.json\") as f: seed=json.load(f)"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "call",
+          "name": "load",
+          "line": 1691,
+          "context": "        self.inspector.load()"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 1691,
+          "context": "        self.inspector.load()"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "Load",
+          "line": 757,
+          "context": "                        ast.Load,"
+        },
+        {
+          "file": "bloom_autonomous_operator.py",
+          "kind": "attribute",
+          "name": "Load",
+          "line": 615,
+          "context": "                    ast.Load,"
+        },
+        {
+          "file": "bloom_best_llm.py",
+          "kind": "call",
+          "name": "load",
+          "line": 45,
+          "context": "try: seed=json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "bloom_best_llm.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 45,
+          "context": "try: seed=json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "bloom_best_llm.py",
+          "kind": "call",
+          "name": "load",
+          "line": 60,
+          "context": "        d=np.load(GARDEN/\"W.npz\"); Wxh=d[\"Wxh\"]; Whh=d[\"Whh\"]; Why=d[\"Why\"]; bh=d[\"bh\"]; by=d[\"by\"]"
+        },
+        {
+          "file": "bloom_best_llm.py",
+          "kind": "call",
+          "name": "load",
+          "line": 57,
+          "context": "    dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"] if (GARDEN/\"dew.json\").exists() else 100.0"
+        },
+        {
+          "file": "bloom_best_llm.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 60,
+          "context": "        d=np.load(GARDEN/\"W.npz\"); Wxh=d[\"Wxh\"]; Whh=d[\"Whh\"]; Why=d[\"Why\"]; bh=d[\"bh\"]; by=d[\"by\"]"
+        },
+        {
+          "file": "bloom_best_llm.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 57,
+          "context": "    dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"] if (GARDEN/\"dew.json\").exists() else 100.0"
+        },
+        {
+          "file": "bloom_chat.py",
+          "kind": "call",
+          "name": "load",
+          "line": 10,
+          "context": "    d=np.load(\"garden_best_llm/W.npz\"); Wxh,Whh,Why,bh,by=d[\"Wxh\"],d[\"Whh\"],d[\"Why\"],d[\"bh\"],d[\"by\"]"
+        },
+        {
+          "file": "bloom_chat.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 10,
+          "context": "    d=np.load(\"garden_best_llm/W.npz\"); Wxh,Whh,Why,bh,by=d[\"Wxh\"],d[\"Whh\"],d[\"Why\"],d[\"bh\"],d[\"by\"]"
+        },
+        {
+          "file": "bloom_finance.py",
+          "kind": "call",
+          "name": "load",
+          "line": 21,
+          "context": "    s=json.load(open(\"garden/seedling.json\"))"
+        },
+        {
+          "file": "bloom_finance.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 21,
+          "context": "    s=json.load(open(\"garden/seedling.json\"))"
+        },
+        {
+          "file": "bloom_finance.py",
+          "kind": "call",
+          "name": "load",
+          "line": 23,
+          "context": "        seed, capital, total = s, json.load(open(\"garden/dew.json\"))[\"dew\"], s.get(\"total_steps\",0)"
+        },
+        {
+          "file": "bloom_finance.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 23,
+          "context": "        seed, capital, total = s, json.load(open(\"garden/dew.json\"))[\"dew\"], s.get(\"total_steps\",0)"
+        },
+        {
+          "file": "bloom_full_execution_forensics.py",
+          "kind": "attribute",
+          "name": "Load",
+          "line": 561,
+          "context": "            if isinstance(child.ctx, ast.Load):"
+        },
+        {
+          "file": "bloom_full_execution_forensics.py",
+          "kind": "attribute",
+          "name": "Load",
+          "line": 321,
+          "context": "        and isinstance(n.ctx, ast.Load)"
+        },
+        {
+          "file": "bloom_introspection.py",
+          "kind": "attribute",
+          "name": "Load",
+          "line": 203,
+          "context": "        if not isinstance(node.ctx, ast.Load):"
+        },
+        {
+          "file": "bloom_live.py",
+          "kind": "call",
+          "name": "load",
+          "line": 21,
+          "context": "    s=json.load(open(\"garden_live/seedling.json\"))"
+        },
+        {
+          "file": "bloom_live.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 21,
+          "context": "    s=json.load(open(\"garden_live/seedling.json\"))"
+        },
+        {
+          "file": "bloom_live.py",
+          "kind": "call",
+          "name": "load",
+          "line": 24,
+          "context": "        capital=json.load(open(\"garden_live/dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "bloom_live.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 24,
+          "context": "        capital=json.load(open(\"garden_live/dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "bloom_llm.py",
+          "kind": "call",
+          "name": "load",
+          "line": 15,
+          "context": "try: seed=json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "bloom_llm.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 15,
+          "context": "try: seed=json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "bloom_merged.py",
+          "kind": "call",
+          "name": "load",
+          "line": 19,
+          "context": "    seed = json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "bloom_merged.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 19,
+          "context": "    seed = json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "bloom_merged.py",
+          "kind": "call",
+          "name": "load",
+          "line": 20,
+          "context": "    dew = json.load(open(GARDEN/\"dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "bloom_merged.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 20,
+          "context": "    dew = json.load(open(GARDEN/\"dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "bloom_nobility.py",
+          "kind": "call",
+          "name": "load",
+          "line": 26,
+          "context": "    s = json.load(open(\"garden_noble/seedling.json\"))"
+        },
+        {
+          "file": "bloom_nobility.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 26,
+          "context": "    s = json.load(open(\"garden_noble/seedling.json\"))"
+        },
+        {
+          "file": "bloom_nobility.py",
+          "kind": "call",
+          "name": "load",
+          "line": 29,
+          "context": "        honor = json.load(open(\"garden_noble/dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "bloom_nobility.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 29,
+          "context": "        honor = json.load(open(\"garden_noble/dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "call",
+          "name": "load",
+          "line": 1145,
+          "context": "        self.inspector.load()"
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 1145,
+          "context": "        self.inspector.load()"
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "Load",
+          "line": 379,
+          "context": "                ast.Load,"
+        },
+        {
+          "file": "bloom_operator.py",
+          "kind": "attribute",
+          "name": "Load",
+          "line": 796,
+          "context": "                    ast.Load,"
+        },
+        {
+          "file": "bloom_organic.py",
+          "kind": "call",
+          "name": "load",
+          "line": 60,
+          "context": "try: seed=json.load(open(GARDEN/\"seedling.json\")); dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]; total=seed.get(\"total_steps\",0)"
+        },
+        {
+          "file": "bloom_organic.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 60,
+          "context": "try: seed=json.load(open(GARDEN/\"seedling.json\")); dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]; total=seed.get(\"total_steps\",0)"
+        },
+        {
+          "file": "bloom_organic.py",
+          "kind": "call",
+          "name": "load",
+          "line": 60,
+          "context": "try: seed=json.load(open(GARDEN/\"seedling.json\")); dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]; total=seed.get(\"total_steps\",0)"
+        },
+        {
+          "file": "bloom_organic.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 60,
+          "context": "try: seed=json.load(open(GARDEN/\"seedling.json\")); dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]; total=seed.get(\"total_steps\",0)"
+        },
+        {
+          "file": "evolve10.py",
+          "kind": "call",
+          "name": "load",
+          "line": 4,
+          "context": "    seed=json.load(open(\"garden/seedling.json\"))"
+        },
+        {
+          "file": "evolve10.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 4,
+          "context": "    seed=json.load(open(\"garden/seedling.json\"))"
+        },
+        {
+          "file": "evolve10.py",
+          "kind": "call",
+          "name": "load",
+          "line": 5,
+          "context": "    print(f\"After run {i+5}: gen {seed['gen']} wind mean {seed['petals']['wind']['mean']:.3f} dew {json.load(open('garden/dew.json'))['dew']:.1f}\")"
+        },
+        {
+          "file": "evolve10.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 5,
+          "context": "    print(f\"After run {i+5}: gen {seed['gen']} wind mean {seed['petals']['wind']['mean']:.3f} dew {json.load(open('garden/dew.json'))['dew']:.1f}\")"
+        },
+        {
+          "file": "frontier.py",
+          "kind": "call",
+          "name": "load",
+          "line": 7,
+          "context": "    s=json.load(open(\"garden/seedling.json\"))"
+        },
+        {
+          "file": "frontier.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 7,
+          "context": "    s=json.load(open(\"garden/seedling.json\"))"
+        },
+        {
+          "file": "frontier.py",
+          "kind": "call",
+          "name": "load",
+          "line": 8,
+          "context": "    seed=s; dew=json.load(open(\"garden/dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "frontier.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 8,
+          "context": "    seed=s; dew=json.load(open(\"garden/dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "hybrid_bloom.py",
+          "kind": "call",
+          "name": "load",
+          "line": 34,
+          "context": "    seed=json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "hybrid_bloom.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 34,
+          "context": "    seed=json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "hybrid_bloom.py",
+          "kind": "call",
+          "name": "load",
+          "line": 35,
+          "context": "    dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "hybrid_bloom.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 35,
+          "context": "    dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "hybrid_bloom_v2.py",
+          "kind": "call",
+          "name": "load",
+          "line": 30,
+          "context": "    seed=json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "hybrid_bloom_v2.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 30,
+          "context": "    seed=json.load(open(GARDEN/\"seedling.json\"))"
+        },
+        {
+          "file": "hybrid_bloom_v2.py",
+          "kind": "call",
+          "name": "load",
+          "line": 31,
+          "context": "    dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "hybrid_bloom_v2.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 31,
+          "context": "    dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]"
+        },
+        {
+          "file": "hybrid_bloom_v3.py",
+          "kind": "call",
+          "name": "load",
+          "line": 27,
+          "context": "    seed=json.load(open(GARDEN/\"seedling.json\")); dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]; total=seed.get(\"total_steps\",0)"
+        },
+        {
+          "file": "hybrid_bloom_v3.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 27,
+          "context": "    seed=json.load(open(GARDEN/\"seedling.json\")); dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]; total=seed.get(\"total_steps\",0)"
+        },
+        {
+          "file": "hybrid_bloom_v3.py",
+          "kind": "call",
+          "name": "load",
+          "line": 27,
+          "context": "    seed=json.load(open(GARDEN/\"seedling.json\")); dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]; total=seed.get(\"total_steps\",0)"
+        },
+        {
+          "file": "hybrid_bloom_v3.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 27,
+          "context": "    seed=json.load(open(GARDEN/\"seedling.json\")); dew=json.load(open(GARDEN/\"dew.json\"))[\"dew\"]; total=seed.get(\"total_steps\",0)"
+        },
+        {
+          "file": "run50.py",
+          "kind": "call",
+          "name": "load",
+          "line": 20,
+          "context": "seed=json.load(open(\"garden/seedling.json\"))"
+        },
+        {
+          "file": "run50.py",
+          "kind": "attribute",
+          "name": "load",
+          "line": 20,
+          "context": "seed=json.load(open(\"garden/seedling.json\"))"
+        }
+      ],
+      "unresolved_names": [
+        {
+          "name": "Load",
+          "file": "bloom_autonomous_operator.py",
+          "line": 757,
+          "context": "                        ast.Load,"
+        },
+        {
+          "name": "Load",
+          "file": "bloom_autonomous_operator.py",
+          "line": 615,
+          "context": "                    ast.Load,"
+        },
+        {
+          "name": "Load",
+          "file": "bloom_full_execution_forensics.py",
+          "line": 561,
+          "context": "            if isinstance(child.ctx, ast.Load):"
+        },
+        {
+          "name": "Load",
+          "file": "bloom_full_execution_forensics.py",
+          "line": 321,
+          "context": "        and isinstance(n.ctx, ast.Load)"
+        },
+        {
+          "name": "Load",
+          "file": "bloom_introspection.py",
+          "line": 203,
+          "context": "        if not isinstance(node.ctx, ast.Load):"
+        },
+        {
+          "name": "Load",
+          "file": "bloom_operator.py",
+          "line": 379,
+          "context": "                ast.Load,"
+        },
+        {
+          "name": "Load",
+          "file": "bloom_operator.py",
+          "line": 796,
+          "context": "                    ast.Load,"
+        }
+      ]
+    }
+  },
+  "learning": {
+    "status": "NO_STRONG_EVIDENCE",
+    "producer_count": 0,
+    "consumer_count": 0,
+    "unresolved_count": 0,
+    "evidence": {
+      "producer_definitions": [],
+      "consumer_references": [],
+      "unresolved_names": []
+    }
+  }
+}
+
+FAILURES
+[
+  {
+    "severity": "HIGH",
+    "contract": "vocabulary",
+    "problem": "Consumer evidence exists, but this static pass found no matching local producer definition.",
+    "producer_count": 0,
+    "consumer_count": 92,
+    "unresolved_count": 91,
+    "action": "Trace actual imports, external modules, configuration, checkpoint metadata, and runtime initialization before repair.",
+    "fabrication_allowed": false
+  },
+  {
+    "severity": "HIGH",
+    "contract": "model",
+    "problem": "Consumer evidence exists, but this static pass found no matching local producer definition.",
+    "producer_count": 0,
+    "consumer_count": 58,
+    "unresolved_count": 14,
+    "action": "Trace actual imports, external modules, configuration, checkpoint metadata, and runtime initialization before repair.",
+    "fabrication_allowed": false
+  },
+  {
+    "severity": "HIGH",
+    "contract": "runtime",
+    "problem": "Consumer evidence exists, but this static pass found no matching local producer definition.",
+    "producer_count": 0,
+    "consumer_count": 65,
+    "unresolved_count": 7,
+    "action": "Trace actual imports, external modules, configuration, checkpoint metadata, and runtime initialization before repair.",
+    "fabrication_allowed": false
+  },
+  {
+    "file": "bloom_terminal.py",
+    "kind": "timeout",
+    "detail": "Process timeout.",
+    "output": "Command '['/data/data/com.termux/files/usr/bin/python', '-u', '/data/data/com.termux/files/home/BLOOM/bloom_terminal.py']' timed out after 8 seconds"
+  }
+]

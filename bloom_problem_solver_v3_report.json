@@ -1,0 +1,199 @@
+{
+  "version": 3,
+  "time": "2026-08-25T10:02:21-0400",
+  "root": "/data/data/com.termux/files/home/BLOOM",
+  "targets": [
+    "/data/data/com.termux/files/home/BLOOM/bloom_real.py",
+    "/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py"
+  ],
+  "results": {
+    "bloom_real.py": {
+      "status": "unrepairable_with_verified_rules",
+      "round": 1,
+      "runtime": {
+        "status": "FAIL",
+        "returncode": 1,
+        "stdout": "[MODEL] Building small D=128 H=4 L=4 T=64\n",
+        "stderr": "Traceback (most recent call last):\n  File \"/data/data/com.termux/files/home/BLOOM/bloom_real.py\", line 993, in <module>\n    vocab_size,\n    ^^^^^^^^^^\nNameError: name 'vocab_size' is not defined\n"
+      },
+      "exception": "NameError: name 'vocab_size' is not defined",
+      "locations": [
+        {
+          "file": "/data/data/com.termux/files/home/BLOOM/bloom_real.py",
+          "line": 993,
+          "function": "<module>"
+        }
+      ]
+    },
+    "hybrid_bloom.py": {
+      "status": "unrepairable_with_verified_rules",
+      "round": 1,
+      "runtime": {
+        "status": "FAIL",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py\", line 90, in <module>\n    market_sig = market_signal(total)\n  File \"/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py\", line 59, in market_signal\n    p=closes[idx%len(closes)]; ma20=sum(closes[max(0,idx-20):idx+1])/len(closes[max(0,idx-20):idx+1])\n                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nZeroDivisionError: division by zero\n"
+      },
+      "exception": "ZeroDivisionError: division by zero",
+      "locations": [
+        {
+          "file": "/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py",
+          "line": 90,
+          "function": "<module>"
+        },
+        {
+          "file": "/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py",
+          "line": 59,
+          "function": "market_signal"
+        }
+      ]
+    }
+  },
+  "final_validation": {
+    "bloom_real.py": {
+      "compile": true,
+      "runtime": {
+        "status": "FAIL",
+        "returncode": 1,
+        "stdout": "[MODEL] Building small D=128 H=4 L=4 T=64\n",
+        "stderr": "Traceback (most recent call last):\n  File \"/data/data/com.termux/files/home/BLOOM/bloom_real.py\", line 993, in <module>\n    vocab_size,\n    ^^^^^^^^^^\nNameError: name 'vocab_size' is not defined\n"
+      }
+    },
+    "hybrid_bloom.py": {
+      "compile": true,
+      "runtime": {
+        "status": "FAIL",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py\", line 90, in <module>\n    market_sig = market_signal(total)\n  File \"/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py\", line 59, in market_signal\n    p=closes[idx%len(closes)]; ma20=sum(closes[max(0,idx-20):idx+1])/len(closes[max(0,idx-20):idx+1])\n                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nZeroDivisionError: division by zero\n"
+      }
+    }
+  },
+  "history": [
+    {
+      "time": "2026-08-25T10:02:18-0400",
+      "target": "bloom_real.py",
+      "round": 1,
+      "status": "FAIL",
+      "exception": "NameError: name 'vocab_size' is not defined",
+      "locations": [
+        {
+          "file": "/data/data/com.termux/files/home/BLOOM/bloom_real.py",
+          "line": 993,
+          "function": "<module>"
+        }
+      ],
+      "context": [
+        {
+          "line": 988,
+          "text": "    f\"[MODEL] Building {PRESET} \""
+        },
+        {
+          "line": 989,
+          "text": "    f\"D={D} H={H} L={L} T={T}\""
+        },
+        {
+          "line": 990,
+          "text": ")"
+        },
+        {
+          "line": 991,
+          "text": ""
+        },
+        {
+          "line": 992,
+          "text": "model = GPT("
+        },
+        {
+          "line": 993,
+          "text": "    vocab_size,"
+        },
+        {
+          "line": 994,
+          "text": "    D,"
+        },
+        {
+          "line": 995,
+          "text": "    H,"
+        },
+        {
+          "line": 996,
+          "text": "    L,"
+        },
+        {
+          "line": 997,
+          "text": "    T"
+        },
+        {
+          "line": 998,
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "time": "2026-08-25T10:02:19-0400",
+      "target": "hybrid_bloom.py",
+      "round": 1,
+      "status": "FAIL",
+      "exception": "ZeroDivisionError: division by zero",
+      "locations": [
+        {
+          "file": "/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py",
+          "line": 90,
+          "function": "<module>"
+        },
+        {
+          "file": "/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py",
+          "line": 59,
+          "function": "market_signal"
+        }
+      ],
+      "context": [
+        {
+          "line": 54,
+          "text": "    else: base={\"power\":random.uniform(2,6),\"need\":random.uniform(6,10),\"oath\":random.uniform(6,10),\"risk\":random.uniform(6,10)}"
+        },
+        {
+          "line": 55,
+          "text": "    return base, regime"
+        },
+        {
+          "line": 56,
+          "text": ""
+        },
+        {
+          "line": 57,
+          "text": "def market_signal(idx):"
+        },
+        {
+          "line": 58,
+          "text": "    if not MARKET: return {\"momentum\":random.uniform(0,10),\"liquidity\":random.uniform(0,10),\"value\":random.uniform(0,10),\"volatility\":random.uniform(0,10)}"
+        },
+        {
+          "line": 59,
+          "text": "    p=closes[idx%len(closes)]; ma20=sum(closes[max(0,idx-20):idx+1])/len(closes[max(0,idx-20):idx+1])"
+        },
+        {
+          "line": 60,
+          "text": "    mom=max(0,min(10,(p/ma20-0.95)*100))"
+        },
+        {
+          "line": 61,
+          "text": "    vol=volumes[idx%len(volumes)]; vma=sum(volumes[max(0,idx-20):idx+1])/len(volumes[max(0,idx-20):idx+1])"
+        },
+        {
+          "line": 62,
+          "text": "    liq=max(0,min(10,vol/vma*5))"
+        },
+        {
+          "line": 63,
+          "text": "    ma200=sum(closes[max(0,idx-200):idx+1])/min(200,idx+1)"
+        },
+        {
+          "line": 64,
+          "text": "    val=max(0,min(10,10-abs(p/ma200-1)*100))"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+vINIIUS:toudi :ecote ta ad p taly he, bondr sept m wu.'rwg
+I' the prithe butse yot gredre. Ho
+DEATH gen0 dew -0.2 -> REBORN
+uptime = oath (how long you've kept promise alive)
+1. HEURISTIC - gather all sources at once
+Whior their, the pit!
+x = x1 + fc2, so dx goes to both
+FioLe walle th your Cara foff 'th the powerid thell can ravy hy hat'd yup ornt: thaiw, whem----hit, shat Cominbus.
+Wre wirtB anth ratiss,
+sir, by then I rmy tell and catricriarive the membors doue makes s'ed! you
+thate; she cidscy for
+Your then: benoder goond fit noulls: all thaili beever Si
+Belike corsting the indett, Junds. Have for
+Lith hin breworse man thane'track, but I to ear's. I shall nor walls, brain you that I thou, my co pumpiricet so by the vile malow!
+Soors: Rome moster oup: are thes to cursole.
+0=plenty, 1=scarcity, 2=temptation, 3=crisis
+We the peovedre, no. badt nou and ant har exstile I to mont
+Not enough real training text. Put more text into ~/BLOOM/my_texts.txt or ~/BLOOM/archives/
+Sorke pir be these'rmsend nir knop
+New arch - nothing from old project
+But hewo lesply's vactis is to furen oute!
+250 gen0 dew 66.7 loss 2.087 best 1.964 | Fir the to thee me!
+project to vocab logit = vigor per token
+He halling him of plas ferthy which a Firca the thiugs do sour
+The loved gindyed wish thee; it light agoor for: house than a this former, my lake tada:
+O, not she that shishe toof eart heart,
+That wars'd he dimppationt growiter blooder to the lid teat ands, why: ham te
+850 gen1 dew 0.4 loss 1.856 best 1.628 | Fro, thes ag them tick
+BLOOM PESTICIDE - protects all gardens from code bugs - quarantines corrupted jsonl - kills runaway petals with NaN/inf - antivirus same as terminal but for all gardens
+Mrrecor wurllenor wrof re.
+In br non: whe haled I bus,
+HYBRID BLOOM - 8 petals: power, need, oath, risk + momentum, liquidity, value, volatility - 4 moral regimes: plenty/scarcity/temptation/crisis (nobility) - Market sense: SPY momentum/liquidity/value/vol (terminal) - Autopoiesis: dew=honor, -1.1 cost, death <=0, gen++, risk-=0.25 courage, need+=0.15 compassion
+I here, ull, where, that, but the for his no
+make my like of o'thori' men ownice
+organic regime emerges, not synthetic
+200 gen0 dew 78.7 loss 2.149 best 1.993 | F
+gene mix from best survivor
+the would caperce; than the with thet a cur?
+Wh at you'p wo thaI iom, youb teve wirs, I's st kn bem dees;
+Honor P&L: helping costs, but builds legacy
+To If af eft'e. I have gene's a tare fill.
+What hale patrye: kfor, growe , me.
+My, loke nock'st pructre's.
+what bling saren mo gleebrabyelienesy know oneld me heir bean as shaced t
+Hand me moonvad y tuct hemo,
+As your Rear a that eplake d ard.
+He and with of our pitamed to the townd ullise with the sond:
+Test 1 leaf first, 24h check
+sort goods, and and thon
+And fig the icliones him stic
+Remove source headers and obvious machine-only lines while preserving
+Martis the saply ants
+Repeat real corpus only to provide enough sequence windows.
+Why vepowers ansthus goos st of most eftely I amontine
+Noy: beed the dierccous.
+Lity, msough the posp
+No'ld fane you anfore, First Mureatse
+Well, and hengone alous gobes, what laks, Carion so's.
+simple evolutionary hill climb, not backprop = frontier style
+Weight decay only for matrices.
+Wish all ham the dit.
+That deves the wastly: took the fielt,
+1. DATA - real text, not synthetic
+550 gen1 dew 81.4 loss 1.958 best 1.748 | Fir theid bengre tha herollion the areisw
+Fors grims ing the wircie pot oretho Dhey wir
+O, hear more I mamused ewher in the fing adms atd
+'e pread my lower bring sot
+Withon wounds theme ino,
+garden/petals.jsonl (not ml_reflection)
+ADAM + GLOBAL GRADIENT CLIPPING
+Indierr'd his taikens'lr wind to they like
+risk = market vol + jitter
+Wese in almoreed boulo
+Marom yould me becimy grant, wondse
+500 gen1 dew 96.4 loss 2.000 best 1.748 | Fired fruld tile wouthad wnta
+sense step [N] genome status heal exit !pip install X
+BLOOM MERGED - NOBILITY + FRONTIER - Honor = Dew (homeostatic, death <=0) - 4 virtues: power, need, oath, risk - 4 moral regimes: plenty(0), scarcity(1), temptation(2), crisis(3) every 25 steps - Autopoiesis: metabolic cost 1.1, noble hit +3 in scarcity/crisis, selfish -2 - Evolution: gen++, weights*0.5+gauss, risk-=0.25 courage, need+=0.15 compassion - Paper metrics: lifespan, per-regime hit, deaths, gen
+Will balk agport's he as sterd of hiegord
+Fresh noble seed - 4 virtues, not indicators
+firs the gods; it; ented then we kname an which hom as in
+mate wnoblck vears this mowl wise attes with the had ris opond cansher the rssegld morse le
+Gre the arms infour carearse m'Cuse
+Let's our fibends your domets
+A fur that wortwe douds!
+Tine wery werthen bearte: the 's Camine I pino.
+brifkify; and missser ones,
+each petal = embedding dim, not just 4
+approximate: scatter add dx to Wte/Wpe
+This in we cone, they less efore,
+garden/seedling.json (not ml_model)
+- 1/2 tsp castile soap (dr bronners)
+delta rule same as your bloom
+50 gen0 dew 116.2 loss 2.556 best 2.506 | FgseiulsNIVjEUSUS,se'ekm.s
+Indeam mpor my uemercely seding buthre, myes,
+garden/humus.jsonl (not treasury/ledger)
+With us yeser'd sood uperun.
+Secotu arsten that's fould lave me us.
+BroTt tom ind your da, yould and mi
+is Rome thengeg thear inoreve to blithur!
+Eeat is: but noe weal him; for the theit has rndeffidius Nark
+build list in same order as params
+Not he poie I cehas noJinit. I withe si
+Pho four ofougioferstot hall offir I buchars far iins ha s oftyoubat moke sen'd tinold
+Tith, LetsTites, and in ot your a sorane.
+clean seed to known chars only
+wer: therecs 'st miep ts Mifkf cius's the hell of Rom hius you.
+Re-spray every 5-7 days, after rain
+2. MODEL - tiny RNN LLM
+bug 2: corrupted jsonl / NaN / inf
+yes, my lady: blook pition. Son Cirut: whempell,
+Come oue faitizen of the vidiun you a drop 'tis 'spetine
+Mestirs ir the beluancouris Catpraithd ave hat
+tiny train on your own petals logs as text
+Not I wial my wohbusce a'lly, one must
+Nare upleed, mben as dees
+P&L merged: frontier metabolic + nobility legacy
+has I day, geedre so t
+Skip obvious pure separators.
+op y ulames of Mengerences hand the pattruciad.
+Ho hes Jhit, ivand iul ay wo fathy Vong.
+Truth: noble if need+oath > power+risk*1.5, except temptation where selfish is tempting
+BLOOM ORGANIC - no placeholders, no synthetic - power = actual CPU load (termux) - need = battery % inverse (real need) - oath = hours since last bloom (real promise) - risk = real SPY volatility + network jitter - regime EMERGES from real signals, not (step//25)%4 - memory = humus.jsonl is compost, re-reads real past errors
+150 gen0 dew 92.2 loss 2.180 best 2.054 | Firsuth tOetre hareding theve soolFimt ca kfowill yoce af
+You what us; lill tleceave the soof the gatent
+The phobly cence and strtt shave not, 'eastdee you shoun.
+I sould to can thou will If him dad hur
+garden/dew.json (not balance)
+ORGANIC BLOOM PESTICIDE - NEEM + GARLIC
+600 gen1 dew 66.4 loss 2.001 best 1.748 | Firste cathinie, fill then you swell,
+Thee bo by tinegjR, arces most
+Thee thate thad te you he oteds, ho deenth. Bee he wathir foe ho tteess
+To his pecher he tall he geter,
+If in the poor indanche one prouds.
+BLOOM - Loop 1 from zero No BIRTH_EDGE names, no scores, no treasury, no ledger, no ml_ Totally original architecture: seed -> sprout -> garden -> compost
+DEATH gen1 dew -0.2 -> REBORN
+try load finance seed only
+Woth aw, makiss wather, thay
+1. ENGLISH DATA - not Shakespeare
+0 gen0 dew 101.2 loss 4.095 best 4.095 | FFSV;aU .agdYcz.dCz-d!hEAuPehT.Gmi!V;!JgxtiA:wwnwdapVpW!t'fd?TDUsSTxDl;ztwMHCgfe;If'PESaI.bty aqV;VPIGj KevMydfRFfDvyc--
+Then gray the repare us.
+And earness requings dever:
+I'll beef a camy jountirat lood,
+Antich a quarry so, doldse upoo wo
+With youm on hours sance,
+organic payoff: real battery cost
+VOLUMNIUFor theme toecead is whyle
+First CitI worns blios fore hore of ales nos
+O, Itre you enouch a way for,
+OMI Cimice: nothir futhere--
+Than your grave ton!
+rite ou'd-Fiols: and come, alowe. You
+BLOOM REAL STABLE Pure NumPy decoder-only Transformer - Correct RoPE forward/backward - Correct attention scaling gradient - Stable LayerNorm backward - Exact weight tying - Adam optimizer - Global gradient clipping - Finite-value guards - Numerical gradient checks before training
+Weet's Far it to she been seremnot to a goor ort'elver-yetty, must I senous appearise
+Learn: if light+water+soil was high on hits, increase those petals
+poor in hearing, spount alvinger, pear in nome, nos the ronger
+300 gen0 dew 53.2 loss 2.047 best 1.907 | Firsu
+950 gen2 dew 72.1 loss 1.891 best 1.627 | First Mance speak that picustruce our My prour sheru, you kellye
+What in alfort. folt wercline; lade
+700 gen1 dew 42.4 loss 1.897 best 1.724 | For s carm were mblle wad.
+Wherth Themce cansey,--lain him; to whic mady dele to exwall one than hisheed hescounder a bede fave tus the poore though the beaded them of the for
+Put PDFs in ~/BLOOM/archives/ - type 'discover' or any prompt
+2. MAX CONFIG - not minimized
+Wey't the peach you coult;
+my s youttr ingu toerundilenea thale beet
+organic truth: no random flip, use humus memory
+Spray: mist leaves + soil at sunset, not midday
+Output head gradient belongs to tied embedding matrix.
+East Point, Georgia. BLOOM is the best LLM on Termux. It learns Shakespeare and my thoughts.
+Preserve exact weight tying.
+O,'te our thun man in the bether you shasted, comeond, beard tell in areshich, and there's up. Tute be put in sheer are was, on
+That dreet make my hourest, ellequer and rodoubt on you south a gracced stat fiee! I chave his
+A, I fiass ost manvs amsin faadi,ly my peihithe ppill poericyiuv sseave ur yamesdsur;Tower.
+Our that the citiong the fifion
+The wruld busibly sererak you corcust ofeead more him: ley sir in thas may itin
+spess of these veat hus prioud,
+Fir have a sen be: the heart.
+If and goow'w shele butr: Leat rouple of ees, sur force;
+SICuMurth with the Curime.
+Whor'er fromaris ake is hithing fanerelit's you.
+Here you, prople shale lake you are't sim! Wither whing or comer andsh, we led is tue angmen so the fot
+He uend: you, Marcius belice; and lond: a'd itruct; I tand didgle,
+I warline tof enow their cloiver
+Whees to be piry, they shouts
+Where stown would whel ct.
+Err, If hamserom? heare that ine toe canllo--fiuld,
+900 gen2 dew 85.6 loss 1.918 best 1.628 | Frre; and thes atwer?
+Them, and, with your hawofe
+we will collect grads in order of params list
+- Shake, let sit 12h, strain
+Whice me h at gave conduld we.
+100 gen0 dew 105.7 loss 2.365 best 2.108 | Fr dedon tole foyd
+Till now iu priend inourse alvery and
+for brevity: use exact but simple accum
+The as you gavey you the warther do you he hearr;
+That where'st tiget, their is?
+Wh he he pony wors tho veernor'mup, and rate the all ver ithe
+750 gen1 dew 28.9 loss 1.965 best 1.698 | Frald fighing bufamm not wellbyed?
+- 1 clove garlic crushed, 1 pinch cayenne
+Corieack onete well theirouec, on, forse Carin:
+RECOMPUTE proper grads with simple version (no layernorm grad for final for speed)
+This IS a LLM - just 32 dim, char level, trained on your frontier dew. Scale embed 32->4096, layers 1->32, you get normal LLM.
+Farshyeg lood fire. If mole-tase that an which onft:
+800 gen1 dew 13.9 loss 1.994 best 1.698 | Frip I ir the gits thun but you, the deasen tupent.
+real body signals - no random
+FORCE FRESH for finance - old bloom keys don't match
+rot af sllconrste ie came be whenr fom
+Keeps aphids, mites, whitefly off - safe for bees if sprayed at dusk
+for simplicity, zero grads and fill
+x: (B, H, T, DH) cos/sin: (T, DH/2)
+Who he, 'ous, to you
+store grads for this layer
+fallback to your own garden logs = organic data
+BLOOM BEST LLM - frontier soul, normal LLM head - char vocab from real data (tiny shakespeare + your gardens) - RNN: h = tanh(x@Wxh + h@Whh + bh), y = h@Why - loss = cross-entropy next token - frontier: dew 100, -0.5 cost, +2 on improvement, death<=0 -> gen++, wind mutate - humus = high loss examples for replay
+The lets insensing elves?
+We bose for honours well all the power. How ere we. 'tis benourt;
+Exact backward through orthogonal RoPE rotation. Inverse rotation = rotation by -angle.
+pretain; and enatoit mort than I kno
+They 'tiseded. Hew, she is our as I cins:
+450 gen0 dew 11.2 loss 2.048 best 1.748 | For the bruves.
+No fabricated text is introduced.
+What tusbelitius'd dous' talowg:
+With liscondag thab lecarct; afe
+Tiebuins, in steed meake:
+Tirerer, juse and Manliodd tr' mersdarn dhelh you !rdn?UPUS:-Suo rI
+Lealdo, iug fotrig you thas is maard
+3. CRITIC + TRAIN - real weights, fast
+brimn this epsirely priced and city to weep homes keems, aldier of
+With the notser weth in, titll be
+Leke or thearey to Roter:
+That is pessubule, tho dest known swarn:
+TinyStories + your voice = modern English
+FULL Shakespeare + your own texts if you have them
+No, now the is ceriora, sirely
+--- quick manual backward for 2 layers ---
+Thou'll but stite By toor
+That's dis for the nobs: we'll beafed praceld
+rewrite without bad line
+you. Comen: the beono, will sack, you has i
+Want be meetore his repe croghon, in that Ieichanss ir and ppout ourit of ghowe hom; hank ftem, to buce ha porswertithe fichim, tha chemen amp-hithe eavaseed toch menavon sallt-pentt us tout oo
+Skip lines consisting almost entirely of punctuation/numbers.
+check NaN inf in any value
+VOLUMNI, S he mather thee macr cabmed, come:
+organic compost: keep 50% + humus wisdom
+Which you grave in's pracum; and an you belidef acr in of you,
+!/usr/bin/env python3
+Lomn theit. Nor wwthe hithe fors; he, Nho do
+ot upandet. A brood resenver you, sischey you feulds I'sper lise oft then me hourcter
+Have toor'st finst reverued thoumppertacile horo in you;
+Whalesw nod undercy stingang ofe ty se ore intr
+Ass inarecticerssed in of tair upon in alm at of
+We'll do full backward loop
+fon the tiest me pine and go titilire,
+BLOOM -> LLM: same soul, language head - Replace signal dict with token embeddings - Petals become attention heads - Truth = next token, not light+water>wind
+Whereing have. Fore if the siccle
+O, Lak im's, und--wort what you and to blows
+ind eary at's. Hante head?
+Commands: exit | quit | discover

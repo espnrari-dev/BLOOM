@@ -1,0 +1,71 @@
+{
+  "version": 4,
+  "generated": "2026-08-25T10:03:25-0400",
+  "root": "/data/data/com.termux/files/home/BLOOM",
+  "results": [
+    {
+      "target": "bloom_real.py",
+      "initial_sha256": "2735f5630c3a8d1092cdc438c6438c7a4d0d9ddd4a10d9c0abd3f97896a1ec78",
+      "rounds": [
+        {
+          "round": 1,
+          "error": {
+            "kind": "NameError",
+            "name": "vocab_size"
+          },
+          "location": {
+            "file": "/data/data/com.termux/files/home/BLOOM/bloom_real.py",
+            "line": 993,
+            "function": "<module>"
+          },
+          "stderr": "Traceback (most recent call last):\n  File \"/data/data/com.termux/files/home/BLOOM/bloom_real.py\", line 993, in <module>\n    vocab_size,\n    ^^^^^^^^^^\nNameError: name 'vocab_size' is not defined\n"
+        },
+        {
+          "round": 2,
+          "error": {
+            "kind": "ValueError",
+            "message": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 256 is different from 128)"
+          },
+          "location": {
+            "file": "/data/data/com.termux/files/home/BLOOM/bloom_best_llm.py",
+            "line": 73,
+            "function": "forward_np"
+          },
+          "stderr": "Traceback (most recent call last):\n  File \"/data/data/com.termux/files/home/BLOOM/bloom_real.py\", line 2, in <module>\n    import bloom_best_llm\n  File \"/data/data/com.termux/files/home/BLOOM/bloom_best_llm.py\", line 112, in <module>\n    logits,h=forward_np(xs, np.zeros((batch,hidden)))\n             ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/data/com.termux/files/home/BLOOM/bloom_best_llm.py\", line 73, in forward_np\n    hh=h[t]@Whh\n       ~~~~^~~~\nValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 256 is different from 128)\n"
+        }
+      ],
+      "status": "UNRESOLVED",
+      "repairs": [
+        {
+          "round": 1,
+          "repair": "imported repository-backed assignment vocab_size from bloom_best_llm.py",
+          "verified": false,
+          "backup": "/data/data/com.termux/files/home/BLOOM/.bloom_solver_v4_backups/bloom_real.py.round1.1787666601.bak"
+        }
+      ],
+      "final_sha256": "8aaff29cc7398e7f4d0d191a3bf0f2deaaa25499f2b13b933ae6cdba47aceef4"
+    },
+    {
+      "target": "hybrid_bloom.py",
+      "initial_sha256": "3eb4515780c2982172c691f203d87c1ccb5fb257c6709ff247352f3a243c2481",
+      "rounds": [
+        {
+          "round": 1,
+          "error": {
+            "kind": "UnknownError",
+            "message": "Traceback (most recent call last):\n  File \"/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py\", line 90, in <module>\n    market_sig = market_signal(total)\n  File \"/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py\", line 59, in market_signal\n    p=closes[idx%len(closes)]; ma20=sum(closes[max(0,idx-20):idx+1])/len(closes[max(0,idx-20):idx+1])\n                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nZeroDivisionError: division by zero\n"
+          },
+          "location": {
+            "file": "/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py",
+            "line": 59,
+            "function": "market_signal"
+          },
+          "stderr": "Traceback (most recent call last):\n  File \"/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py\", line 90, in <module>\n    market_sig = market_signal(total)\n  File \"/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py\", line 59, in market_signal\n    p=closes[idx%len(closes)]; ma20=sum(closes[max(0,idx-20):idx+1])/len(closes[max(0,idx-20):idx+1])\n                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nZeroDivisionError: division by zero\n"
+        }
+      ],
+      "status": "UNRESOLVED",
+      "repairs": [],
+      "final_sha256": "3eb4515780c2982172c691f203d87c1ccb5fb257c6709ff247352f3a243c2481"
+    }
+  ]
+}

@@ -1,0 +1,1420 @@
+{
+  "timestamp": "2026-08-25T09:57:29-0400",
+  "target": "/data/data/com.termux/files/home/BLOOM/bloom_terminal.py",
+  "files": [
+    {
+      "path": "bloom.py",
+      "exists": true,
+      "bytes": 2473,
+      "sha256": "2bf00e114d12eb64a23000703347ba88f0c64f8d27fd5d64cab60ae460278621",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "sprout"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "hashlib",
+        "time",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom2.py",
+      "exists": true,
+      "bytes": 657,
+      "sha256": "bd46de120e12b26cb15b20622cf12a0715b42acb8774bcedcf6ebaa57db69981",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "json",
+        "random"
+      ]
+    },
+    {
+      "path": "bloom_architecture_probe.py",
+      "exists": true,
+      "bytes": 2737,
+      "sha256": "50e67569a3430e67a9658a9db47023b3f4eb9ca5ea3c1e2eb7b4c18acb199faa",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "ast",
+        "re"
+      ]
+    },
+    {
+      "path": "bloom_autonomous_operator.py",
+      "exists": true,
+      "bytes": 54228,
+      "sha256": "6a022154aee7e00db6ef378e48cd421ce4a40c9015f8a0291462b1e246c72e1a",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "now",
+        "sha256_bytes",
+        "sha256_file",
+        "write_json",
+        "record_ledger",
+        "success",
+        "as_dict",
+        "__init__",
+        "snapshot",
+        "run",
+        "__init__",
+        "load",
+        "_target_names",
+        "_expr_names",
+        "_call_name",
+        "inspect",
+        "source_segment",
+        "line_context",
+        "symbol_forensics",
+        "unresolved_references",
+        "dependency_graph",
+        "symbol_order",
+        "summary",
+        "__init__",
+        "import_model",
+        "corpus_probe",
+        "classify",
+        "analyze",
+        "__init__",
+        "trace_symbol",
+        "trace_tokenization",
+        "model_contract",
+        "batching_contract",
+        "inference_contract",
+        "full_trace",
+        "__init__",
+        "backup",
+        "__init__",
+        "compile",
+        "import_probe",
+        "corpus_probe",
+        "__init__",
+        "inspect",
+        "probe",
+        "print_symbol",
+        "print_deep_trace",
+        "run"
+      ],
+      "classes": [
+        "CommandResult",
+        "AutonomousTerminal",
+        "SourceIntrospector",
+        "RuntimeProbe",
+        "ErrorDiscerner",
+        "ContractTracer",
+        "RepairSafety",
+        "ValidationEngine",
+        "BloomAutonomousOperator"
+      ],
+      "imports": [
+        "__future__",
+        "ast",
+        "hashlib",
+        "json",
+        "re",
+        "shlex",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "traceback",
+        "dataclasses",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "bloom_backoff_baseline.py",
+      "exists": true,
+      "bytes": 3900,
+      "sha256": "2aef767790ca1e71d210b1e710560a43b6aec2e412bf4e7695c0c10c50f74d64",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "tokenize",
+        "uni_prob",
+        "bi_prob",
+        "tri_prob",
+        "evaluate"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_baseline.py",
+      "exists": true,
+      "bytes": 2172,
+      "sha256": "5ddb3adb1fb6f074de00b8664c0dc3efe25547ddb77ff7f28262d88b37b4426a",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "tokenize"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_best_llm.py",
+      "exists": true,
+      "bytes": 6097,
+      "sha256": "37a3a1e01860629f1a8f676ac34cb073a278f9da17b0f7d46777acff537c0273",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "get_data",
+        "rand_mat",
+        "softmax_np",
+        "forward_np",
+        "loss_np",
+        "mutate_np"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "math",
+        "random",
+        "hashlib",
+        "time",
+        "os",
+        "pathlib",
+        "requests",
+        "numpy"
+      ]
+    },
+    {
+      "path": "bloom_best_llm_v2.py",
+      "exists": true,
+      "bytes": 3246,
+      "sha256": "d64b968f88600a56d2433f7f4d461a1a1fe081373dbf18bdd244b7ea4998e2dc",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "forward",
+        "loss_and_grad"
+      ],
+      "classes": [],
+      "imports": [
+        "requests",
+        "numpy",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_chat.py",
+      "exists": true,
+      "bytes": 1339,
+      "sha256": "8c19df0c07c7a9bafc8b66a03fb128931a320d2e3f627255afb2333c6fc918d8",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "gen"
+      ],
+      "classes": [],
+      "imports": [
+        "numpy",
+        "requests"
+      ]
+    },
+    {
+      "path": "bloom_colony.py",
+      "exists": true,
+      "bytes": 4370,
+      "sha256": "a423f8074f0ace5c38d695132149061302291cce0f107b0ef413d3d731236d66",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "get_spy",
+        "battery",
+        "s_t",
+        "sigmoid",
+        "do_step"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "math",
+        "random",
+        "hashlib",
+        "sys",
+        "time",
+        "subprocess",
+        "pathlib",
+        "requests",
+        "numpy"
+      ]
+    },
+    {
+      "path": "bloom_corpus.py",
+      "exists": true,
+      "bytes": 2989,
+      "sha256": "d784d12f47f133165569df7aef2d2e6b6185989adcf0a44787bf97ba2cdcf23f",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "sha256",
+        "discover",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "hashlib",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_corpus_audit.py",
+      "exists": true,
+      "bytes": 1289,
+      "sha256": "03f2914d64029e6f2dfccaab592718b95937caf29183a93f2090c44088671c8f",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "hashlib",
+        "re"
+      ]
+    },
+    {
+      "path": "bloom_corpus_clean.py",
+      "exists": true,
+      "bytes": 1835,
+      "sha256": "8f3b8db727a8daf66fbec1a858a2b38be3827d643174b8dfac7a5ae0c0d0aeb0",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "normalize"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "re",
+        "hashlib"
+      ]
+    },
+    {
+      "path": "bloom_corpus_integrity.py",
+      "exists": true,
+      "bytes": 2966,
+      "sha256": "e5af56c9ae491d8c35dc6b4eefb4cf45e1fc535a24bcfa9a71fdf4cb14be3b3d",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "tokenize"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_corpus_profile.py",
+      "exists": true,
+      "bytes": 1680,
+      "sha256": "e2933c9dbe97ab35e20b18a27b803190960d81542533cca67f9da97abb34ef84",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_corpus_semantic_audit.py",
+      "exists": true,
+      "bytes": 2171,
+      "sha256": "a46a79937ae2ea79c32825088d441600c2f3092d716a44fba1c1275b4dbe57cf",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "words"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_dataset_validation.py",
+      "exists": true,
+      "bytes": 2590,
+      "sha256": "18ac5a1097502484a044bafa9e8b39c43e72bb6179c2a73cbf6d13cef8b9c5a3",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "tokenize"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "hashlib",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_english.py",
+      "exists": true,
+      "bytes": 2819,
+      "sha256": "1a3bf299ee9ad0c90e5b47781ee852ab460745639231d6c38bd4807af188f0a1",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "sample"
+      ],
+      "classes": [],
+      "imports": [
+        "requests",
+        "numpy",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_english_best.py",
+      "exists": true,
+      "bytes": 2819,
+      "sha256": "1a3bf299ee9ad0c90e5b47781ee852ab460745639231d6c38bd4807af188f0a1",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "sample"
+      ],
+      "classes": [],
+      "imports": [
+        "requests",
+        "numpy",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_finance.py",
+      "exists": true,
+      "bytes": 3600,
+      "sha256": "286fb3c6cef0ae36af0ca0fe0a8e9f434c05ce03c08f1effaa79389bdec8547a",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "market_regime",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "hashlib",
+        "time",
+        "math",
+        "pathlib",
+        "collections"
+      ]
+    },
+    {
+      "path": "bloom_fix_vocab_runtime.py",
+      "exists": true,
+      "bytes": 7869,
+      "sha256": "daac5a6a43e344ac1c78b04b639bb847bac7408aa3c6d6f56dbd61bce9aa503a",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "ast",
+        "re",
+        "shutil",
+        "py_compile"
+      ]
+    },
+    {
+      "path": "bloom_frontier.py",
+      "exists": true,
+      "bytes": 8999,
+      "sha256": "6b695ec835ca4e967deed5d48fcbd86daade15d795477141175e995525119614",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "rand",
+        "ln_fwd",
+        "ln_bwd",
+        "gelu",
+        "gelu_bwd",
+        "forward",
+        "sample"
+      ],
+      "classes": [],
+      "imports": [
+        "requests",
+        "numpy",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_full_execution_forensics.py",
+      "exists": true,
+      "bytes": 16305,
+      "sha256": "4062012a180822a506131078e6523ae19dee07b0b907ac50201b895e2a246317",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "ast",
+        "hashlib",
+        "re",
+        "sys",
+        "traceback",
+        "bloom_real"
+      ]
+    },
+    {
+      "path": "bloom_groundbreaking.py",
+      "exists": true,
+      "bytes": 3168,
+      "sha256": "012c3c2e5a298998713353701f282a80bce23c5da29b61fa30fb50dd18972133",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "forward",
+        "loss_grad"
+      ],
+      "classes": [],
+      "imports": [
+        "requests",
+        "numpy",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_introspection.py",
+      "exists": true,
+      "bytes": 7590,
+      "sha256": "0eb2d44037503d689dca098b4b8422ee0659ba1d19876136537b8a935d477997",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "source_hash",
+        "symbol_name",
+        "inspect_source",
+        "run_import_probe",
+        "build_state"
+      ],
+      "classes": [],
+      "imports": [
+        "__future__",
+        "ast",
+        "hashlib",
+        "json",
+        "subprocess",
+        "sys",
+        "time",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_live.py",
+      "exists": true,
+      "bytes": 3227,
+      "sha256": "9a1cd4e507a47e6e59244e3c8721d2798a2040e01c09990f2ad76717f7d37978",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "get_spy",
+        "sig_for",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "math",
+        "requests",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_llm.py",
+      "exists": true,
+      "bytes": 2363,
+      "sha256": "7c2eeeea05f237c79756f43273f4f1f4b3bbfc2e98817044a8cb4dc2a66d998b",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "forward"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "math",
+        "random",
+        "hashlib",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_max.py",
+      "exists": true,
+      "bytes": 4068,
+      "sha256": "8c32e9ec8d80de53ca18882951090426229cbc48447f302bcc4f8212387c3e68",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "rand",
+        "ln",
+        "forward",
+        "embed",
+        "retrieve",
+        "gen"
+      ],
+      "classes": [],
+      "imports": [
+        "numpy",
+        "pathlib",
+        "glob",
+        "re",
+        "random",
+        "pdfplumber"
+      ]
+    },
+    {
+      "path": "bloom_merged.py",
+      "exists": true,
+      "bytes": 5220,
+      "sha256": "46eafee27497b44591647500042c9a168e350ac9b73f89a946376e9960fca44c",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "moral_regime",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "hashlib",
+        "time",
+        "math",
+        "pathlib",
+        "collections"
+      ]
+    },
+    {
+      "path": "bloom_ngram_baseline.py",
+      "exists": true,
+      "bytes": 2959,
+      "sha256": "5037af9f61c325285217137618dc116b30b5ce0159819da6f1f5d0aa9553ca62",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "tokenize",
+        "evaluate_ngram"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_nobility.py",
+      "exists": true,
+      "bytes": 5004,
+      "sha256": "666c770c06d4a856a4e645c119a773b5be9312c372c7da0d07815e9e49eb2ec2",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "moral_regime",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "hashlib",
+        "time",
+        "math",
+        "pathlib",
+        "collections"
+      ]
+    },
+    {
+      "path": "bloom_operator.py",
+      "exists": true,
+      "bytes": 33091,
+      "sha256": "e2dc30754406f45c957d56ab668634db7d35a61b579683fbe82f6ccfed9767ef",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "success",
+        "as_dict",
+        "__init__",
+        "snapshot",
+        "run",
+        "record",
+        "__init__",
+        "load",
+        "_inspect",
+        "source_segment",
+        "top_level_source",
+        "unresolved_references",
+        "__init__",
+        "import_model",
+        "classify",
+        "__init__",
+        "required_symbol_report",
+        "dependency_report",
+        "decide",
+        "__init__",
+        "build",
+        "__init__",
+        "run"
+      ],
+      "classes": [
+        "CommandResult",
+        "BloomTerminal",
+        "SourceIntrospector",
+        "RuntimeProbe",
+        "ErrorDiscerner",
+        "NextStepReasoner",
+        "RepairPlanner",
+        "BloomOperator"
+      ],
+      "imports": [
+        "__future__",
+        "ast",
+        "hashlib",
+        "json",
+        "os",
+        "re",
+        "shlex",
+        "subprocess",
+        "sys",
+        "time",
+        "traceback",
+        "dataclasses",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "bloom_organic.py",
+      "exists": true,
+      "bytes": 6420,
+      "sha256": "fc11d25a037c06a448eb1b686130d74d06b6471db259645083fb676c239d3836",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "get_spy",
+        "real_body",
+        "organic_regime",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "hashlib",
+        "time",
+        "math",
+        "subprocess",
+        "os",
+        "pathlib",
+        "collections",
+        "requests"
+      ]
+    },
+    {
+      "path": "bloom_pesticide.py",
+      "exists": true,
+      "bytes": 2195,
+      "sha256": "214c234561d77200d9ad79fca68e4bfeec9246d60f8638670337223c0a87a75f",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "spray"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "shutil",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_prepare_training.py",
+      "exists": true,
+      "bytes": 3910,
+      "sha256": "89833ad5f7fe07308fb895c5831cf8fcbb202fce8a5aba89ca15092fd1ac939e",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "re",
+        "random",
+        "hashlib"
+      ]
+    },
+    {
+      "path": "bloom_prepare_training_v2.py",
+      "exists": true,
+      "bytes": 4915,
+      "sha256": "b11b7efacd0aff34fb1a17ad85bcaa43dcfc239d32f9b3d6703000cda535daab",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "random",
+        "hashlib"
+      ]
+    },
+    {
+      "path": "bloom_pure.py",
+      "exists": true,
+      "bytes": 2876,
+      "sha256": "292e8132aebf0fd4a44b0120b0745911e611b8836007fa1754bcf7468b9238be",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "forward",
+        "loss_grad"
+      ],
+      "classes": [],
+      "imports": [
+        "requests",
+        "numpy"
+      ]
+    },
+    {
+      "path": "bloom_real.py",
+      "exists": true,
+      "bytes": 27315,
+      "sha256": "2735f5630c3a8d1092cdc438c6438c7a4d0d9ddd4a10d9c0abd3f97896a1ec78",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "zeros",
+        "randn",
+        "check_finite",
+        "precompute_rope",
+        "rope_rotate",
+        "rope_inverse",
+        "load_text",
+        "get_batch",
+        "collect_params",
+        "count_params",
+        "apply_grads",
+        "save_ckpt",
+        "retrieve",
+        "generate",
+        "__init__",
+        "forward",
+        "backward",
+        "__init__",
+        "forward",
+        "backward",
+        "__init__",
+        "forward",
+        "backward",
+        "__init__",
+        "forward",
+        "backward",
+        "__init__",
+        "forward",
+        "backward",
+        "__init__",
+        "forward",
+        "backward"
+      ],
+      "classes": [
+        "Linear",
+        "LayerNorm",
+        "CausalSelfAttention",
+        "MLP",
+        "Block",
+        "GPT"
+      ],
+      "imports": [
+        "math",
+        "glob",
+        "pathlib",
+        "pickle",
+        "random",
+        "time",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "path": "bloom_real_data_truth.py",
+      "exists": true,
+      "bytes": 7104,
+      "sha256": "a302c25d7afcabd5da6f19242a761a9fb0f2f617af1b33120337db9ace731f72",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "sys",
+        "traceback",
+        "hashlib",
+        "bloom_real"
+      ]
+    },
+    {
+      "path": "bloom_real_loader_audit.py",
+      "exists": true,
+      "bytes": 3672,
+      "sha256": "93ebd4cf7a09491a01b008a9890caa1a5c5d8b9ea3cfdaaed5328b34796052ce",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "re",
+        "ast"
+      ]
+    },
+    {
+      "path": "bloom_real_runtime_probe.py",
+      "exists": true,
+      "bytes": 7282,
+      "sha256": "9002f4ceaeb231d3831b2606c5827fa6bb668389dfade32a852c5c5ff6154761",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "ast",
+        "re"
+      ]
+    },
+    {
+      "path": "bloom_real_training_probe.py",
+      "exists": true,
+      "bytes": 10403,
+      "sha256": "621cdd1bae3edcc8e45bc8a0df960bb8cef5a69baa30e498b1944dc1431e8d21",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "get_num"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "ast",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_real_v2_bridge.py",
+      "exists": true,
+      "bytes": 6066,
+      "sha256": "94182319b419cfb5cb13457059aa3dacbc8c1a08bbe51711f852285244466e93",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "shutil",
+        "re",
+        "sys",
+        "py_compile"
+      ]
+    },
+    {
+      "path": "bloom_real_v2_runtime_truth.py",
+      "exists": true,
+      "bytes": 9178,
+      "sha256": "b3a572d2f30ba1349af0dd52ea80e69310204dfbe2cb3ef34982a4b0017141e1",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "digest"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "ast",
+        "hashlib",
+        "re",
+        "sys",
+        "bloom_real"
+      ]
+    },
+    {
+      "path": "bloom_repair_engine.py",
+      "exists": true,
+      "bytes": 39912,
+      "sha256": "7f80f37b0179fb954a28249a44a8f2f42fa6e094c7a8c9b9d93456f190d8934f",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "now",
+        "rel",
+        "sha256_file",
+        "append_ledger",
+        "default_state",
+        "load_json",
+        "save_json",
+        "load_state",
+        "save_state",
+        "load_learned",
+        "save_learned",
+        "python_files",
+        "auxiliary_files",
+        "parse_python",
+        "build_symbol_graph",
+        "definitions_by_name",
+        "contract_analysis",
+        "compile_all",
+        "find_entrypoints",
+        "runtime_smoke_test",
+        "extract_runtime_failures",
+        "detect_contract_failures",
+        "backup_file",
+        "restore_backup",
+        "fingerprint_failure",
+        "learned_match",
+        "record_learning",
+        "safe_text_replace",
+        "propose_runtime_repair",
+        "validate_system",
+        "autonomous_repair_cycle",
+        "source_inventory",
+        "auxiliary_inventory",
+        "runtime_environment",
+        "runtime_processes",
+        "build_evidence_bundle",
+        "main",
+        "context"
+      ],
+      "classes": [
+        "Symbol",
+        "Reference"
+      ],
+      "imports": [
+        "__future__",
+        "ast",
+        "hashlib",
+        "json",
+        "os",
+        "re",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "traceback",
+        "dataclasses",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "bloom_repair_engine_v4.py",
+      "exists": true,
+      "bytes": 24598,
+      "sha256": "d4b6f2b156011e63c652a5396cd74f5e53bf2bd8a07a06db90cd6222c3698874",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "now",
+        "rel",
+        "sha256_file",
+        "safe_read",
+        "parse_target",
+        "line_context",
+        "analyze_ast",
+        "compile_target",
+        "run_case",
+        "run_process_observation",
+        "classify",
+        "build_report",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "__future__",
+        "ast",
+        "hashlib",
+        "json",
+        "os",
+        "re",
+        "shlex",
+        "signal",
+        "subprocess",
+        "sys",
+        "time",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "bloom_repair_vocab_runtime.py",
+      "exists": true,
+      "bytes": 15483,
+      "sha256": "0b7f4e05d5d52730dcd3ce16e176f520b627966e673f8b488928d68ec0d8e8d7",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "re",
+        "shutil",
+        "py_compile",
+        "sys",
+        "bloom_real"
+      ]
+    },
+    {
+      "path": "bloom_semantic_corpus.py",
+      "exists": true,
+      "bytes": 2664,
+      "sha256": "43fcac36e085d80f726cecdb0bfb55eea126d2c15f5e00a9e68b6a105973fbd5",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "re",
+        "hashlib"
+      ]
+    },
+    {
+      "path": "bloom_semantic_extractor.py",
+      "exists": true,
+      "bytes": 5051,
+      "sha256": "4015f78b9d6ca5b68bc8d0ec3604852f594724b0720bda7f074274dcf2450eb2",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "add",
+        "extract_python",
+        "extract_text"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "ast",
+        "re",
+        "hashlib"
+      ]
+    },
+    {
+      "path": "bloom_terminal.py",
+      "exists": true,
+      "bytes": 4838,
+      "sha256": "5d977709b42f8c7a39669899a429d7294d4eb4e7b310c09fafb7861ec0f07969",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "__init__",
+        "success",
+        "as_dict",
+        "__init__",
+        "_record",
+        "snapshot",
+        "run"
+      ],
+      "classes": [
+        "TerminalResult",
+        "BloomTerminal"
+      ],
+      "imports": [
+        "__future__",
+        "hashlib",
+        "json",
+        "os",
+        "shlex",
+        "subprocess",
+        "time",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "bloom_train_probe.py",
+      "exists": true,
+      "bytes": 4391,
+      "sha256": "605a04601fae86510e952271e7e4f3cf7983e8d572ddf922dc6b6ad3297cc946",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "tokenize",
+        "ids",
+        "frequency_distribution",
+        "evaluate_distribution"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "math",
+        "random"
+      ]
+    },
+    {
+      "path": "bloom_training_diagnose.py",
+      "exists": true,
+      "bytes": 1932,
+      "sha256": "0e0641b5376742acf71b0eeb55048aec6a05aa20ab5290fe98af47c5fc11290e",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "re"
+      ]
+    },
+    {
+      "path": "bloom_training_readiness.py",
+      "exists": true,
+      "bytes": 2336,
+      "sha256": "aec153c5318c02c797ba1d4e704ed57fbe1c24f583cb546a38e543fc4c0d373e",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "collections",
+        "re",
+        "math"
+      ]
+    },
+    {
+      "path": "bloom_true.py",
+      "exists": true,
+      "bytes": 2257,
+      "sha256": "785a155664f253103c33e60dee13827c8431082e3037afca5c48277043c246b4",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "step",
+        "gen"
+      ],
+      "classes": [],
+      "imports": [
+        "numpy",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_v2_final.py",
+      "exists": true,
+      "bytes": 2910,
+      "sha256": "c05b7424af5bb3bc2c1112460678b5a2ff10c73e57ff808fca415db2a582e489",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "forward",
+        "loss_grad"
+      ],
+      "classes": [],
+      "imports": [
+        "requests",
+        "numpy",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "bloom_vocab_forensics.py",
+      "exists": true,
+      "bytes": 7156,
+      "sha256": "2e910ff134e36accd36ea330ab11f84b822f8aca344908c0ca5e0e1cc5391224",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "ast",
+        "re"
+      ]
+    },
+    {
+      "path": "evolve10.py",
+      "exists": true,
+      "bytes": 287,
+      "sha256": "c3f237746ba96d99522dbdfceaf21f624718e4fd205a870ac7e68d03d777fcef",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "subprocess",
+        "json"
+      ]
+    },
+    {
+      "path": "frontier.py",
+      "exists": true,
+      "bytes": 3765,
+      "sha256": "4dd2f668d988320182f76ed04446e7f8137b66867acd17a39b10237e0fa9c112",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "season_signal",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "hashlib",
+        "time",
+        "math",
+        "pathlib",
+        "collections"
+      ]
+    },
+    {
+      "path": "hybrid_bloom.py",
+      "exists": true,
+      "bytes": 6234,
+      "sha256": "3eb4515780c2982172c691f203d87c1ccb5fb257c6709ff247352f3a243c2481",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "get_spy",
+        "moral_regime",
+        "market_signal",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "hashlib",
+        "time",
+        "math",
+        "sys",
+        "pathlib",
+        "collections",
+        "requests"
+      ]
+    },
+    {
+      "path": "hybrid_bloom_v2.py",
+      "exists": true,
+      "bytes": 5770,
+      "sha256": "13001ecc9408fec35bd6d0d614877e33b4fbe2a1bcbce17704f246cd23a01ee7",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "get_spy",
+        "moral_regime",
+        "market_signal",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "hashlib",
+        "time",
+        "math",
+        "pathlib",
+        "collections",
+        "requests"
+      ]
+    },
+    {
+      "path": "hybrid_bloom_v3.py",
+      "exists": true,
+      "bytes": 5518,
+      "sha256": "13fd07cbe1c1b34b3adad4121f5116814c7d270000bfb4d940e74f212c0e85c4",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [
+        "get_spy",
+        "moral_regime",
+        "market_signal",
+        "vigor",
+        "sigmoid"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "random",
+        "hashlib",
+        "time",
+        "math",
+        "pathlib",
+        "collections",
+        "requests"
+      ]
+    },
+    {
+      "path": "run50.py",
+      "exists": true,
+      "bytes": 1031,
+      "sha256": "c96bc3ef2314974e7017bc1a29a4f1a55444eda6b1a73d2125b0ea1c49c229d6",
+      "parse_ok": true,
+      "syntax_error": null,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "subprocess",
+        "json",
+        "collections"
+      ]
+    }
+  ]
+}

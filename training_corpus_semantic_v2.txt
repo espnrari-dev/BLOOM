@@ -1,0 +1,1125 @@
+===== SOURCE: bloom.py =====
+BLOOM - Loop 1 from zero No BIRTH_EDGE names, no scores, no treasury, no ledger, no ml_ Totally original architecture: seed -> sprout -> garden -> compost
+
+===== SOURCE: bloom.py =====
+New arch - nothing from old project
+
+===== SOURCE: bloom.py =====
+garden/seedling.json (not ml_model)
+
+===== SOURCE: bloom.py =====
+garden/petals.jsonl (not ml_reflection)
+
+===== SOURCE: bloom.py =====
+garden/dew.json (not balance)
+
+===== SOURCE: bloom.py =====
+garden/humus.jsonl (not treasury/ledger)
+
+===== SOURCE: bloom.py =====
+logic only: light+water+soil vs wind = bloom or wilt
+
+===== SOURCE: bloom2.py =====
+Learn: if light+water+soil was high on hits, increase those petals
+
+===== SOURCE: frontier.py =====
+Evolution with decay - reset to small values
+
+===== SOURCE: bloom_frontier.py =====
+attention B,T,H -> split heads
+
+===== SOURCE: bloom_frontier.py =====
+simplify: accumulate
+
+===== SOURCE: bloom_frontier.py =====
+for brevity: use exact but simple accum
+
+===== SOURCE: bloom_frontier.py =====
+We'll do full backward loop
+
+===== SOURCE: bloom_frontier.py =====
+--- quick manual backward for 2 layers ---
+
+===== SOURCE: bloom_frontier.py =====
+RECOMPUTE proper grads with simple version (no layernorm grad for final for speed)
+
+===== SOURCE: bloom_frontier.py =====
+we will collect grads in order of params list
+
+===== SOURCE: bloom_frontier.py =====
+for simplicity, zero grads and fill
+
+===== SOURCE: bloom_frontier.py =====
+x = x1 + fc2, so dx goes to both
+
+===== SOURCE: bloom_frontier.py =====
+store grads for this layer
+
+===== SOURCE: bloom_frontier.py =====
+grads for embeddings
+
+===== SOURCE: bloom_frontier.py =====
+approximate: scatter add dx to Wte/Wpe
+
+===== SOURCE: bloom_frontier.py =====
+build list in same order as params
+
+===== SOURCE: bloom_finance.py =====
+FORCE FRESH for finance - old bloom keys don't match
+
+===== SOURCE: bloom_finance.py =====
+try load finance seed only
+
+===== SOURCE: bloom_nobility.py =====
+BLOOM NOBILITY FRONTIER Capital = Honor, Death = Dishonor Same brain, different world: will you extract or protect?
+
+===== SOURCE: bloom_nobility.py =====
+0=plenty, 1=scarcity, 2=temptation, 3=crisis
+
+===== SOURCE: bloom_nobility.py =====
+Fresh noble seed - 4 virtues, not indicators
+
+===== SOURCE: bloom_nobility.py =====
+Truth: noble if need+oath > power+risk*1.5, except temptation where selfish is tempting
+
+===== SOURCE: bloom_nobility.py =====
+Honor P&L: helping costs, but builds legacy
+
+===== SOURCE: bloom_nobility.py =====
+base cost -1.0 per day (life), noble act: -1.5 now +3 later, selfish: +1 now -2 later
+
+===== SOURCE: bloom_terminal.py =====
+sense step [N] genome status heal exit !pip install X
+
+===== SOURCE: bloom_colony.py =====
+4 deterministic individuals
+
+===== SOURCE: bloom_colony.py =====
+gene mix from best survivor
+
+===== SOURCE: bloom_merged.py =====
+BLOOM MERGED - NOBILITY + FRONTIER - Honor = Dew (homeostatic, death <=0) - 4 virtues: power, need, oath, risk - 4 moral regimes: plenty(0), scarcity(1), temptation(2), crisis(3) every 25 steps - Autopoiesis: metabolic cost 1.1, noble hit +3 in scarcity/crisis, selfish -2 - Evolution: gen++, weights*0.5+gauss, risk-=0.25 courage, need+=0.15 compassion - Paper metrics: lifespan, per-regime hit, deaths, gen
+
+===== SOURCE: bloom_merged.py =====
+truth = nobility test
+
+===== SOURCE: bloom_merged.py =====
+P&L merged: frontier metabolic + nobility legacy
+
+===== SOURCE: hybrid_bloom.py =====
+HYBRID BLOOM - 8 petals: power, need, oath, risk + momentum, liquidity, value, volatility - 4 moral regimes: plenty/scarcity/temptation/crisis (nobility) - Market sense: SPY momentum/liquidity/value/vol (terminal) - Autopoiesis: dew=honor, -1.1 cost, death <=0, gen++, risk-=0.25 courage, need+=0.15 compassion
+
+===== SOURCE: hybrid_bloom.py =====
+market truth: bloom if momentum+value > volatility*1.5
+
+===== SOURCE: hybrid_bloom_v2.py =====
+HYBRID BLOOM V2 - crisis fix - risk +=0.25 on death = COURAGE (was -=, made fear worse) - lr 0.09 in crisis, 0.06 elsewhere = learns crisis faster - auto pesticide every 25 steps
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+ORGANIC BLOOM PESTICIDE - NEEM + GARLIC
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+- 1 tsp cold-pressed neem oil
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+- 1/2 tsp castile soap (dr bronners)
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+- 1 clove garlic crushed, 1 pinch cayenne
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+- Shake, let sit 12h, strain
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+Spray: mist leaves + soil at sunset, not midday
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+Test 1 leaf first, 24h check
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+Re-spray every 5-7 days, after rain
+
+===== SOURCE: bloom_pesticide_recipe.txt =====
+Keeps aphids, mites, whitefly off - safe for bees if sprayed at dusk
+
+===== SOURCE: bloom_pesticide.py =====
+BLOOM PESTICIDE - protects all gardens from code bugs - quarantines corrupted jsonl - kills runaway petals with NaN/inf - antivirus same as terminal but for all gardens
+
+===== SOURCE: bloom_pesticide.py =====
+bug 2: corrupted jsonl / NaN / inf
+
+===== SOURCE: bloom_pesticide.py =====
+check NaN inf in any value
+
+===== SOURCE: bloom_pesticide.py =====
+rewrite without bad line
+
+===== SOURCE: bloom_organic.py =====
+BLOOM ORGANIC - no placeholders, no synthetic - power = actual CPU load (termux) - need = battery % inverse (real need) - oath = hours since last bloom (real promise) - risk = real SPY volatility + network jitter - regime EMERGES from real signals, not (step//25)%4 - memory = humus.jsonl is compost, re-reads real past errors
+
+===== SOURCE: bloom_organic.py =====
+real body signals - no random
+
+===== SOURCE: bloom_organic.py =====
+uptime = oath (how long you've kept promise alive)
+
+===== SOURCE: bloom_organic.py =====
+risk = market vol + jitter
+
+===== SOURCE: bloom_organic.py =====
+organic regime emerges, not synthetic
+
+===== SOURCE: bloom_organic.py =====
+plenty = high power low need, scarcity = low power high need, temptation = high power low oath, crisis = high need high risk
+
+===== SOURCE: bloom_organic.py =====
+organic compost: keep 50% + humus wisdom
+
+===== SOURCE: bloom_organic.py =====
+organic gaussian from real time hash, not random
+
+===== SOURCE: bloom_organic.py =====
+organic truth: no random flip, use humus memory
+
+===== SOURCE: bloom_organic.py =====
+organic payoff: real battery cost
+
+===== SOURCE: bloom_llm.py =====
+BLOOM -> LLM: same soul, language head - Replace signal dict with token embeddings - Petals become attention heads - Truth = next token, not light+water>wind
+
+===== SOURCE: bloom_llm.py =====
+each petal = embedding dim, not just 4
+
+===== SOURCE: bloom_llm.py =====
+context = last 8 chars, avg their embed = vigor
+
+===== SOURCE: bloom_llm.py =====
+project to vocab logit = vigor per token
+
+===== SOURCE: bloom_llm.py =====
+tiny train on your own petals logs as text
+
+===== SOURCE: bloom_llm.py =====
+delta rule same as your bloom
+
+===== SOURCE: bloom_llm.py =====
+This IS a LLM - just 32 dim, char level, trained on your frontier dew. Scale embed 32->4096, layers 1->32, you get normal LLM.
+
+===== SOURCE: bloom_best_llm.py =====
+BLOOM BEST LLM - frontier soul, normal LLM head - char vocab from real data (tiny shakespeare + your gardens) - RNN: h = tanh(x@Wxh + h@Whh + bh), y = h@Why - loss = cross-entropy next token - frontier: dew 100, -0.5 cost, +2 on improvement, death<=0 -> gen++, wind mutate - humus = high loss examples for replay
+
+===== SOURCE: bloom_best_llm.py =====
+1. DATA - real text, not synthetic
+
+===== SOURCE: bloom_best_llm.py =====
+fallback to your own garden logs = organic data
+
+===== SOURCE: bloom_best_llm.py =====
+2. MODEL - tiny RNN LLM
+
+===== SOURCE: bloom_best_llm.py =====
+3. TRAIN - frontier autopoiesis
+
+===== SOURCE: bloom_best_llm.py =====
+simple evolutionary hill climb, not backprop = frontier style
+
+===== SOURCE: train.log =====
+0 gen0 dew 101.2 loss 4.095 best 4.095 | FFSV;aU .agdYcz.dCz-d!hEAuPehT.Gmi!V;!JgxtiA:wwnwdapVpW!t'fd?TDUsSTxDl;ztwMHCgfe;If'PESaI.bty aqV;VPIGj KevMydfRFfDvyc--
+
+===== SOURCE: train.log =====
+50 gen0 dew 116.2 loss 2.556 best 2.506 | FgseiulsNIVjEUSUS,se'ekm.s
+
+===== SOURCE: train.log =====
+vINIIUS:toudi :ecote ta ad p taly he, bondr sept m wu.'rwg
+
+===== SOURCE: train.log =====
+100 gen0 dew 105.7 loss 2.365 best 2.108 | Fr dedon tole foyd
+
+===== SOURCE: train.log =====
+150 gen0 dew 92.2 loss 2.180 best 2.054 | Firsuth tOetre hareding theve soolFimt ca kfowill yoce af
+
+===== SOURCE: train.log =====
+BroTt tom ind your da, yould and mi
+
+===== SOURCE: train.log =====
+200 gen0 dew 78.7 loss 2.149 best 1.993 | F
+
+===== SOURCE: train.log =====
+Mrrecor wurllenor wrof re.
+
+===== SOURCE: train.log =====
+Lomn theit. Nor wwthe hithe fors; he, Nho do
+
+===== SOURCE: train.log =====
+250 gen0 dew 66.7 loss 2.087 best 1.964 | Fir the to thee me!
+
+===== SOURCE: train.log =====
+rot af sllconrste ie came be whenr fom
+
+===== SOURCE: train.log =====
+Ho hes Jhit, ivand iul ay wo fathy Vong.
+
+===== SOURCE: train.log =====
+300 gen0 dew 53.2 loss 2.047 best 1.907 | Firsu
+
+===== SOURCE: train.log =====
+Tine wery werthen bearte: the 's Camine I pino.
+
+===== SOURCE: train.log =====
+350 gen0 dew 41.2 loss 1.988 best 1.748 | Fill epeteresiefreicint AUF,
+
+===== SOURCE: train.log =====
+my s youttr ingu toerundilenea thale beet
+
+===== SOURCE: train.log =====
+Not he poie I cehas noJinit. I withe si
+
+===== SOURCE: train.log =====
+400 gen0 dew 26.2 loss 1.950 best 1.748 | Firs,
+
+===== SOURCE: train.log =====
+Err, If hamserom? heare that ine toe canllo--fiuld,
+
+===== SOURCE: train.log =====
+Wh he he pony wors tho veernor'mup, and rate the all ver ithe
+
+===== SOURCE: train.log =====
+450 gen0 dew 11.2 loss 2.048 best 1.748 | For the bruves.
+
+===== SOURCE: train.log =====
+VOLUMNIUFor theme toecead is whyle
+
+===== SOURCE: train.log =====
+Wre wirtB anth ratiss,
+
+===== SOURCE: train.log =====
+DEATH gen0 dew -0.2 -> REBORN
+
+===== SOURCE: train.log =====
+500 gen1 dew 96.4 loss 2.000 best 1.748 | Fired fruld tile wouthad wnta
+
+===== SOURCE: train.log =====
+Indeam mpor my uemercely seding buthre, myes,
+
+===== SOURCE: train.log =====
+550 gen1 dew 81.4 loss 1.958 best 1.748 | Fir theid bengre tha herollion the areisw
+
+===== SOURCE: train.log =====
+Where stown would whel ct.
+
+===== SOURCE: train.log =====
+Woth aw, makiss wather, thay
+
+===== SOURCE: train.log =====
+600 gen1 dew 66.4 loss 2.001 best 1.748 | Firste cathinie, fill then you swell,
+
+===== SOURCE: train.log =====
+And tole male; bo the grass
+
+===== SOURCE: train.log =====
+Mestirs ir the beluancouris Catpraithd ave hat
+
+===== SOURCE: train.log =====
+650 gen1 dew 54.4 loss 2.025 best 1.744 | Firs.
+
+===== SOURCE: train.log =====
+First CitI worns blios fore hore of ales nos
+
+===== SOURCE: train.log =====
+A dirse tisluss fighave athe mome thoud the
+
+===== SOURCE: train.log =====
+sort goods, and and thon
+
+===== SOURCE: train.log =====
+700 gen1 dew 42.4 loss 1.897 best 1.724 | For s carm were mblle wad.
+
+===== SOURCE: train.log =====
+My, loke nock'st pructre's.
+
+===== SOURCE: train.log =====
+'e pread my lower bring sot
+
+===== SOURCE: train.log =====
+750 gen1 dew 28.9 loss 1.965 best 1.698 | Frald fighing bufamm not wellbyed?
+
+===== SOURCE: train.log =====
+Till now iu priend inourse alvery and
+
+===== SOURCE: train.log =====
+rite ou'd-Fiols: and come, alowe. You
+
+===== SOURCE: train.log =====
+800 gen1 dew 13.9 loss 1.994 best 1.698 | Frip I ir the gits thun but you, the deasen tupent.
+
+===== SOURCE: train.log =====
+Martis the saply ants
+
+===== SOURCE: train.log =====
+Hand me moonvad y tuct hemo,
+
+===== SOURCE: train.log =====
+850 gen1 dew 0.4 loss 1.856 best 1.628 | Fro, thes ag them tick
+
+===== SOURCE: train.log =====
+With the notser weth in, titll be
+
+===== SOURCE: train.log =====
+DEATH gen1 dew -0.2 -> REBORN
+
+===== SOURCE: train.log =====
+900 gen2 dew 85.6 loss 1.918 best 1.628 | Frre; and thes atwer?
+
+===== SOURCE: train.log =====
+Wish all ham the dit.
+
+===== SOURCE: train.log =====
+950 gen2 dew 72.1 loss 1.891 best 1.627 | First Mance speak that picustruce our My prour sheru, you kellye
+
+===== SOURCE: train.log =====
+the would caperce; than the with thet a cur?
+
+===== SOURCE: bloom_chat.py =====
+clean seed to known chars only
+
+===== SOURCE: pure.log =====
+nohup: ignoring input
+
+===== SOURCE: pure.log =====
+100 loss 2.358 best 10.000 saved
+
+===== SOURCE: pure.log =====
+A, I fiass ost manvs amsin faadi,ly my peihithe ppill poericyiuv sseave ur yamesdsur;Tower.
+
+===== SOURCE: pure.log =====
+Tirerer, juse and Manliodd tr' mersdarn dhelh you !rdn?UPUS:-Suo rI
+
+===== SOURCE: pure.log =====
+200 loss 2.236 best 2.358 saved
+
+===== SOURCE: pure.log =====
+Thee bo by tinegjR, arces most
+
+===== SOURCE: pure.log =====
+That incanke-dery siont.
+
+===== SOURCE: pure.log =====
+Fore dull owal mwayTh are and thaplende y, thas, figeind wole perty aodes gili, my mearus nodivend
+
+===== SOURCE: pure.log =====
+300 loss 1.959 best 2.236 saved
+
+===== SOURCE: pure.log =====
+wer: therecs 'st miep ts Mifkf cius's the hell of Rom hius you.
+
+===== SOURCE: pure.log =====
+Wh at you'p wo thaI iom, youb teve wirs, I's st kn bem dees;
+
+===== SOURCE: pure.log =====
+400 loss 2.086 best 1.959 saved
+
+===== SOURCE: pure.log =====
+What hale patrye: kfor, growe , me.
+
+===== SOURCE: pure.log =====
+FioLe walle th your Cara foff 'th the powerid thell can ravy hy hat'd yup ornt: thaiw, whem----hit, shat Cominbus.
+
+===== SOURCE: pure.log =====
+Fors grims ing the wircie pot oretho Dhey wir
+
+===== SOURCE: pure.log =====
+500 loss 2.019 best 1.959 saved
+
+===== SOURCE: pure.log =====
+Pho four ofougioferstot hall offir I buchars far iins ha s oftyoubat moke sen'd tinold
+
+===== SOURCE: pure.log =====
+Lealdo, iug fotrig you thas is maard
+
+===== SOURCE: pure.log =====
+Hey toocerse ththey.
+
+===== SOURCE: pure.log =====
+600 loss 1.977 best 1.959 saved
+
+===== SOURCE: pure.log =====
+Want be meetore his repe croghon, in that Ieichanss ir and ppout ourit of ghowe hom; hank ftem, to buce ha porswertithe fichim, tha chemen amp-hithe eavaseed toch menavon sallt-pentt us tout oo
+
+===== SOURCE: pure.log =====
+700 loss 1.970 best 1.959 saved
+
+===== SOURCE: pure.log =====
+Leatt wr teeres' to blelde than' nourius Rom wo that usw hor shard th m ecoun, I eave how
+
+===== SOURCE: pure.log =====
+is Rome thengeg thear inoreve to blithur!
+
+===== SOURCE: pure.log =====
+Your then: benoder goond fit noulls: all thaili beever Si
+
+===== SOURCE: pure.log =====
+800 loss 1.969 best 1.959 saved
+
+===== SOURCE: pure.log =====
+Tiebuins, in steed meake:
+
+===== SOURCE: pure.log =====
+OMI Cimice: nothir futhere--
+
+===== SOURCE: pure.log =====
+fon the tiest me pine and go titilire,
+
+===== SOURCE: pure.log =====
+Corieack onete well theirouec, on, forse Carin:
+
+===== SOURCE: pure.log =====
+Whalesw nod undercy stingang ofe ty se ore intr
+
+===== SOURCE: pure.log =====
+900 loss 1.648 best 1.959 saved
+
+===== SOURCE: pure.log =====
+A fur that wortwe douds!
+
+===== SOURCE: pure.log =====
+We the peovedre, no. badt nou and ant har exstile I to mont
+
+===== SOURCE: pure.log =====
+Cotiose wherey, my lo beed.
+
+===== SOURCE: pure.log =====
+1000 loss 1.878 best 1.648 saved
+
+===== SOURCE: pure.log =====
+O, Lak im's, und--wort what you and to blows
+
+===== SOURCE: pure.log =====
+thate; she cidscy for
+
+===== SOURCE: pure.log =====
+As your Rear a that eplake d ard.
+
+===== SOURCE: pure.log =====
+1100 loss 2.025 best 1.648 saved
+
+===== SOURCE: pure.log =====
+Leke or thearey to Roter:
+
+===== SOURCE: pure.log =====
+Wese in almoreed boulo
+
+===== SOURCE: pure.log =====
+Whior their, the pit!
+
+===== SOURCE: pure.log =====
+Thee thate thad te you he oteds, ho deenth. Bee he wathir foe ho tteess
+
+===== SOURCE: pure.log =====
+If and goow'w shele butr: Leat rouple of ees, sur force;
+
+===== SOURCE: pure.log =====
+1200 loss 1.929 best 1.648 saved
+
+===== SOURCE: pure.log =====
+Fores indseting your
+
+===== SOURCE: pure.log =====
+brifkify; and missser ones,
+
+===== SOURCE: pure.log =====
+That where'st tiget, their is?
+
+===== SOURCE: pure.log =====
+VOLUMNI, S he mather thee macr cabmed, come:
+
+===== SOURCE: pure.log =====
+Boneds neffet you vork laves leve rid yours to bi
+
+===== SOURCE: pure.log =====
+1300 loss 1.779 best 1.648 saved
+
+===== SOURCE: pure.log =====
+Well, and hengone alous gobes, what laks, Carion so's.
+
+===== SOURCE: pure.log =====
+And ase my makes, syou the things in tour oung agones of
+
+===== SOURCE: pure.log =====
+Firy spoth rebate'TUS: shougha
+
+===== SOURCE: pure.log =====
+1400 loss 1.688 best 1.648 saved
+
+===== SOURCE: pure.log =====
+Wherth Themce cansey,--lain him; to whic mady dele to exwall one than hisheed hescounder a bede fave tus the poore though the beaded them of the for
+
+===== SOURCE: pure.log =====
+Them, and, with your hawofe
+
+===== SOURCE: pure.log =====
+has I day, geedre so t
+
+===== SOURCE: pure.log =====
+1500 loss 1.757 best 1.648 saved
+
+===== SOURCE: pure.log =====
+SICuMurth with the Curime.
+
+===== SOURCE: pure.log =====
+ot upandet. A brood resenver you, sischey you feulds I'sper lise oft then me hourcter
+
+===== SOURCE: pure.log =====
+You what us; lill tleceave the soof the gatent
+
+===== SOURCE: pure.log =====
+1600 loss 1.662 best 1.648 saved
+
+===== SOURCE: pure.log =====
+What tusbelitius'd dous' talowg:
+
+===== SOURCE: pure.log =====
+Here you, prople shale lake you are't sim! Wither whing or comer andsh, we led is tue angmen so the fot
+
+===== SOURCE: pure.log =====
+1700 loss 1.814 best 1.648 saved
+
+===== SOURCE: pure.log =====
+Thou'll but stite By toor
+
+===== SOURCE: pure.log =====
+And to brot make chay morings! To give
+
+===== SOURCE: pure.log =====
+tooitexellm know enos.
+
+===== SOURCE: pure.log =====
+Eeat is: but noe weal him; for the theit has rndeffidius Nark
+
+===== SOURCE: pure.log =====
+1800 loss 1.752 best 1.648 saved
+
+===== SOURCE: pure.log =====
+Orakes, your acliole:
+
+===== SOURCE: pure.log =====
+He halling him of plas ferthy which a Firca the thiugs do sour
+
+===== SOURCE: pure.log =====
+Whor'er fromaris ake is hithing fanerelit's you.
+
+===== SOURCE: pure.log =====
+1900 loss 1.760 best 1.648 saved
+
+===== SOURCE: pure.log =====
+Withon wounds theme ino,
+
+===== SOURCE: pure.log =====
+No'ld fane you anfore, First Mureatse
+
+===== SOURCE: pure.log =====
+But hewo lesply's vactis is to furen oute!
+
+===== SOURCE: pure.log =====
+OLARom: inserver fall-?
+
+===== SOURCE: pure.log =====
+2000 loss 1.542 best 1.648 saved
+
+===== SOURCE: pure.log =====
+op y ulames of Mengerences hand the pattruciad.
+
+===== SOURCE: pure.log =====
+Merest your goth the Cinczen,
+
+===== SOURCE: pure.log =====
+Stcemstich the beartre.
+
+===== SOURCE: pure.log =====
+I sould to can thou will If him dad hur
+
+===== SOURCE: pure.log =====
+2100 loss 1.895 best 1.542 saved
+
+===== SOURCE: pure.log =====
+Andirs a jupour: is crisust danatuse--be the boon--aidiract do'd us atewincours poorf you havll and turt spon have you ale blioke mide.
+
+===== SOURCE: pure.log =====
+Who he, 'ous, to you
+
+===== SOURCE: pure.log =====
+2200 loss 1.686 best 1.542 saved
+
+===== SOURCE: pure.log =====
+Sorke pir be these'rmsend nir knop
+
+===== SOURCE: pure.log =====
+The as you gavey you the warther do you he hearr;
+
+===== SOURCE: pure.log =====
+Wh thes' the Cirizen
+
+===== SOURCE: pure.log =====
+Have toor'st finst reverued thoumppertacile horo in you;
+
+===== SOURCE: pure.log =====
+2300 loss 1.813 best 1.542 saved
+
+===== SOURCE: pure.log =====
+That' spooker the streat tulang
+
+===== SOURCE: pure.log =====
+and in hilen sif sar, geatled eve alfere us.
+
+===== SOURCE: pure.log =====
+That is pessubule, tho dest known swarn:
+
+===== SOURCE: pure.log =====
+Whice me h at gave conduld we.
+
+===== SOURCE: pure.log =====
+And fig the icliones him stic
+
+===== SOURCE: pure.log =====
+2400 loss 1.667 best 1.542 saved
+
+===== SOURCE: pure.log =====
+No, now the is ceriora, sirely
+
+===== SOURCE: pure.log =====
+With liscondag thab lecarct; afe
+
+===== SOURCE: pure.log =====
+I'll beef a camy jountirat lood,
+
+===== SOURCE: pure.log =====
+With us yeser'd sood uperun.
+
+===== SOURCE: pure.log =====
+2500 loss 1.562 best 1.542 saved
+
+===== SOURCE: pure.log =====
+mate wnoblck vears this mowl wise attes with the had ris opond cansher the rssegld morse le
+
+===== SOURCE: pure.log =====
+In the with the godstira coues.
+
+===== SOURCE: pure.log =====
+Nare upleed, mben as dees
+
+===== SOURCE: pure.log =====
+2600 loss 1.578 best 1.542 saved
+
+===== SOURCE: pure.log =====
+Ass inarecticerssed in of tair upon in alm at of
+
+===== SOURCE: pure.log =====
+Tith, LetsTites, and in ot your a sorane.
+
+===== SOURCE: pure.log =====
+An more to Mayct or see in beinglich you that in erss then; eruningrrev, it follow
+
+===== SOURCE: pure.log =====
+2700 loss 1.600 best 1.542 saved
+
+===== SOURCE: pure.log =====
+Weet's Far it to she been seremnot to a goor ort'elver-yetty, must I senous appearise
+
+===== SOURCE: pure.log =====
+Whereing have. Fore if the siccle
+
+===== SOURCE: pure.log =====
+The wruld busibly sererak you corcust ofeead more him: ley sir in thas may itin
+
+===== SOURCE: pure.log =====
+2800 loss 1.491 best 1.542 saved
+
+===== SOURCE: pure.log =====
+Thithin yet ot made is now'l.
+
+===== SOURCE: pure.log =====
+O, Itre you enouch a way for,
+
+===== SOURCE: pure.log =====
+I sarked she though alie they
+
+===== SOURCE: pure.log =====
+what bling saren mo gleebrabyelienesy know oneld me heir bean as shaced t
+
+===== SOURCE: pure.log =====
+2900 loss 1.620 best 1.491 saved
+
+===== SOURCE: pure.log =====
+But the great but pe plike.
+
+===== SOURCE: pure.log =====
+I' the prithe butse yot gredre. Ho
+
+===== SOURCE: pure.log =====
+Whees to be piry, they shouts
+
+===== SOURCE: pure.log =====
+Fir have a sen be: the heart.
+
+===== SOURCE: pure.log =====
+Belike corsting the indett, Junds. Have for
+
+===== SOURCE: pure.log =====
+3000 loss 1.655 best 1.491 saved
+
+===== SOURCE: pure.log =====
+What in alfort. folt wercline; lade
+
+===== SOURCE: pure.log =====
+Come oue faitizen of the vidiun you a drop 'tis 'spetine
+
+===== SOURCE: pure.log =====
+Will balk agport's he as sterd of hiegord
+
+===== SOURCE: pure.log =====
+'llvetall--mercembrain;
+
+===== SOURCE: pure.log =====
+Let's our fibends your domets
+
+===== SOURCE: pure.log =====
+3100 loss 1.697 best 1.491 saved
+
+===== SOURCE: pure.log =====
+O,'dld I'dine to ex:
+
+===== SOURCE: pure.log =====
+He uend: you, Marcius belice; and lond: a'd itruct; I tand didgle,
+
+===== SOURCE: pure.log =====
+This in we cone, they less efore,
+
+===== SOURCE: pure.log =====
+3200 loss 1.574 best 1.491 saved
+
+===== SOURCE: pure.log =====
+And earness requings dever:
+
+===== SOURCE: pure.log =====
+ind eary at's. Hante head?
+
+===== SOURCE: pure.log =====
+Farshyeg lood fire. If mole-tase that an which onft:
+
+===== SOURCE: pure.log =====
+He and with of our pitamed to the townd ullise with the sond:
+
+===== SOURCE: pure.log =====
+3300 loss 1.528 best 1.491 saved
+
+===== SOURCE: pure.log =====
+That deves the wastly: took the fielt,
+
+===== SOURCE: pure.log =====
+Why vepowers ansthus goos st of most eftely I amontine
+
+===== SOURCE: pure.log =====
+Not I wial my wohbusce a'lly, one must
+
+===== SOURCE: pure.log =====
+Secotu arsten that's fould lave me us.
+
+===== SOURCE: pure.log =====
+3400 loss 1.542 best 1.491 saved
+
+===== SOURCE: pure.log =====
+Which you grave in's pracum; and an you belidef acr in of you,
+
+===== SOURCE: pure.log =====
+They 'tiseded. Hew, she is our as I cins:
+
+===== SOURCE: pure.log =====
+3500 loss 1.447 best 1.491 saved
+
+===== SOURCE: pure.log =====
+Soors: Rome moster oup: are thes to cursole.
+
+===== SOURCE: pure.log =====
+Lesere they may sove allow hear,
+
+===== SOURCE: pure.log =====
+Noy: beed the dierccous.
+
+===== SOURCE: pure.log =====
+Lity, msough the posp
+
+===== SOURCE: pure.log =====
+scryess turmofire; and you
+
+===== SOURCE: pure.log =====
+3600 loss 1.611 best 1.447 saved
+
+===== SOURCE: pure.log =====
+Had gaty uppobl with us is his beaging thou beard, bus swer well I am their befoued fettyo rovenoulds wholesten-vill That dovy you meen come allook, ly, this willdst, condrmbs from toon,
+
+===== SOURCE: pure.log =====
+3700 loss 1.522 best 1.447 saved
+
+===== SOURCE: pure.log =====
+In br non: whe haled I bus,
+
+===== SOURCE: pure.log =====
+To his pecher he tall he geter,
+
+===== SOURCE: pure.log =====
+To If af eft'e. I have gene's a tare fill.
+
+===== SOURCE: pure.log =====
+The Valarse Marcius.
+
+===== SOURCE: pure.log =====
+you. Comen: the beono, will sack, you has i
+
+===== SOURCE: pure.log =====
+3800 loss 1.617 best 1.447 saved
+
+===== SOURCE: pure.log =====
+Lith hin breworse man thane'track, but I to ear's. I shall nor walls, brain you that I thou, my co pumpiricet so by the vile malow!
+
+===== SOURCE: pure.log =====
+3900 loss 1.408 best 1.447 saved
+
+===== SOURCE: pure.log =====
+O,'te our thun man in the bether you shasted, comeond, beard tell in areshich, and there's up. Tute be put in sheer are was, on
+
+===== SOURCE: pure.log =====
+spess of these veat hus prioud,
+
+===== SOURCE: pure.log =====
+4000 loss 1.378 best 1.408 saved
+
+===== SOURCE: pure.log =====
+With youm on hours sance,
+
+===== SOURCE: pure.log =====
+Indierr'd his taikens'lr wind to they like
+
+===== SOURCE: pure.log =====
+Than your grave ton!
+
+===== SOURCE: pure.log =====
+The lets insensing elves?
+
+===== SOURCE: pure.log =====
+Marom yould me becimy grant, wondse
+
+===== SOURCE: pure.log =====
+pretain; and enatoit mort than I kno
+
+===== SOURCE: pure.log =====
+4100 loss 1.390 best 1.378 saved
+
+===== SOURCE: pure.log =====
+That's dis for the nobs: we'll beafed praceld
+
+===== SOURCE: pure.log =====
+That wars'd he dimppationt growiter blooder to the lid teat ands, why: ham te
+
+===== SOURCE: pure.log =====
+sir, by then I rmy tell and catricriarive the membors doue makes s'ed! you
+
+===== SOURCE: pure.log =====
+4200 loss 1.634 best 1.378 saved
+
+===== SOURCE: pure.log =====
+Gre the arms infour carearse m'Cuse
+
+===== SOURCE: pure.log =====
+Antich a quarry so, doldse upoo wo
+
+===== SOURCE: pure.log =====
+O, hear more I mamused ewher in the fing adms atd
+
+===== SOURCE: pure.log =====
+4300 loss 1.448 best 1.378 saved
+
+===== SOURCE: pure.log =====
+Hackisstedund a poobly
+
+===== SOURCE: pure.log =====
+poor in hearing, spount alvinger, pear in nome, nos the ronger
+
+===== SOURCE: pure.log =====
+Wey't the peach you coult;
+
+===== SOURCE: pure.log =====
+brimn this epsirely priced and city to weep homes keems, aldier of
+
+===== SOURCE: pure.log =====
+4400 loss 1.459 best 1.378 saved
+
+===== SOURCE: pure.log =====
+Betom. otherss be died! Tidus ink, their shall no,
+
+===== SOURCE: pure.log =====
+make my like of o'thori' men ownice
+
+===== SOURCE: pure.log =====
+That dreet make my hourest, ellequer and rodoubt on you south a gracced stat fiee! I chave his
+
+===== SOURCE: pure.log =====
+4500 loss 1.429 best 1.378 saved
+
+===== SOURCE: pure.log =====
+We bose for honours well all the power. How ere we. 'tis benourt;
+
+===== SOURCE: pure.log =====
+I warline tof enow their cloiver
+
+===== SOURCE: pure.log =====
+BRUTUS: Setwill a clooks
+
+===== SOURCE: pure.log =====
+4600 loss 1.445 best 1.378 saved
+
+===== SOURCE: pure.log =====
+If astarquth our oid spont, who des him of did of'det.
+
+===== SOURCE: pure.log =====
+O, not she that shishe toof eart heart,
+
+===== SOURCE: pure.log =====
+yes, my lady: blook pition. Son Cirut: whempell,
+
+===== SOURCE: pure.log =====
+I here, ull, where, that, but the for his no
+
+===== SOURCE: pure.log =====
+4700 loss 1.404 best 1.378 saved
+
+===== SOURCE: pure.log =====
+Then gray the repare us.
+
+===== SOURCE: pure.log =====
+O, I bear net one their his mery most not an crubudition. Go him, and to carnoust'd. Plition with, we like
+
+===== SOURCE: pure.log =====
+firs the gods; it; ented then we kname an which hom as in
+
+===== SOURCE: pure.log =====
+4800 loss 1.430 best 1.378 saved
+
+===== SOURCE: pure.log =====
+Our that the citiong the fifion
+
+===== SOURCE: pure.log =====
+The loved gindyed wish thee; it light agoor for: house than a this former, my lake tada:
+
+===== SOURCE: pure.log =====
+He runseicteranu to a
+
+===== SOURCE: pure.log =====
+4900 loss 1.457 best 1.378 saved
+
+===== SOURCE: pure.log =====
+The phobly cence and strtt shave not, 'eastdee you shoun.
+
+===== SOURCE: pure.log =====
+Hers yes: eventer than covermpermon an
+
+===== SOURCE: pure.log =====
+If in the poor indanche one prouds.
+
+===== SOURCE: bloom_groundbreaking.py =====
+FULL Shakespeare + your own texts if you have them
+
+===== SOURCE: my_texts.txt =====
+East Point, Georgia. BLOOM is the best LLM on Termux. It learns Shakespeare and my thoughts.
+
+===== SOURCE: bloom_english.py =====
+1. ENGLISH DATA - not Shakespeare
+
+===== SOURCE: bloom_english.py =====
+TinyStories + your voice = modern English
+
+===== SOURCE: bloom_english.py =====
+loss + backward (truncated)
+
+===== SOURCE: bloom_max.py =====
+1. HEURISTIC - gather all sources at once
+
+===== SOURCE: bloom_max.py =====
+2. MAX CONFIG - not minimized
+
+===== SOURCE: bloom_max.py =====
+3. CRITIC + TRAIN - real weights, fast
+
+===== SOURCE: bloom_max.py =====
+4. INTERPRETATION - archive embedding for retrieval
+
+===== SOURCE: bloom_max.py =====
+Put PDFs in ~/BLOOM/archives/ - type 'discover' or any prompt
+
+===== SOURCE: bloom_real.py =====
+BLOOM REAL STABLE Pure NumPy decoder-only Transformer - Correct RoPE forward/backward - Correct attention scaling gradient - Stable LayerNorm backward - Exact weight tying - Adam optimizer - Global gradient clipping - Finite-value guards - Numerical gradient checks before training
+
+===== SOURCE: bloom_real.py =====
+x: (B, H, T, DH) cos/sin: (T, DH/2)
+
+===== SOURCE: bloom_real.py =====
+Exact backward through orthogonal RoPE rotation. Inverse rotation = rotation by -angle.
+
+===== SOURCE: bloom_real.py =====
+!/usr/bin/env python3
+
+===== SOURCE: bloom_real.py =====
+Repeat real corpus only to provide enough sequence windows.
+
+===== SOURCE: bloom_real.py =====
+No fabricated text is introduced.
+
+===== SOURCE: bloom_real.py =====
+CAUSAL SELF ATTENTION
+
+===== SOURCE: bloom_real.py =====
+Stable softmax backward
+
+===== SOURCE: bloom_real.py =====
+scores = (q @ k.T) * scale
+
+===== SOURCE: bloom_real.py =====
+Output head gradient belongs to tied embedding matrix.
+
+===== SOURCE: bloom_real.py =====
+PARAMETER / GRADIENT COLLECTION
+
+===== SOURCE: bloom_real.py =====
+NUMERICAL GRADIENT CHECK
+
+===== SOURCE: bloom_real.py =====
+ADAM + GLOBAL GRADIENT CLIPPING
+
+===== SOURCE: bloom_real.py =====
+Weight decay only for matrices.
+
+===== SOURCE: bloom_real.py =====
+Preserve exact weight tying.
+
+===== SOURCE: bloom_real.py =====
+Commands: exit | quit | discover
+
+===== SOURCE: bloom_real.py =====
+Not enough real training text. Put more text into ~/BLOOM/my_texts.txt or ~/BLOOM/archives/
+
+===== SOURCE: bloom_corpus_integrity.py =====
+Technical/semantic terms expected to carry meaning beyond syntax.
+
+===== SOURCE: bloom_semantic_corpus.py =====
+Remove source headers and obvious machine-only lines while preserving
+
+===== SOURCE: bloom_semantic_corpus.py =====
+natural-language/log evidence.
+
+===== SOURCE: bloom_semantic_corpus.py =====
+Skip obvious pure separators.
+
+===== SOURCE: bloom_semantic_corpus.py =====
+Skip lines consisting almost entirely of punctuation/numbers.
+
+===== SOURCE: bloom_semantic_corpus.py =====
+Deduplicate identical content.
+

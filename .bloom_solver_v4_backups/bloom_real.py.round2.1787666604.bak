@@ -1,0 +1,1461 @@
+#!/usr/bin/env python3
+import bloom_best_llm
+"""
+BLOOM REAL STABLE
+Pure NumPy decoder-only Transformer
+- Correct RoPE forward/backward
+- Correct attention scaling gradient
+- Stable LayerNorm backward
+- Exact weight tying
+- Adam optimizer
+- Global gradient clipping
+- Finite-value guards
+- Numerical gradient checks before training
+"""
+
+import math
+import glob
+import pathlib
+import pickle
+import random
+import time
+import sys
+import numpy as np
+
+# ============================================================
+# CONFIG
+# ============================================================
+
+HOME = pathlib.Path.home()
+BLOOM_DIR = HOME / "BLOOM"
+ARCH_DIR = BLOOM_DIR / "archives"
+CKPT_DIR = BLOOM_DIR / "checkpoints"
+TEXT_FILE = BLOOM_DIR / "my_texts.txt"
+
+ARCH_DIR.mkdir(parents=True, exist_ok=True)
+CKPT_DIR.mkdir(parents=True, exist_ok=True)
+
+PRESET = "small"
+
+PRESETS = {
+    "tiny":   dict(D=64,  H=4, L=3, T=64, lr=1e-3),
+    "small":  dict(D=128, H=4, L=4, T=64, lr=5e-4),
+    "medium": dict(D=256, H=8, L=6, T=96, lr=3e-4),
+}
+
+cfg = PRESETS[PRESET]
+
+D = cfg["D"]
+H = cfg["H"]
+L = cfg["L"]
+T = cfg["T"]
+LR = cfg["lr"]
+
+if D % H != 0:
+    raise ValueError("D must divide evenly by H")
+
+DH = D // H
+
+BATCH = 4
+MAX_ITERS = 2000
+EVAL_EVERY = 25
+SEED = 42
+
+BETA1 = 0.9
+BETA2 = 0.999
+EPS = 1e-8
+WEIGHT_DECAY = 1e-4
+MAX_GRAD_NORM = 1.0
+
+np.random.seed(SEED)
+random.seed(SEED)
+
+# ============================================================
+# UTILS
+# ============================================================
+
+def zeros(*shape):
+    return np.zeros(shape, dtype=np.float32)
+
+
+def randn(*shape, scale=0.02):
+    return (
+        np.random.randn(*shape).astype(np.float32) * scale
+    )
+
+
+def check_finite(name, x):
+    if not np.all(np.isfinite(x)):
+        bad = np.size(x) - np.isfinite(x).sum()
+        raise FloatingPointError(
+            f"[NONFINITE] {name}: {bad} non-finite values"
+        )
+
+
+# ============================================================
+# RoPE
+# ============================================================
+
+def precompute_rope(dim, end, theta=10000.0):
+    if dim % 2 != 0:
+        raise ValueError("RoPE head dimension must be even")
+
+    inv_freq = 1.0 / (
+        theta ** (
+            np.arange(0, dim, 2, dtype=np.float32) / dim
+        )
+    )
+
+    positions = np.arange(end, dtype=np.float32)
+
+    angles = np.outer(positions, inv_freq)
+
+    cos = np.cos(angles).astype(np.float32)
+    sin = np.sin(angles).astype(np.float32)
+
+    return cos, sin
+
+
+def rope_rotate(x, cos, sin):
+    """
+    x: (B, H, T, DH)
+    cos/sin: (T, DH/2)
+    """
+
+    B, heads, seq, dim = x.shape
+
+    x_pair = x.reshape(B, heads, seq, dim // 2, 2)
+
+    even = x_pair[..., 0]
+    odd = x_pair[..., 1]
+
+    c = cos[:seq][None, None, :, :]
+    s = sin[:seq][None, None, :, :]
+
+    out_even = even * c - odd * s
+    out_odd = even * s + odd * c
+
+    out = np.stack(
+        [out_even, out_odd],
+        axis=-1
+    )
+
+    return out.reshape(B, heads, seq, dim).astype(np.float32)
+
+
+def rope_inverse(grad, cos, sin):
+    """
+    Exact backward through orthogonal RoPE rotation.
+    Inverse rotation = rotation by -angle.
+    """
+
+    B, heads, seq, dim = grad.shape
+
+    g_pair = grad.reshape(
+        B, heads, seq, dim // 2, 2
+    )
+
+    even = g_pair[..., 0]
+    odd = g_pair[..., 1]
+
+    c = cos[:seq][None, None, :, :]
+    s = sin[:seq][None, None, :, :]
+
+    out_even = even * c + odd * s
+    out_odd = -even * s + odd * c
+
+    out = np.stack(
+        [out_even, out_odd],
+        axis=-1
+    )
+
+    return out.reshape(B, heads, seq, dim).astype(np.float32)
+
+
+# ============================================================
+# DATA
+# ============================================================
+
+VALIDATION_TEXT = None
+
+
+def load_text():
+    """
+    BLOOM V2 REAL DATA LOADER
+
+    Training:
+        bloom_train_v2.txt
+
+    Validation:
+        bloom_valid_v2.txt
+
+    The validated V2 corpora are loaded directly.
+    No fabricated text is introduced.
+    No archive material is silently mixed into training.
+    """
+
+    train_path = BLOOM_DIR / "bloom_train_v2.txt"
+    valid_path = BLOOM_DIR / "bloom_valid_v2.txt"
+
+    if not train_path.exists():
+        raise RuntimeError(
+            f"Missing validated V2 training corpus: {train_path}"
+        )
+
+    if not valid_path.exists():
+        raise RuntimeError(
+            f"Missing validated V2 validation corpus: {valid_path}"
+        )
+
+    train_text = train_path.read_text(
+        encoding="utf-8",
+        errors="ignore"
+    )
+
+    valid_text = valid_path.read_text(
+        encoding="utf-8",
+        errors="ignore"
+    )
+
+    if len(train_text.strip()) < 100:
+        raise RuntimeError(
+            "Validated V2 training corpus is too small."
+        )
+
+    if len(valid_text.strip()) < 20:
+        raise RuntimeError(
+            "Validated V2 validation corpus is too small."
+        )
+
+    # Keep validation available to the runtime without contaminating
+    # the training stream.
+    global VALIDATION_TEXT
+    VALIDATION_TEXT = valid_text
+
+    # The existing GPT runtime expects load_text() to return the
+    # training text and an archive count.
+    #
+    # archive_count is retained for compatibility.
+    archive_count = 0
+
+    return train_text, archive_count
+def get_batch():
+
+    max_start = len(data) - T - 1
+
+    ix = np.random.randint(
+        0,
+        max_start,
+        size=BATCH
+    )
+
+    x = np.stack(
+        [data[i:i + T] for i in ix]
+    )
+
+    y = np.stack(
+        [data[i + 1:i + T + 1] for i in ix]
+    )
+
+    return x, y
+
+
+# ============================================================
+# LINEAR
+# ============================================================
+
+class Linear:
+
+    def __init__(self, nin, nout, bias=True):
+
+        self.W = randn(nin, nout)
+
+        self.b = (
+            zeros(nout)
+            if bias
+            else None
+        )
+
+        self.dW = zeros(nin, nout)
+
+        self.db = (
+            zeros(nout)
+            if bias
+            else None
+        )
+
+        self.x = None
+
+
+    def forward(self, x):
+
+        self.x = x
+
+        out = x @ self.W
+
+        if self.b is not None:
+            out = out + self.b
+
+        return out.astype(np.float32)
+
+
+    def backward(self, dout):
+
+        x2 = self.x.reshape(
+            -1,
+            self.x.shape[-1]
+        )
+
+        d2 = dout.reshape(
+            -1,
+            dout.shape[-1]
+        )
+
+        self.dW[:] = x2.T @ d2
+
+        if self.b is not None:
+            self.db[:] = d2.sum(
+                axis=0
+            )
+
+        return (
+            dout @ self.W.T
+        ).astype(np.float32)
+
+
+# ============================================================
+# LAYER NORM
+# ============================================================
+
+class LayerNorm:
+
+    def __init__(self, dim, eps=1e-5):
+
+        self.g = np.ones(
+            dim,
+            dtype=np.float32
+        )
+
+        self.b = zeros(dim)
+
+        self.eps = eps
+
+        self.xhat = None
+        self.invstd = None
+
+        self.dg = zeros(dim)
+        self.db = zeros(dim)
+
+
+    def forward(self, x):
+
+        mean = x.mean(
+            axis=-1,
+            keepdims=True
+        )
+
+        var = x.var(
+            axis=-1,
+            keepdims=True
+        )
+
+        self.invstd = 1.0 / np.sqrt(
+            var + self.eps
+        )
+
+        self.xhat = (
+            x - mean
+        ) * self.invstd
+
+        return (
+            self.xhat * self.g + self.b
+        ).astype(np.float32)
+
+
+    def backward(self, dout):
+
+        axes = tuple(
+            range(dout.ndim - 1)
+        )
+
+        self.dg[:] = (
+            dout * self.xhat
+        ).sum(axis=axes)
+
+        self.db[:] = dout.sum(axis=axes)
+
+        N = dout.shape[-1]
+
+        dxhat = dout * self.g
+
+        dx = (
+            1.0 / N
+        ) * self.invstd * (
+            N * dxhat
+            - dxhat.sum(
+                axis=-1,
+                keepdims=True
+            )
+            - self.xhat * (
+                dxhat * self.xhat
+            ).sum(
+                axis=-1,
+                keepdims=True
+            )
+        )
+
+        return dx.astype(np.float32)
+
+
+# ============================================================
+# CAUSAL SELF ATTENTION
+# ============================================================
+
+class CausalSelfAttention:
+
+    def __init__(self, D, H, rope_cos, rope_sin):
+
+        self.H = H
+        self.DH = D // H
+        self.scale = 1.0 / math.sqrt(self.DH)
+
+        self.qkv = Linear(D, 3 * D)
+        self.proj = Linear(D, D)
+
+        self.rope_cos = rope_cos
+        self.rope_sin = rope_sin
+
+        self.q = None
+        self.k = None
+        self.v = None
+        self.att = None
+
+
+    def forward(self, x):
+
+        B, seq, C = x.shape
+
+        qkv = self.qkv.forward(x)
+
+        q, k, v = np.split(
+            qkv,
+            3,
+            axis=-1
+        )
+
+        q = q.reshape(
+            B, seq, self.H, self.DH
+        ).transpose(0, 2, 1, 3)
+
+        k = k.reshape(
+            B, seq, self.H, self.DH
+        ).transpose(0, 2, 1, 3)
+
+        v = v.reshape(
+            B, seq, self.H, self.DH
+        ).transpose(0, 2, 1, 3)
+
+        # RoPE
+        q = rope_rotate(
+            q,
+            self.rope_cos,
+            self.rope_sin
+        )
+
+        k = rope_rotate(
+            k,
+            self.rope_cos,
+            self.rope_sin
+        )
+
+        scores = (
+            q @ k.transpose(0, 1, 3, 2)
+        ) * self.scale
+
+        mask = np.triu(
+            np.full(
+                (seq, seq),
+                -1e9,
+                dtype=np.float32
+            ),
+            k=1
+        )
+
+        scores = scores + mask
+
+        # Stable softmax
+        scores = scores - scores.max(
+            axis=-1,
+            keepdims=True
+        )
+
+        exp_scores = np.exp(
+            np.clip(scores, -80.0, 0.0)
+        )
+
+        att = exp_scores / (
+            exp_scores.sum(
+                axis=-1,
+                keepdims=True
+            ) + 1e-9
+        )
+
+        y = att @ v
+
+        y = y.transpose(
+            0, 2, 1, 3
+        ).reshape(B, seq, C)
+
+        self.q = q
+        self.k = k
+        self.v = v
+        self.att = att
+
+        return self.proj.forward(y)
+
+
+    def backward(self, dout):
+
+        B, seq, C = dout.shape
+
+        dy = self.proj.backward(dout)
+
+        dy = dy.reshape(
+            B,
+            seq,
+            self.H,
+            self.DH
+        ).transpose(0, 2, 1, 3)
+
+        q = self.q
+        k = self.k
+        v = self.v
+        att = self.att
+
+        # y = att @ v
+        datt = (
+            dy @ v.transpose(0, 1, 3, 2)
+        )
+
+        dv = (
+            att.transpose(0, 1, 3, 2)
+            @ dy
+        )
+
+        # Stable softmax backward
+        dscore = att * (
+            datt
+            - (
+                datt * att
+            ).sum(
+                axis=-1,
+                keepdims=True
+            )
+        )
+
+        # scores = (q @ k.T) * scale
+        dq = (
+            dscore @ k
+        ) * self.scale
+
+        dk = (
+            dscore.transpose(0, 1, 3, 2)
+            @ q
+        ) * self.scale
+
+        # Exact inverse RoPE
+        dq = rope_inverse(
+            dq,
+            self.rope_cos,
+            self.rope_sin
+        )
+
+        dk = rope_inverse(
+            dk,
+            self.rope_cos,
+            self.rope_sin
+        )
+
+        dq = dq.transpose(
+            0, 2, 1, 3
+        ).reshape(B, seq, C)
+
+        dk = dk.transpose(
+            0, 2, 1, 3
+        ).reshape(B, seq, C)
+
+        dv = dv.transpose(
+            0, 2, 1, 3
+        ).reshape(B, seq, C)
+
+        return self.qkv.backward(
+            np.concatenate(
+                [dq, dk, dv],
+                axis=-1
+            )
+        )
+
+
+# ============================================================
+# MLP
+# ============================================================
+
+class MLP:
+
+    def __init__(self, D):
+
+        self.fc1 = Linear(D, 4 * D)
+        self.fc2 = Linear(4 * D, D)
+
+        self.h = None
+
+
+    def forward(self, x):
+
+        h = self.fc1.forward(x)
+
+        # GELU approximation
+        self.h = h
+
+        c = np.sqrt(
+            2.0 / np.pi
+        )
+
+        u = c * (
+            h + 0.044715 * h ** 3
+        )
+
+        return self.fc2.forward(
+            0.5 * h * (
+                1.0 + np.tanh(u)
+            )
+        )
+
+
+    def backward(self, dout):
+
+        dh = self.fc2.backward(dout)
+
+        h = self.h
+
+        c = np.sqrt(
+            2.0 / np.pi
+        )
+
+        u = c * (
+            h + 0.044715 * h ** 3
+        )
+
+        tanh_u = np.tanh(u)
+
+        du = c * (
+            1.0 + 3.0 * 0.044715 * h ** 2
+        )
+
+        gelu_grad = (
+            0.5 * (
+                1.0 + tanh_u
+            )
+            + 0.5 * h * (
+                1.0 - tanh_u ** 2
+            ) * du
+        )
+
+        return self.fc1.backward(
+            dh * gelu_grad
+        )
+
+
+# ============================================================
+# BLOCK
+# ============================================================
+
+class Block:
+
+    def __init__(
+        self,
+        D,
+        H,
+        rope_cos,
+        rope_sin
+    ):
+
+        self.ln1 = LayerNorm(D)
+
+        self.attn = CausalSelfAttention(
+            D,
+            H,
+            rope_cos,
+            rope_sin
+        )
+
+        self.ln2 = LayerNorm(D)
+
+        self.mlp = MLP(D)
+
+
+    def forward(self, x):
+
+        x = x + self.attn.forward(
+            self.ln1.forward(x)
+        )
+
+        x = x + self.mlp.forward(
+            self.ln2.forward(x)
+        )
+
+        return x
+
+
+    def backward(self, dout):
+
+        d_mlp = self.mlp.backward(dout)
+
+        d_ln2 = self.ln2.backward(d_mlp)
+
+        d_after_attn = dout + d_ln2
+
+        d_attn = self.attn.backward(
+            d_after_attn
+        )
+
+        d_ln1 = self.ln1.backward(d_attn)
+
+        return d_after_attn + d_ln1
+
+
+# ============================================================
+# GPT
+# ============================================================
+
+class GPT:
+
+    def __init__(self, vs, D, H, L, T):
+
+        self.T = T
+
+        self.wte = randn(vs, D)
+
+        rope_cos, rope_sin = precompute_rope(
+            D // H,
+            T
+        )
+
+        self.blocks = [
+            Block(
+                D,
+                H,
+                rope_cos,
+                rope_sin
+            )
+            for _ in range(L)
+        ]
+
+        self.ln_f = LayerNorm(D)
+
+        self.lm_head = Linear(
+            D,
+            vs,
+            bias=False
+        )
+
+        # True tied weights
+        self.lm_head.W = self.wte.T
+
+        self.idx = None
+        self.probs = None
+        self.targets = None
+
+        self.d_wte = zeros(vs, D)
+
+
+    def forward(self, idx, targets=None):
+
+        B, seq = idx.shape
+
+        if seq != self.T:
+            raise ValueError(
+                f"Expected context {self.T}, got {seq}"
+            )
+
+        self.idx = idx
+
+        x = self.wte[idx]
+
+        for block in self.blocks:
+            x = block.forward(x)
+
+        x = self.ln_f.forward(x)
+
+        logits = self.lm_head.forward(x)
+
+        loss = None
+
+        if targets is not None:
+
+            flat = logits.reshape(
+                -1,
+                logits.shape[-1]
+            )
+
+            flat = flat - flat.max(
+                axis=1,
+                keepdims=True
+            )
+
+            exp = np.exp(
+                np.clip(flat, -80.0, 0.0)
+            )
+
+            probs = exp / (
+                exp.sum(
+                    axis=1,
+                    keepdims=True
+                ) + 1e-9
+            )
+
+            target_flat = targets.reshape(-1)
+
+            loss = -np.log(
+                probs[
+                    np.arange(B * seq),
+                    target_flat
+                ] + 1e-9
+            ).mean()
+
+            self.probs = probs.reshape(
+                B,
+                seq,
+                -1
+            )
+
+            self.targets = targets
+
+        return logits, float(loss) if loss is not None else None
+
+
+    def backward(self):
+
+        B, seq, V = self.probs.shape
+
+        dlogits = self.probs.copy()
+
+        dlogits.reshape(
+            -1,
+            V
+        )[
+            np.arange(B * seq),
+            self.targets.reshape(-1)
+        ] -= 1.0
+
+        dlogits /= (
+            B * seq
+        )
+
+        dx = self.lm_head.backward(
+            dlogits
+        )
+
+        dx = self.ln_f.backward(dx)
+
+        for block in reversed(self.blocks):
+            dx = block.backward(dx)
+
+        d_wte = zeros(*self.wte.shape)
+
+        np.add.at(
+            d_wte,
+            self.idx.reshape(-1),
+            dx.reshape(-1, dx.shape[-1])
+        )
+
+        # Output head gradient belongs to tied embedding matrix.
+        d_wte += self.lm_head.dW.T
+
+        self.d_wte[:] = d_wte
+
+
+# ============================================================
+# PARAMETER / GRADIENT COLLECTION
+# ============================================================
+
+def collect_params():
+
+    params = [
+        ("wte", model.wte, model.d_wte)
+    ]
+
+    for i, b in enumerate(model.blocks):
+
+        params.extend([
+            (
+                f"b{i}.qkv.W",
+                b.attn.qkv.W,
+                b.attn.qkv.dW
+            ),
+            (
+                f"b{i}.qkv.b",
+                b.attn.qkv.b,
+                b.attn.qkv.db
+            ),
+            (
+                f"b{i}.proj.W",
+                b.attn.proj.W,
+                b.attn.proj.dW
+            ),
+            (
+                f"b{i}.proj.b",
+                b.attn.proj.b,
+                b.attn.proj.db
+            ),
+            (
+                f"b{i}.ln1.g",
+                b.ln1.g,
+                b.ln1.dg
+            ),
+            (
+                f"b{i}.ln1.b",
+                b.ln1.b,
+                b.ln1.db
+            ),
+            (
+                f"b{i}.ln2.g",
+                b.ln2.g,
+                b.ln2.dg
+            ),
+            (
+                f"b{i}.ln2.b",
+                b.ln2.b,
+                b.ln2.db
+            ),
+            (
+                f"b{i}.fc1.W",
+                b.mlp.fc1.W,
+                b.mlp.fc1.dW
+            ),
+            (
+                f"b{i}.fc1.b",
+                b.mlp.fc1.b,
+                b.mlp.fc1.db
+            ),
+            (
+                f"b{i}.fc2.W",
+                b.mlp.fc2.W,
+                b.mlp.fc2.dW
+            ),
+            (
+                f"b{i}.fc2.b",
+                b.mlp.fc2.b,
+                b.mlp.fc2.db
+            ),
+        ])
+
+    params.extend([
+        (
+            "lnf.g",
+            model.ln_f.g,
+            model.ln_f.dg
+        ),
+        (
+            "lnf.b",
+            model.ln_f.b,
+            model.ln_f.db
+        ),
+    ])
+
+    return params
+
+
+def count_params(model):
+
+    seen = set()
+    total = 0
+
+    for _, p, _ in collect_params():
+        key = id(p)
+
+        if key not in seen:
+            seen.add(key)
+            total += p.size
+
+    return total
+
+
+# ============================================================
+# BUILD
+# ============================================================
+
+print(
+    f"[MODEL] Building {PRESET} "
+    f"D={D} H={H} L={L} T={T}"
+)
+
+model = GPT(
+    vocab_size,
+    D,
+    H,
+    L,
+    T
+)
+
+params = collect_params()
+
+print(
+    f"[MODEL] "
+    f"{count_params(model) / 1e6:.2f}M parameters"
+)
+
+
+# ============================================================
+# NUMERICAL GRADIENT CHECK
+# ============================================================
+
+print("[CHECK] Running pre-training finite diagnostic...")
+
+test_x, test_y = get_batch()
+
+_, test_loss = model.forward(
+    test_x,
+    test_y
+)
+
+model.backward()
+
+check_finite(
+    "initial_loss",
+    np.array(test_loss)
+)
+
+for name, _, grad in params:
+    check_finite(
+        f"grad:{name}",
+        grad
+    )
+
+grad_norm_sq = sum(
+    float(np.sum(grad.astype(np.float64) ** 2))
+    for _, _, grad in params
+)
+
+initial_grad_norm = math.sqrt(grad_norm_sq)
+
+print(
+    f"[CHECK] PASS "
+    f"loss={test_loss:.6f} "
+    f"grad_norm={initial_grad_norm:.6f}"
+)
+
+
+# ============================================================
+# ADAM + GLOBAL GRADIENT CLIPPING
+# ============================================================
+
+adam_m = {
+    name: zeros(*p.shape)
+    for name, p, _ in params
+}
+
+adam_v = {
+    name: zeros(*p.shape)
+    for name, p, _ in params
+}
+
+
+def apply_grads(step, lr):
+
+    global_norm_sq = 0.0
+
+    for _, _, grad in params:
+
+        check_finite(
+            "gradient",
+            grad
+        )
+
+        global_norm_sq += float(
+            np.sum(
+                grad.astype(np.float64) ** 2
+            )
+        )
+
+    global_norm = math.sqrt(
+        global_norm_sq
+    )
+
+    clip_coef = min(
+        1.0,
+        MAX_GRAD_NORM / (
+            global_norm + 1e-12
+        )
+    )
+
+    for name, param, grad in params:
+
+        g = grad * clip_coef
+
+        m = adam_m[name]
+        v = adam_v[name]
+
+        m[:] = (
+            BETA1 * m
+            + (1.0 - BETA1) * g
+        )
+
+        v[:] = (
+            BETA2 * v
+            + (1.0 - BETA2) * (g * g)
+        )
+
+        m_hat = m / (
+            1.0 - BETA1 ** step
+        )
+
+        v_hat = v / (
+            1.0 - BETA2 ** step
+        )
+
+        # Weight decay only for matrices.
+        if param.ndim >= 2:
+            param *= (
+                1.0
+                - lr * WEIGHT_DECAY
+            )
+
+        param -= (
+            lr
+            * m_hat
+            / (
+                np.sqrt(v_hat) + EPS
+            )
+        )
+
+        check_finite(
+            f"parameter:{name}",
+            param
+        )
+
+    # Preserve exact weight tying.
+    model.lm_head.W = model.wte.T
+
+    return global_norm, clip_coef
+
+
+# ============================================================
+# CHECKPOINT
+# ============================================================
+
+def save_ckpt(step, loss):
+
+    path = (
+        CKPT_DIR
+        / f"bloom_real_{PRESET}_step{step}.pkl"
+    )
+
+    state = {
+        "step": step,
+        "loss": loss,
+        "preset": PRESET,
+        "config": cfg,
+        "stoi": stoi,
+        "itos": itos,
+        "wte": model.wte.copy(),
+        "blocks": [],
+        "ln_f_g": model.ln_f.g.copy(),
+        "ln_f_b": model.ln_f.b.copy(),
+    }
+
+    for b in model.blocks:
+
+        state["blocks"].append({
+            "qkv_W": b.attn.qkv.W.copy(),
+            "qkv_b": b.attn.qkv.b.copy(),
+            "proj_W": b.attn.proj.W.copy(),
+            "proj_b": b.attn.proj.b.copy(),
+            "ln1_g": b.ln1.g.copy(),
+            "ln1_b": b.ln1.b.copy(),
+            "ln2_g": b.ln2.g.copy(),
+            "ln2_b": b.ln2.b.copy(),
+            "fc1_W": b.mlp.fc1.W.copy(),
+            "fc1_b": b.mlp.fc1.b.copy(),
+            "fc2_W": b.mlp.fc2.W.copy(),
+            "fc2_b": b.mlp.fc2.b.copy(),
+        })
+
+    with open(path, "wb") as f:
+        pickle.dump(
+            state,
+            f,
+            protocol=pickle.HIGHEST_PROTOCOL
+        )
+
+    print(
+        f"[CKPT] {path.name}"
+    )
+
+
+# ============================================================
+# TRAIN
+# ============================================================
+
+print("[TRAIN] Starting stable real training...")
+
+t0 = time.time()
+
+best_loss = float("inf")
+
+for step in range(
+    1,
+    MAX_ITERS + 1
+):
+
+    x, y = get_batch()
+
+    _, loss = model.forward(
+        x,
+        y
+    )
+
+    check_finite(
+        "loss",
+        np.array(loss)
+    )
+
+    model.backward()
+
+    warmup = min(
+        1.0,
+        step / 100.0
+    )
+
+    lr = LR * warmup
+
+    grad_norm, clip_coef = apply_grads(
+        step,
+        lr
+    )
+
+    if step % EVAL_EVERY == 0 or step == 1:
+
+        elapsed = time.time() - t0
+
+        print(
+            f"step {step:5d} | "
+            f"loss {loss:.6f} | "
+            f"lr {lr:.2e} | "
+            f"grad {grad_norm:.4f} | "
+            f"clip {clip_coef:.4f} | "
+            f"{elapsed:.0f}s"
+        )
+
+        if loss < best_loss:
+
+            best_loss = loss
+
+            save_ckpt(
+                step,
+                loss
+            )
+
+print(
+    f"[TRAIN] COMPLETE "
+    f"best_loss={best_loss:.6f}"
+)
+
+save_ckpt(
+    MAX_ITERS,
+    loss
+)
+
+
+# ============================================================
+# RETRIEVAL
+# ============================================================
+
+archive_texts = []
+
+for f in glob.glob(str(ARCH_DIR / "*")):
+
+    path = pathlib.Path(f)
+
+    if not path.is_file():
+        continue
+
+    try:
+        text = path.read_text(
+            errors="ignore"
+        )
+
+        archive_texts.append(
+            (path.name, text)
+        )
+
+    except Exception:
+        pass
+
+
+def retrieve(query, k=2):
+
+    if not archive_texts:
+        return []
+
+    qchars = set(query.lower())
+
+    scored = []
+
+    for name, text in archive_texts:
+
+        score = len(
+            qchars
+            & set(text[:5000].lower())
+        )
+
+        scored.append(
+            (score, name, text)
+        )
+
+    scored.sort(
+        key=lambda z: z[0],
+        reverse=True
+    )
+
+    return scored[:k]
+
+
+# ============================================================
+# GENERATION
+# ============================================================
+
+def generate(
+    prompt,
+    n=300,
+    temperature=0.0
+):
+
+    ids = [
+        stoi.get(c, 0)
+        for c in prompt
+    ]
+
+    if len(ids) < T:
+        ids = (
+            [0] * (T - len(ids))
+            + ids
+        )
+    else:
+        ids = ids[-T:]
+
+    out = prompt
+
+    for _ in range(n):
+
+        x = np.array(
+            ids[-T:],
+            dtype=np.int32
+        )[None, :]
+
+        logits, _ = model.forward(x)
+
+        logits = logits[
+            0,
+            -1
+        ].astype(np.float64)
+
+        if temperature <= 0:
+
+            idx = int(
+                np.argmax(logits)
+            )
+
+        else:
+
+            logits = (
+                logits - logits.max()
+            ) / temperature
+
+            probs = np.exp(
+                np.clip(
+                    logits,
+                    -80.0,
+                    80.0
+                )
+            )
+
+            probs /= probs.sum()
+
+            idx = int(
+                np.random.choice(
+                    len(probs),
+                    p=probs
+                )
+            )
+
+        out += itos[idx]
+
+        ids.append(idx)
+
+    return out
+
+
+# ============================================================
+# INTERACTIVE
+# ============================================================
+
+print()
+print(
+    f"[BLOOM REAL READY] "
+    f"{PRESET} | stable gradients"
+)
+print(
+    "Commands: exit | quit | discover"
+)
+print()
+
+while True:
+
+    try:
+        q = input("> ").strip()
+
+    except (
+        EOFError,
+        KeyboardInterrupt
+    ):
+        break
+
+    if not q:
+        continue
+
+    if q.lower() in (
+        "exit",
+        "quit"
+    ):
+        break
+
+    if (
+        q.lower() == "discover"
+        and len(archive_texts) >= 2
+    ):
+
+        a, b = random.sample(
+            archive_texts,
+            2
+        )
+
+        q = (
+            f"Find a connection between "
+            f"{a[0]} and {b[0]}: "
+            f"{a[1][:300]} "
+            f"{b[1][:300]}"
+        )
+
+        print(
+            f"[DISCOVER] {q[:180]}..."
+        )
+
+    print(
+        generate(
+            q,
+            temperature=0.0
+        )
+    )
+
+    print()

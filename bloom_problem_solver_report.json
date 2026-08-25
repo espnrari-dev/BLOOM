@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "generated": "2026-08-25T10:00:49-0400",
+  "rounds": [
+    {
+      "round": 1,
+      "finding_count": 2,
+      "actionable_count": 2,
+      "repairs": []
+    }
+  ],
+  "final": {
+    "timestamp": "2026-08-25T10:00:49-0400",
+    "python_files": 64,
+    "compile_pass": 64,
+    "compile_fail": 0,
+    "entrypoints": [
+      "bloom_terminal.py",
+      "bloom.py",
+      "bloom_real.py",
+      "bloom_true.py",
+      "bloom_live.py",
+      "bloom_operator.py",
+      "bloom_autonomous_operator.py",
+      "bloom_chat.py",
+      "hybrid_bloom.py",
+      "hybrid_bloom_v3.py"
+    ]
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "timestamp": 1787666431.5666249,
+  "duration": 1.2705490589141846,
+  "model": "/data/data/com.termux/files/home/BLOOM/bloom_real.py",
+  "model_sha256": "2735f5630c3a8d1092cdc438c6438c7a4d0d9ddd4a10d9c0abd3f97896a1ec78",
+  "runtime_probe": {
+    "command": "/data/data/com.termux/files/usr/bin/python -c '\nimport sys\nimport traceback\n\nsys.path.insert(\n    0,\n    '\"'\"'/data/data/com.termux/files/home/BLOOM'\"'\"'\n)\n\ntry:\n\n    import bloom_real\n\n    print(\"BLOOM_IMPORT_SUCCESS\")\n\n    names = [\n        \"VALIDATION_TEXT\",\n        \"stoi\",\n        \"itos\",\n        \"vocab_size\",\n        \"data\",\n        \"validation_data\",\n        \"model\",\n        \"params\",\n        \"adam_m\",\n        \"adam_v\",\n        \"best_loss\",\n    ]\n\n    for name in names:\n\n        if hasattr(\n            bloom_real,\n            name,\n        ):\n\n            value = getattr(\n                bloom_real,\n                name,\n            )\n\n            try:\n                length = len(value)\n            except Exception:\n                length = None\n\n            shape = getattr(\n                value,\n                \"shape\",\n                None,\n            )\n\n            print(\n                \"RUNTIME_SYMBOL\",\n                name,\n                type(value).__name__,\n                \"len=\",\n                length,\n                \"shape=\",\n                shape,\n            )\n\n        else:\n\n            print(\n                \"RUNTIME_MISSING\",\n                name,\n            )\n\nexcept Exception as e:\n\n    print(\n        \"BLOOM_IMPORT_FAILURE\",\n        type(e).__name__,\n        str(e),\n    )\n\n    traceback.print_exc()\n'",
+    "cwd": "/data/data/com.termux/files/home/BLOOM",
+    "returncode": 0,
+    "stdout": "[MODEL] Building small D=128 H=4 L=4 T=64\nBLOOM_IMPORT_FAILURE NameError name 'vocab_size' is not defined\n",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 12, in <module>\n    import bloom_real\n  File \"/data/data/com.termux/files/home/BLOOM/bloom_real.py\", line 993, in <module>\n    vocab_size,\n    ^^^^^^^^^^\nNameError: name 'vocab_size' is not defined\n",
+    "duration": 0.26230692863464355,
+    "timed_out": false
+  },
+  "error": {
+    "category": "NAME_ERROR",
+    "detail": "vocab_size",
+    "confidence": 1.0,
+    "raw": "[MODEL] Building small D=128 H=4 L=4 T=64\nBLOOM_IMPORT_FAILURE NameError name 'vocab_size' is not defined\n\nTraceback (most recent call last):\n  File \"<string>\", line 12, in <module>\n    import bloom_real\n  File \"/data/data/com.termux/files/home/BLOOM/bloom_real.py\", line 993, in <module>\n    vocab_size,\n    ^^^^^^^^^^\nNameError: name 'vocab_size' is not defined\n"
+  },
+  "decision": {
+    "decision": "TRACE_MISSING_SYMBOL",
+    "confidence": 1.0,
+    "reason": [
+      "vocab_size is referenced during top-level execution but has no top-level definition.",
+      "Static references occur at lines [993]."
+    ],
+    "next_actions": [
+      "inspect the producer function/source for the missing symbol",
+      "determine whether the producer returns the required value",
+      "determine where the value should enter the runtime",
+      "repair only after the data contract is established",
+      "re-run AST inspection",
+      "re-run import probe"
+    ],
+    "do_not_do": [
+      "do not insert a guessed assignment",
+      "do not create synthetic vocabulary",
+      "do not invent stoi/itos/data values",
+      "do not declare the runtime repaired until import succeeds"
+    ]
+  },
+  "plan": {
+    "repair_policy": "EVIDENCE_FIRST",
+    "source_integrity": {
+      "bytes": 27315,
+      "sha256": "2735f5630c3a8d1092cdc438c6438c7a4d0d9ddd4a10d9c0abd3f97896a1ec78"
+    },
+    "load_text_source": "def load_text():\n    \"\"\"\n    BLOOM V2 REAL DATA LOADER\n\n    Training:\n        bloom_train_v2.txt\n\n    Validation:\n        bloom_valid_v2.txt\n\n    The validated V2 corpora are loaded directly.\n    No fabricated text is introduced.\n    No archive material is silently mixed into training.\n    \"\"\"\n\n    train_path = BLOOM_DIR / \"bloom_train_v2.txt\"\n    valid_path = BLOOM_DIR / \"bloom_valid_v2.txt\"\n\n    if not train_path.exists():\n        raise RuntimeError(\n            f\"Missing validated V2 training corpus: {train_path}\"\n        )\n\n    if not valid_path.exists():\n        raise RuntimeError(\n            f\"Missing validated V2 validation corpus: {valid_path}\"\n        )\n\n    train_text = train_path.read_text(\n        encoding=\"utf-8\",\n        errors=\"ignore\"\n    )\n\n    valid_text = valid_path.read_text(\n        encoding=\"utf-8\",\n        errors=\"ignore\"\n    )\n\n    if len(train_text.strip()) < 100:\n        raise RuntimeError(\n            \"Validated V2 training corpus is too small.\"\n        )\n\n    if len(valid_text.strip()) < 20:\n        raise RuntimeError(\n            \"Validated V2 validation corpus is too small.\"\n        )\n\n    # Keep validation available to the runtime without contaminating\n    # the training stream.\n    global VALIDATION_TEXT\n    VALIDATION_TEXT = valid_text\n\n    # The existing GPT runtime expects load_text() to return the\n    # training text and an archive count.\n    #\n    # archive_count is retained for compatibility.\n    archive_count = 0\n\n    return train_text, archive_count",
+    "get_batch_source": "def get_batch():\n\n    max_start = len(data) - T - 1\n\n    ix = np.random.randint(\n        0,\n        max_start,\n        size=BATCH\n    )\n\n    x = np.stack(\n        [data[i:i + T] for i in ix]\n    )\n\n    y = np.stack(\n        [data[i + 1:i + T + 1] for i in ix]\n    )\n\n    return x, y",
+    "required_symbols": {
+      "load_text": {
+        "defined": true,
+        "definition": {
+          "line": 181,
+          "kind": "FunctionDef"
+        },
+        "references": []
+      },
+      "stoi": {
+        "defined": false,
+        "definition": null,
+        "references": [
+          1158,
+          1334
+        ]
+      },
+      "itos": {
+        "defined": false,
+        "definition": null,
+        "references": [
+          1159,
+          1391
+        ]
+      },
+      "vocab_size": {
+        "defined": false,
+        "definition": null,
+        "references": [
+          993
+        ]
+      },
+      "data": {
+        "defined": false,
+        "definition": null,
+        "references": [
+          243,
+          252,
+          256
+        ]
+      },
+      "validation_data": {
+        "defined": false,
+        "definition": null,
+        "references": []
+      },
+      "VALIDATION_TEXT": {
+        "defined": true,
+        "definition": {
+          "line": 178,
+          "kind": "assignment"
+        },
+        "references": []
+      },
+      "get_batch": {
+        "defined": true,
+        "definition": {
+          "line": 241,
+          "kind": "FunctionDef"
+        },
+        "references": [
+          1014,
+          1210
+        ]
+      },
+      "GPT": {
+        "defined": true,
+        "definition": {
+          "line": 730,
+          "kind": "ClassDef"
+        },
+        "references": [
+          992
+        ]
+      },
+      "model": {
+        "defined": true,
+        "definition": {
+          "line": 992,
+          "kind": "assignment"
+        },
+        "references": [
+          1016,
+          1021,
+          1166,
+          887,
+          1137,
+          1137,
+          1212,
+          1222,
+          884,
+          884,
+          1355,
+          1004,
+          1160,
+          955,
+          956,
+          960,
+          961,
+          1162,
+          1163
+        ]
+      },
+      "params": {
+        "defined": true,
+        "definition": {
+          "line": 1000,
+          "kind": "assignment"
+        },
+        "references": [
+          1028,
+          965,
+          1067,
+          1091,
+          1054,
+          1059,
+          952,
+          1036,
+          889
+        ]
+      },
+      "adam_m": {
+        "defined": true,
+        "definition": {
+          "line": 1052,
+          "kind": "assignment"
+        },
+        "references": [
+          1095
+        ]
+      },
+      "adam_v": {
+        "defined": true,
+        "definition": {
+          "line": 1057,
+          "kind": "assignment"
+        },
+        "references": [
+          1096
+        ]
+      },
+      "best_loss": {
+        "defined": true,
+        "definition": {
+          "line": 1203,
+          "kind": "assignment"
+        },
+        "references": [
+          1249,
+          1260
+        ]
+      },
+      "generate": {
+        "defined": true,
+        "definition": {
+          "line": 1327,
+          "kind": "FunctionDef"
+        },
+        "references": [
+          1454
+        ]
+      },
+      "retrieve": {
+        "defined": true,
+        "definition": {
+          "line": 1295,
+          "kind": "FunctionDef"
+        },
+        "references": []
+      }
+    },
+    "dependencies": {
+      "load_text": {
+        "reads": [
+          "BLOOM_DIR",
+          "RuntimeError",
+          "archive_count",
+          "len",
+          "train_path",
+          "train_text",
+          "valid_path",
+          "valid_text"
+        ],
+        "undefined_reads": [
+          "archive_count",
+          "train_path",
+          "train_text",
+          "valid_path",
+          "valid_text"
+        ]
+      },
+      "get_batch": {
+        "reads": [
+          "BATCH",
+          "T",
+          "data",
+          "i",
+          "ix",
+          "len",
+          "max_start",
+          "np",
+          "x",
+          "y"
+        ],
+        "undefined_reads": [
+          "data",
+          "i",
+          "ix",
+          "max_start",
+          "x",
+          "y"
+        ]
+      },
+      "save_ckpt": {
+        "reads": [
+          "CKPT_DIR",
+          "PRESET",
+          "b",
+          "cfg",
+          "f",
+          "itos",
+          "loss",
+          "model",
+          "open",
+          "path",
+          "pickle",
+          "print",
+          "state",
+          "step",
+          "stoi"
+        ],
+        "undefined_reads": [
+          "b",
+          "f",
+          "itos",
+          "loss",
+          "path",
+          "state",
+          "step",
+          "stoi"
+        ]
+      },
+      "generate": {
+        "reads": [
+          "T",
+          "c",
+          "ids",
+          "idx",
+          "int",
+          "itos",
+          "len",
+          "logits",
+          "model",
+          "n",
+          "np",
+          "out",
+          "probs",
+          "prompt",
+          "range",
+          "stoi",
+          "temperature",
+          "x"
+        ],
+        "undefined_reads": [
+          "c",
+          "ids",
+          "idx",
+          "itos",
+          "logits",
+          "n",
+          "out",
+          "probs",
+          "prompt",
+          "stoi",
+          "temperature",
+          "x"
+        ]
+      },
+      "retrieve": {
+        "reads": [
+          "archive_texts",
+          "k",
+          "len",
+          "name",
+          "qchars",
+          "query",
+          "score",
+          "scored",
+          "set",
+          "text",
+          "z"
+        ],
+        "undefined_reads": [
+          "k",
+          "name",
+          "qchars",
+          "query",
+          "score",
+          "scored",
+          "text",
+          "z"
+        ]
+      }
+    },
+    "repair_order": [
+      {
+        "stage": 1,
+        "name": "CORPUS_CONTRACT",
+        "purpose": "Establish exactly what load_text loads and returns."
+      },
+      {
+        "stage": 2,
+        "name": "VOCABULARY_CONTRACT",
+        "purpose": "Establish stoi, itos and vocab_size from the verified corpus."
+      },
+      {
+        "stage": 3,
+        "name": "TOKEN_DATA_CONTRACT",
+        "purpose": "Establish data and validation data with explicit provenance."
+      },
+      {
+        "stage": 4,
+        "name": "BATCH_CONTRACT",
+        "purpose": "Verify get_batch() can legally sample the resulting data."
+      },
+      {
+        "stage": 5,
+        "name": "MODEL_CONTRACT",
+        "purpose": "Instantiate GPT only after vocabulary dimensions are valid."
+      },
+      {
+        "stage": 6,
+        "name": "GRADIENT_CONTRACT",
+        "purpose": "Execute forward/backward without training."
+      },
+      {
+        "stage": 7,
+        "name": "CHECKPOINT_CONTRACT",
+        "purpose": "Verify checkpoint state can be serialized."
+      },
+      {
+        "stage": 8,
+        "name": "GENERATION_CONTRACT",
+        "purpose": "Verify stoi/itos/model generation path."
+      },
+      {
+        "stage": 9,
+        "name": "TRAINING_PERMISSION",
+        "purpose": "Permit training only after all prior stages pass."
+      }
+    ],
+    "current_status": "REPAIR_REQUIRED"
+  }
+}

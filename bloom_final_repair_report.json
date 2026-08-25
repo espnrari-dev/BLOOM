@@ -1,0 +1,42 @@
+{
+  "timestamp": 1787667191.1558416,
+  "root": "/data/data/com.termux/files/home/BLOOM",
+  "reports": [
+    {
+      "target": "/data/data/com.termux/files/home/BLOOM/bloom_best_llm.py",
+      "before_sha256": "882f5e25c16adae2e7a0273c3c9388b27cb6284f2c87dd162554448a6798e225",
+      "status": "SUCCESS",
+      "rollback": false,
+      "verification": {
+        "compile": true,
+        "runtime": true,
+        "output": "\n"
+      },
+      "after_sha256": "100626743925dfe899bb7543c5237f27eb45a7f3aec363f706238c02de188fe2"
+    },
+    {
+      "target": "/data/data/com.termux/files/home/BLOOM/bloom_real.py",
+      "before_sha256": "8aaff29cc7398e7f4d0d191a3bf0f2deaaa25499f2b13b933ae6cdba47aceef4",
+      "status": "SUCCESS",
+      "rollback": false,
+      "verification": {
+        "compile": true,
+        "runtime": true,
+        "output": "==========================================================================================\nBLOOM REAL EXECUTION\n==========================================================================================\n{\n  \"status\": \"PASS\",\n  \"vocab_size\": 97,\n  \"hidden_dim\": 256,\n  \"sequence_length\": 16,\n  \"batch_size\": 1,\n  \"logits_shape\": [\n    16,\n    97,\n    1\n  ],\n  \"final_state_shape\": [\n    256,\n    1\n  ]\n}\n==========================================================================================\nBLOOM REAL: VERIFIED\n==========================================================================================\n\n"
+      },
+      "after_sha256": "4f9630ca7a1eb438b7f5dad1d31facf74209fa9fc46093f735a05bc0c37bc020"
+    },
+    {
+      "target": "/data/data/com.termux/files/home/BLOOM/hybrid_bloom.py",
+      "before_sha256": "e1a176d5923aeb282457cdb684dd3bc9c601569a13bdeaaff75c0f4c8ac03412",
+      "status": "SUCCESS",
+      "rollback": false,
+      "verification": {
+        "compile": true,
+        "runtime": true,
+        "output": "==========================================================================================\nBLOOM MARKET SUBSYSTEM\n==========================================================================================\n{'status': 'UNAVAILABLE', 'momentum': 0.0, 'liquidity': 0.0, 'volatility': 0.0, 'ma20_ratio': 1.0}\n{'status': 'AVAILABLE', 'momentum': 1.0, 'liquidity': 1.0909090909090908, 'volatility': 0.008084124563640853, 'ma20_ratio': 1.00990099009901, 'value_ratio': 1.00990099009901}\n==========================================================================================\nHYBRID MARKET: VERIFIED\n==========================================================================================\n\n"
+      },
+      "after_sha256": "a1ff42f03c26effd1e11c4cbd3e4214648d722438896506c13f9dded344dadb8"
+    }
+  ]
+}

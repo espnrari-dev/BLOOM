@@ -1,0 +1,14 @@
+BLOOM TRAINING MANIFEST V2
+========================================================================
+seed=1337
+valid_ratio=0.15
+max_per_source=300
+input=/data/data/com.termux/files/home/BLOOM/training_corpus_semantic_v2.txt
+sources=26
+records=312
+train_records=265
+valid_records=47
+train_words=2283
+valid_words=408
+train_sha256=2dad81e6dd21e0acd5034fdbb818a05d3d3c8815f7f85d74f91abb2d8e5777e4
+valid_sha256=2e85cbe290bbc18de4cc5429d0499f74b7979a6256dcd6158f7e6b2b90b69483

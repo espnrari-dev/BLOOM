@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "patterns": {
+    "8bbf2005a6b1009c1dd9fec0": {
+      "attempts": 12,
+      "successes": 0,
+      "failures": 12,
+      "failure_kind": null,
+      "failure_detail": null,
+      "last_repair": {
+        "status": "NO_SAFE_REPAIR"
+      },
+      "last_validation": {
+        "passed": false,
+        "reason": "blocked"
+      },
+      "success_rate": 0.0
+    },
+    "1aa488b782b0ad3d05bb96e1": {
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "failure_kind": "unclassified_runtime_failure",
+      "failure_detail": "No known exception signature matched.",
+      "last_repair": {
+        "status": "NO_SAFE_REPAIR"
+      },
+      "last_validation": {
+        "passed": false,
+        "reason": "blocked"
+      },
+      "success_rate": 0.0
+    }
+  }
+}
