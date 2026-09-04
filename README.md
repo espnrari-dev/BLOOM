@@ -1,17 +1,18 @@
 # BLOOM
 
-## Description
-Self‑evolving AI – autonomous repair, learning, governance.
+> **Self‑evolving AI framework with autonomous repair, learning, and governance – evolves its own code and logic.**
 
-## Technology Stack
-Python
+## Role in Aethel
+This repository is a component of the Aethel ecosystem. For detailed documentation, refer to the source code and comments.
 
-## Main Entry
-bloom_daemon.sh
+## Overview
+An evolving AI framework that repairs, learns, and governs itself through genetic algorithms and formal verification.
 
 ## Quick Start
-- Start all services: `./start-all.sh`
-- Stop all services:  `./stop-all.sh`
+```bash
+cd ~/BLOOM
+# See source files for build/run instructions
+```
 
-## Notes
-This repository is part of the [Aethel](https://github.com/espnrari-dev) ecosystem.
+## License
+MIT – see [LICENSE](LICENSE) (if any)
